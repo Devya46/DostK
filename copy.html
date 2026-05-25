@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Accounting Process Section</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #efefef;
+        padding: 40px;
+      }
+
+      .process-section {
+        max-width: 1400px;
+        margin: auto;
+        background: #11a4eb;
+      }
+
+      .process-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .row {
+        display: grid;
+      }
+
+      .row-1 {
+        grid-template-columns: 0.8fr 1.5fr;
+      }
+
+      .row-2 {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .row-3 {
+        grid-template-columns: 1.4fr 0.8fr;
+      }
+
+      .card {
+        position: relative;
+        overflow: hidden;
+        min-height: 340px;
+      }
+
+      /* =========================
+         BLUE CARD
+      ========================= */
+
+      .blue-card {
+        background: #11a4eb;
+        color: #fff;
+        padding: 40px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .blue-card i {
+        font-size: 44px;
+      }
+
+      .number {
+        position: absolute;
+        top: 35px;
+        right: 30px;
+
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .blue-content h3 {
+        font-size: 38px;
+        line-height: 1.1;
+        margin-bottom: 25px;
+      }
+
+      .blue-content p {
+        font-size: 20px;
+        line-height: 1.8;
+      }
+
+      /* =========================
+         CONTENT CARD
+      ========================= */
+
+      .content-card {
+        background: #efefef;
+        padding: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .mini-title {
+        color: #11a4eb;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 22px;
+      }
+
+      .content-card h2 {
+        font-size: 65px;
+        line-height: 1.08;
+        color: #2d2d2d;
+      }
+
+      .content-card p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #7b7b7b;
+        margin-bottom: 20px;
+      }
+
+      /* =========================
+         IMAGE CARD
+      ========================= */
+
+      .image-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-top-right-radius: 60px;
+      }
+
+      /* =========================
+         BUTTONS
+      ========================= */
+
+      .btn-wrap {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 10px;
+      }
+
+      .service-btn {
+        border: none;
+        background: #11a4eb;
+        color: #fff;
+
+        padding: 18px 30px;
+        border-radius: 50px;
+
+        font-size: 16px;
+        font-weight: 700;
+
+        cursor: pointer;
+      }
+
+      .circle-btn {
+        width: 54px;
+        height: 54px;
+
+        border-radius: 50%;
+        border: none;
+
+        background: #11a4eb;
+        color: #fff;
+
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      /* =========================
+         BORDER RADIUS
+      ========================= */
+
+      .radius-bottom-left {
+        border-bottom-left-radius: 60px;
+      }
+
+      .radius-top-right {
+        border-top-right-radius: 60px;
+      }
+
+      .radius-top-left {
+        border-bottom-left-radius: 60px;
+      }
+
+      /* =========================
+         HOVER EFFECT
+      ========================= */
+
+      .blue-card {
+        transition: 0.4s ease;
+      }
+
+      .blue-card:hover {
+        transform: translateY(-6px);
+      }
+
+      /* =========================
+         RESPONSIVE
+      ========================= */
+
+      @media (max-width: 1100px) {
+        .row-1,
+        .row-2,
+        .row-3 {
+          grid-template-columns: 1fr;
+        }
+
+        .content-card h2 {
+          font-size: 52px;
+        }
+
+        .blue-content h3 {
+          font-size: 30px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 20px;
+        }
+
+        .content-card,
+        .blue-card {
+          padding: 30px;
+        }
+
+        .content-card h2 {
+          font-size: 40px;
+        }
+
+        .content-card p,
+        .blue-content p {
+          font-size: 17px;
+        }
+
+        .blue-content h3 {
+          font-size: 26px;
+        }
+
+        .card {
+          min-height: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="process-section">
+      <div class="process-grid">
+        <!-- =========================
+             ROW 1
+        ========================= -->
+
+        <div class="row row-1">
+          <!-- LEFT SMALL -->
+          <div class="card blue-card">
+            <div class="number">01</div>
+
+            <i class="fa-regular fa-sun"></i>
+
+            <div class="blue-content">
+              <h3>Schedule a Consultation</h3>
+
+              <p>
+                Our expert accountants provide tailored solutions to ensure
+                accurate bookkeeping and efficient tax planning.
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT BIG -->
+          <div class="card content-card radius-bottom-left">
+            <div class="mini-title">How It Works</div>
+
+            <h2>Our Simple & Transparent Accounting Process</h2>
+          </div>
+        </div>
+
+        <!-- =========================
+             ROW 2
+        ========================= -->
+
+        <div class="row row-2">
+          <!-- IMAGE -->
+          <div class="card image-card radius-top-right">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+              alt=""
+            />
+          </div>
+
+          <!-- CENTER BLUE -->
+          <div class="card blue-card">
+            <div class="number">02</div>
+
+            <i class="fa-regular fa-clock"></i>
+
+            <div class="blue-content">
+              <h3>Analyze & Strategize</h3>
+
+              <p>
+                Our team reviews your financial records, identifies
+                opportunities to optimize tax savings, and creates a clear
+                accounting roadmap.
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT CONTENT -->
+          <div class="card content-card radius-top-left">
+            <p>
+              We make managing your finances easier through a clear, structured
+              process. From consultation to reporting.
+            </p>
+
+            <p>
+              We make managing your finances easier through a clear, structured
+              process. From consultation to reporting.
+            </p>
+
+            <div class="btn-wrap">
+              <button class="service-btn">View Our Services</button>
+
+              <button class="circle-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- =========================
+             ROW 3
+        ========================= -->
+
+        <div class="row row-3">
+          <!-- BIG IMAGE -->
+          <div class="card image-card">
+            <img
+              src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop"
+              alt=""
+            />
+          </div>
+
+          <!-- RIGHT SMALL -->
+          <div class="card blue-card">
+            <div class="number">03</div>
+
+            <i class="fa-solid fa-coins"></i>
+
+            <div class="blue-content">
+              <h3>Manage & Support</h3>
+
+              <p>
+                We handle the day-to-day accounting, tax filings, and reporting
+                so you can focus on growing your business with confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const cards = document.querySelectorAll(".blue-card");
+
+      cards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          card.style.transform = "translateY(-6px)";
+        });
+
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "translateY(0)";
+        });
+      });
+    </script>
+  </body>
+</html>
