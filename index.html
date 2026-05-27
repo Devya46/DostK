@@ -604,10 +604,10 @@
                 Services <i class="fas fa-chevron-down"></i>
               </button>
               <div class="dropdown-menu">
-                <a href="#gst"
+                <a href="GST.html"
                   ><i class="fas fa-file-invoice-dollar"></i> GST Return</a
                 >
-                <a href="#itr"
+                <a href="Services/ITR.html"
                   ><i class="fas fa-chart-line"></i> Income Tax Return</a
                 >
                 <a href="#dsc"
@@ -683,8 +683,7 @@
       <div class="side-menu-footer">
         <a href="#contact" class="start-now-premium"
           ><i class="fas fa-rocket"></i> Start Now
-          <i class="fas fa-arrow-right"></i
-        ></a>
+        </a>
         <!-- Arrow at end ( > ) as requested -->
         <div class="end-arrow">
           <i class="fas fa-angle-double-right"></i>
@@ -1691,7 +1690,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=yes"
     />
-    <title>FinTax Solutions | Premium Service Cards</title>
+    <title>FinTax Solutions | Premium Tax Services</title>
     <!-- Google Fonts & Font Awesome 6 -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Source+Sans+3:wght@400;500;600&display=swap"
@@ -1702,29 +1701,31 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <style>
+      /* ===== UNIQUE NAMESPACE PREFIX: fintax-premium- ===== */
+      /* All class names are prefixed to avoid any global override conflicts */
+
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
-      body {
+      .fintax-premium-body {
         font-family: "Inter", sans-serif;
-        background: #f5f9ff;
+        background: linear-gradient(135deg, #f4f9fe 0%, #eef2f8 100%);
         color: #0a2540;
         line-height: 1.5;
       }
 
-      /* Services container */
-      .services-wrapper {
-        max-width: 1600px;
+      .fintax-premium-wrapper {
+        max-width: 1400px;
         margin: 0 auto;
-        padding: 10rem 10rem;
-        background: white;
+        padding: 9rem 5rem;
+        background: transparent;
       }
 
-      /* HEADING AREA — exactly as requested (kept original styles + structure) */
-      .section-header {
+      /* HEADING AREA — structure preserved, names unique */
+      .fintax-premium-section-header {
         text-align: left;
         font-size: 22px;
         font-weight: 500;
@@ -1737,7 +1738,7 @@
         color: transparent;
       }
 
-      .section-header .title-accent {
+      .fintax-premium-title-accent {
         width: 70px;
         height: 4px;
         background: #3b82f6;
@@ -1745,13 +1746,13 @@
         border-radius: 4px;
       }
 
-      .section-header p {
+      .fintax-premium-section-header p {
         color: #4a5b6e;
         font-size: 1rem;
         margin-top: 0.5rem;
       }
 
-      .title-grid {
+      .fintax-premium-title-grid {
         display: grid;
         gap: 3rem;
         grid-template-columns: 0.7fr 1.3fr;
@@ -1760,7 +1761,7 @@
         font-family: "Source Sans 3", sans-serif;
       }
 
-      .title-sec {
+      .fintax-premium-title-sec {
         font-size: 18px;
         font-weight: 400;
         line-height: 1.6em;
@@ -1770,7 +1771,7 @@
         padding-bottom: 20px;
       }
 
-      .title-sec2 {
+      .fintax-premium-title-sec2 {
         color: #1a2c3e;
         font-size: 48px;
         font-weight: 600;
@@ -1778,535 +1779,676 @@
         margin-top: -50px;
       }
 
-      /* ----- ENHANCED GRID (better cards: images as background, hover overlay top-to-bottom) ----- */
-      .services-grid {
+      /* MODERN CARD GRID — unique names */
+      .fintax-premium-services-grid {
         display: grid;
-        gap: 2rem;
-        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 1.8rem;
+        grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
         margin-top: 1rem;
       }
 
-      /* MODERN CARD – background image, overlay, full interactive */
-      .service-card-bg {
+      /* CARD: background image container */
+      .fintax-premium-service-card {
         position: relative;
-        border-radius: 2rem;
+        border-radius: 1.75rem;
         overflow: hidden;
-        aspect-ratio: 4 / 4;
+        aspect-ratio: 3/3;
         background-size: cover;
-        background-position: center;
+        background-position: center 30%;
         background-repeat: no-repeat;
-        background-color: #1a2c3e; /* fallback */
-        box-shadow:
-          0 20px 35px -12px rgba(0, 0, 0, 0.12),
-          0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+        background-color: #102b3f;
+        box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
         transition:
           transform 0.35s ease,
-          box-shadow 0.3s;
+          box-shadow 0.3s ease;
         cursor: default;
       }
 
-      /* background images assigned per card via inline style or class — we'll define in HTML */
-      .service-card-bg:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 30px 40px -16px rgba(0, 0, 0, 0.25);
+      .fintax-premium-service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 28px 42px -14px rgba(0, 0, 0, 0.28);
       }
 
-      /* dark gradient overlay (always visible to improve text contrast) */
-      .card-overlay {
+      /* Gradient overlay */
+      .fintax-premium-card-overlay {
         position: absolute;
         inset: 0;
         background: linear-gradient(
           to top,
-          rgba(0, 0, 0, 0.75) 15%,
-          rgba(0, 0, 0, 0.35) 50%,
+          rgba(0, 0, 0, 0.8) 5%,
+          rgba(0, 0, 0, 0.4) 55%,
           rgba(0, 0, 0, 0.2) 100%
         );
         z-index: 1;
-        transition: background 0.4s;
+        transition: opacity 0.3s;
       }
 
-      /* MAIN CARD CONTENT (heading, icon, button) – always visible */
-      .card-content-front {
-        position: relative;
-        z-index: 2;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 1.8rem 1.6rem 2rem;
-        color: white;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      /* BOTTOM HEADING ZONE */
+      .fintax-premium-card-heading-bottom {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        z-index: 15;
+        padding: 3rem 1.5rem 1.8rem;
+        background: linear-gradient(
+          to top,
+          #002850e8 0%,
+          #0a2540de 70%,
+          #00000000 100%
+        );
+        transition:
+          transform 0.4s cubic-bezier(0.2, 0.9, 0.6, 1.1),
+          opacity 0.35s ease;
+        transform: translateY(0);
+        opacity: 1;
       }
 
-      /* header row (icon + title) side by side */
-      .card-header {
+      /* heading inline wrapper */
+      .fintax-premium-heading-inline {
         display: flex;
         align-items: center;
         gap: 14px;
       }
 
-      .service-icon-bg {
-        width: 52px;
-        height: 52px;
+      .fintax-premium-card-icon {
+        width: 46px;
+        height: 46px;
         background: rgba(255, 255, 255, 0.18);
-        backdrop-filter: blur(6px);
-        border-radius: 20px;
+        backdrop-filter: blur(8px);
+        border-radius: 18px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         color: white;
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.45);
         transition: all 0.2s;
       }
 
-      .service-title-bg {
-        font-size: 1.8rem;
+      .fintax-premium-card-title {
+        font-size: 1.65rem;
         font-weight: 700;
         letter-spacing: -0.02em;
+        color: white;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         line-height: 1.2;
-        margin: 0;
-        color: white;
       }
 
-      /* read more button (always visible, modern) */
-      .btn-light {
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        padding: 0.75rem 1.5rem;
-        border-radius: 40px;
-        font-weight: 600;
-        font-size: 0.9rem;
-        font-family: inherit;
-        color: white;
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        width: fit-content;
-        cursor: pointer;
-        transition: all 0.25s ease;
-        margin-top: 0.5rem;
-      }
-
-      .btn-light i {
-        font-size: 0.85rem;
-        transition: transform 0.2s;
-      }
-
-      .btn-light:hover {
-        background: white;
-        color: #0f2b3d;
-        border-color: white;
-        gap: 14px;
-      }
-
-      .btn-light:hover i {
-        transform: translateX(5px);
-        color: #0f2b3d;
-      }
-
-      /* ---- HOVER REVEAL DETAILS (top to bottom animation) ---- */
-      .hover-details {
+      /* HOVER CONTENT PANEL (slides from top) */
+      .fintax-premium-hover-content {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #0a2540 0%, #0f2f44 100%);
-        backdrop-filter: blur(2px);
         z-index: 20;
+        background: linear-gradient(135deg, #071320 0%, #0f2f48 100%);
+        backdrop-filter: blur(3px);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
-        padding: 2rem 1.8rem;
-        transform: translateY(-100%);
-        transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-        border-radius: 2rem;
-        box-shadow: inset 0 0 0 1px rgba(255, 255, 240, 0.1);
-        color: #f0f6ff;
+        padding: 1.8rem 1.6rem;
+        transform: translateY(-101%);
+        transition: transform 0.45s cubic-bezier(0.2, 0.95, 0.3, 1.05);
+        border-radius: 1.75rem;
+        color: #f0f7fe;
         opacity: 0;
         visibility: hidden;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 245, 0.08);
       }
 
-      .service-card-bg:hover .hover-details {
+      .fintax-premium-service-card:hover .fintax-premium-hover-content {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
       }
 
-      .hover-details h4 {
-        font-size: 1.9rem;
+      .fintax-premium-service-card:hover .fintax-premium-card-heading-bottom {
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          transform 0.4s cubic-bezier(0.3, 0.9, 0.4, 1.2),
+          opacity 0.3s;
+      }
+
+      .fintax-premium-hover-content h4 {
+        font-size: 1.7rem;
         font-weight: 700;
-        margin-bottom: 1rem;
+        margin-bottom: 0.9rem;
         letter-spacing: -0.02em;
         color: white;
         border-left: 4px solid #3b82f6;
-        padding-left: 16px;
+        padding-left: 14px;
       }
 
-      .hover-details p {
-        font-size: 0.98rem;
+      .fintax-premium-hover-content p {
+        font-size: 0.85rem;
         line-height: 1.5;
-        margin-bottom: 1.5rem;
-        color: #e2edf7;
+        margin-bottom: 1.2rem;
+        color: #e4f0fe;
         font-weight: 400;
       }
 
-      .hover-details .feature-list {
+      .fintax-premium-feature-list {
         list-style: none;
-        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
       }
 
-      .hover-details .feature-list li {
-        margin-bottom: 12px;
+      .fintax-premium-feature-list li {
+        margin-bottom: 10px;
         display: flex;
         align-items: center;
         gap: 10px;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        font-weight: 450;
       }
 
-      .hover-details .feature-list li i {
-        width: 22px;
-        color: #60a5fa;
-        font-size: 0.9rem;
+      .fintax-premium-feature-list li i {
+        width: 20px;
+        color: #7bb3ff;
+        font-size: 0.8rem;
       }
 
-      .hover-btn {
-        background: white;
-        color: #0f2b3d;
-        border: none;
-        padding: 0.65rem 1.6rem;
+      /* UNIQUE BUTTON: Arrow expands to text on hover */
+      .fintax-premium-expand-btn {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(8px);
+        border: 1.5px solid rgba(255, 255, 255, 0.65);
         border-radius: 40px;
+        padding: 0.65rem 1.2rem;
+        font-family: inherit;
         font-weight: 600;
-        font-size: 0.85rem;
-        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: white;
+        cursor: pointer;
         display: inline-flex;
         align-items: center;
-        gap: 8px;
-        cursor: pointer;
-        transition: 0.2s;
-      }
-
-      .hover-btn:hover {
-        background: #2563eb;
-        color: white;
-        transform: scale(1.02);
-        gap: 12px;
-      }
-
-      /* For the two image-only cards (full-width style inside grid) — we keep them but reimagine consistent with bg cards? 
-           According to original layout there were two extra image cards inside grid. We'll preserve them as "visual accent cards" 
-           but upgrade them to be attractive gallery pieces, not breaking the grid. */
-      .visual-accent-card {
-        background: #eef3fc;
-        border-radius: 2rem;
-        overflow: hidden;
-        aspect-ratio: 4 / 4;
-        box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.08);
-        transition: all 0.3s;
-        display: flex;
-        align-items: center;
         justify-content: center;
-        position: relative;
-        border: 1px solid black;
+        gap: 8px;
+        transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.2);
+        width: 46px;
+        height: 46px;
+        border-radius: 46px;
+        overflow: hidden;
+        white-space: nowrap;
       }
 
-      .visual-accent-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
+      .fintax-premium-expand-btn .fintax-premium-btn-text {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.2s ease;
       }
 
-      .visual-accent-card:hover img {
-        transform: scale(1.03);
+      .fintax-premium-expand-btn i {
+        font-size: 1rem;
+        transition: transform 0.25s ease;
       }
 
-      /* Responsive fixes */
-      @media (max-width: 780px) {
-        .services-wrapper {
-          padding: 2rem 1.2rem;
+      .fintax-premium-expand-btn:hover {
+        width: auto;
+        min-width: 130px;
+        background: white;
+        border-color: white;
+        color: #0f2c3f;
+        gap: 12px;
+        padding: 0.65rem 1.5rem;
+      }
+
+      .fintax-premium-expand-btn:hover .fintax-premium-btn-text {
+        display: inline-block;
+        opacity: 1;
+        animation: fintaxPremiumFadeTextIn 0.25s ease;
+      }
+
+      .fintax-premium-expand-btn:hover i {
+        color: #0f2c3f;
+        transform: translateX(3px);
+      }
+
+      @keyframes fintaxPremiumFadeTextIn {
+        from {
+          opacity: 0;
+          transform: translateX(-6px);
         }
-        .title-grid {
-          padding: 0 10px;
-          gap: 1rem;
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .fintax-premium-btn-wrapper {
+        display: inline-flex;
+        margin-top: 0.5rem;
+      }
+
+      /* responsive design */
+      @media (max-width: 1000px) {
+        .fintax-premium-wrapper {
+          padding: 3rem 2rem;
+        }
+        .fintax-premium-title-grid {
           grid-template-columns: 1fr;
+          gap: 1rem;
+          margin-bottom: 2.5rem;
         }
-        .title-sec {
+        .fintax-premium-title-sec {
           text-align: left;
-          border-bottom: 1px solid #ccc;
+          border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+          padding-bottom: 12px;
         }
-        .title-sec2 {
+        .fintax-premium-title-sec2 {
           margin-top: 0;
         }
-        .service-title-bg {
-          font-size: 1.5rem;
+        .fintax-premium-title-sec2 h2 {
+          font-size: 32px;
         }
-        .hover-details h4 {
-          font-size: 1.5rem;
+        .fintax-premium-card-title {
+          font-size: 1.45rem;
         }
-        .hover-details p {
-          font-size: 0.85rem;
+        .fintax-premium-hover-content h4 {
+          font-size: 1.45rem;
         }
       }
 
-      @media (max-width: 550px) {
-        .services-grid {
+      @media (max-width: 650px) {
+        .fintax-premium-services-grid {
+          gap: 1.3rem;
           grid-template-columns: 1fr;
         }
+        .fintax-premium-service-card {
+          aspect-ratio: 3.8 / 4;
+        }
+        .fintax-premium-card-heading-bottom {
+          padding: 1.2rem;
+        }
+        .fintax-premium-hover-content {
+          padding: 1.4rem;
+        }
       }
 
-      /* footer {
-        text-align: center;
-        margin-top: 3rem;
-        padding: 1.5rem;
-        border-top: 1px solid #e2edf7;
-        font-size: 0.8rem;
-        color: #5e6f8d;
-        background: #fafcff;
-      } */
-      .demo-note {
-        text-align: center;
-        font-size: 0.75rem;
-        margin-top: 0.8rem;
-        color: #7890a7;
+      /* Card fade-in animation */
+      @keyframes fintaxPremiumCardFadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fintax-premium-service-card {
+        animation: fintaxPremiumCardFadeUp 0.55s ease backwards;
+      }
+      .fintax-premium-service-card:nth-child(1) {
+        animation-delay: 0.02s;
+      }
+      .fintax-premium-service-card:nth-child(2) {
+        animation-delay: 0.07s;
+      }
+      .fintax-premium-service-card:nth-child(3) {
+        animation-delay: 0.12s;
+      }
+      .fintax-premium-service-card:nth-child(4) {
+        animation-delay: 0.17s;
+      }
+      .fintax-premium-service-card:nth-child(5) {
+        animation-delay: 0.22s;
+      }
+      .fintax-premium-service-card:nth-child(6) {
+        animation-delay: 0.27s;
       }
     </style>
   </head>
-  <body>
-    <div class="services-wrapper">
-      <!-- Heading section (KEPT EXACTLY as original, unchanged) -->
-      <div class="title-grid">
-        <div class="title-sec">
-          <p>
-            We provide tailored accounting and tax services designed to help you
-            stay organized, compliant, and financially secure.
-          </p>
+  <body class="fintax-premium-body">
+    <section class="fintax-premium-body">
+      <div class="fintax-premium-wrapper">
+        <!-- Heading section (preserved original structure with unique class names) -->
+        <div class="fintax-premium-title-grid">
+          <div class="fintax-premium-title-sec">
+            <p>
+              We provide tailored accounting and tax services designed to help
+              you stay organized, compliant, and financially secure.
+            </p>
+          </div>
+          <div class="fintax-premium-title-sec2">
+            <h2 class="fintax-premium-section-header">Our Services</h2>
+            <p>
+              Expert Financial Solutions for Your Business just a click away
+            </p>
+          </div>
         </div>
-        <div class="title-sec2">
-          <h2 class="section-header">Our Services</h2>
-          <p>Expert Financial Solutions for Your Business just a click away</p>
+
+        <!-- 6 service cards: unique class naming for all elements -->
+        <div class="fintax-premium-services-grid">
+          <!-- 1. GST Services -->
+          <div
+            class="fintax-premium-service-card"
+            style="
+              background-image: url(&quot;images/GST-1.png&quot;);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div class="fintax-premium-card-overlay"></div>
+            <div class="fintax-premium-card-heading-bottom">
+              <div class="fintax-premium-heading-inline">
+                <div class="fintax-premium-card-icon">
+                  <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <h3 class="fintax-premium-card-title">GST Services</h3>
+              </div>
+            </div>
+            <div class="fintax-premium-hover-content">
+              <h4>GST Compliance</h4>
+              <p>
+                End-to-end GST return filing, reconciliation, and advisory. Stay
+                audit-ready with real-time support.
+              </p>
+              <ul class="fintax-premium-feature-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> GSTR-1, 3B, 9, 9C filing
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Input Tax Credit
+                  reconciliation
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> LUT, refund & notice
+                  handling
+                </li>
+              </ul>
+              <div class="fintax-premium-btn-wrapper">
+                <button
+                  class="fintax-premium-expand-btn"
+                  data-service="GST Services"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                  <span class="fintax-premium-btn-text">Explore GST</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Income Tax Filing -->
+          <div
+            class="fintax-premium-service-card"
+            style="
+              background-image: url(&quot;images/ITR-1.png&quot;);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div class="fintax-premium-card-overlay"></div>
+            <div class="fintax-premium-card-heading-bottom">
+              <div class="fintax-premium-heading-inline">
+                <div class="fintax-premium-card-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="fintax-premium-card-title">Income Tax Filing</h3>
+              </div>
+            </div>
+            <div class="fintax-premium-hover-content">
+              <h4>Simplified Tax Filing</h4>
+              <p>
+                Individual & corporate ITR filing, tax planning, and digital
+                verification with expert support.
+              </p>
+              <ul class="fintax-premium-feature-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> ITR-1 to ITR-7 (all forms)
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Capital gains & business
+                  audit
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Belated / revised returns
+                </li>
+              </ul>
+              <div class="fintax-premium-btn-wrapper">
+                <button
+                  class="fintax-premium-expand-btn"
+                  data-service="Income Tax Filing"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                  <span class="fintax-premium-btn-text">File Now</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. DSC Services -->
+          <div
+            class="fintax-premium-service-card"
+            style="
+              background-image: url(&quot;images/GST-1.png&quot;);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div class="fintax-premium-card-overlay"></div>
+            <div class="fintax-premium-card-heading-bottom">
+              <div class="fintax-premium-heading-inline">
+                <div class="fintax-premium-card-icon">
+                  <i class="fas fa-signature"></i>
+                </div>
+                <h3 class="fintax-premium-card-title">DSC Services</h3>
+              </div>
+            </div>
+            <div class="fintax-premium-hover-content">
+              <h4>Digital Signatures</h4>
+              <p>
+                Authorized Class 2 & Class 3 DSC for e-tendering, MCA filings,
+                GST and income tax e-filing.
+              </p>
+              <ul class="fintax-premium-feature-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> Individual / Organization
+                  DSC
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> USB token & remote install
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Renewal & validation
+                  support
+                </li>
+              </ul>
+              <div class="fintax-premium-btn-wrapper">
+                <button
+                  class="fintax-premium-expand-btn"
+                  data-service="DSC Services"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                  <span class="fintax-premium-btn-text">Get DSC</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Tax Consultancy -->
+          <div
+            class="fintax-premium-service-card"
+            style="
+              background-image: url(&quot;images/GST-1.png&quot;);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div class="fintax-premium-card-overlay"></div>
+            <div class="fintax-premium-card-heading-bottom">
+              <div class="fintax-premium-heading-inline">
+                <div class="fintax-premium-card-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <h3 class="fintax-premium-card-title">Tax Consultancy</h3>
+              </div>
+            </div>
+            <div class="fintax-premium-hover-content">
+              <h4>Strategic Advisory</h4>
+              <p>
+                Proactive corporate & international tax planning, NRI taxation,
+                and wealth management strategies.
+              </p>
+              <ul class="fintax-premium-feature-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> Corporate & cross-border
+                  planning
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> HUF / succession &
+                  retirement plans
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> DTAA & tax optimization
+                </li>
+              </ul>
+              <div class="fintax-premium-btn-wrapper">
+                <button
+                  class="fintax-premium-expand-btn"
+                  data-service="Tax Consultancy"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                  <span class="fintax-premium-btn-text">Consult</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. NSDL / PAN Services -->
+          <div
+            class="fintax-premium-service-card"
+            style="
+              background-image: url(&quot;images/GST-1.png&quot;);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div class="fintax-premium-card-overlay"></div>
+            <div class="fintax-premium-card-heading-bottom">
+              <div class="fintax-premium-heading-inline">
+                <div class="fintax-premium-card-icon">
+                  <i class="fas fa-id-card"></i>
+                </div>
+                <h3 class="fintax-premium-card-title">NSDL / PAN Services</h3>
+              </div>
+            </div>
+            <div class="fintax-premium-hover-content">
+              <h4>PAN & NSDL Solutions</h4>
+              <p>
+                Seamless PAN issuance, corrections, TAN, NSDL e-governance, CAS
+                statements and digital KYC.
+              </p>
+              <ul class="fintax-premium-feature-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> New PAN / correction /
+                  e-PAN
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> TAN application & updates
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> NSDL CAS analysis &
+                  support
+                </li>
+              </ul>
+              <div class="fintax-premium-btn-wrapper">
+                <button
+                  class="fintax-premium-expand-btn"
+                  data-service="NSDL PAN Services"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                  <span class="fintax-premium-btn-text">Apply Now</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. TDS & TCS Compliance -->
+          <div
+            class="fintax-premium-service-card"
+            style="
+              background-image: url(&quot;images/GST-1.png&quot;);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div class="fintax-premium-card-overlay"></div>
+            <div class="fintax-premium-card-heading-bottom">
+              <div class="fintax-premium-heading-inline">
+                <div class="fintax-premium-card-icon">
+                  <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <h3 class="fintax-premium-card-title">TDS & TCS Compliance</h3>
+              </div>
+            </div>
+            <div class="fintax-premium-hover-content">
+              <h4>Complete TDS/TCS Management</h4>
+              <p>
+                Quarterly TDS filing, certificate generation, TCS compliance &
+                reconciliation under tax laws.
+              </p>
+              <ul class="fintax-premium-feature-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> Returns: 24Q, 26Q, 27Q
+                </li>
+                <li><i class="fas fa-check-circle"></i> Form 16 / 16A / 27D</li>
+                <li>
+                  <i class="fas fa-check-circle"></i> TDS reconciliation & audit
+                  support
+                </li>
+              </ul>
+              <div class="fintax-premium-btn-wrapper">
+                <button
+                  class="fintax-premium-expand-btn"
+                  data-service="TDS TCS Compliance"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                  <span class="fintax-premium-btn-text">Manage</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- ENHANCED GRID: Cards with background images + hover top-to-bottom details -->
-      <div class="services-grid">
-        <!-- 1. GST RETURN CARD (background image approach) -->
-        <div
-          class="service-card-bg"
-          style="
-            background-image: url(&quot;https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?w=800&auto=format&fit=crop&q=80&quot;);
-          "
-        >
-          <div class="card-overlay"></div>
-          <div class="card-content-front">
-            <div class="card-header">
-              <div class="service-icon-bg">
-                <i class="fas fa-file-invoice-dollar"></i>
-              </div>
-              <h3 class="service-title-bg">GST Return</h3>
-            </div>
-            <div>
-              <button class="btn-light" onclick="event.stopPropagation()">
-                Read More <i class="fas fa-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-          <!-- hover details: appears from top to bottom -->
-          <div class="hover-details">
-            <h4>GST Compliance</h4>
-            <p>
-              End-to-end GST return filing & advisory. Real-time reconciliation,
-              timely filing, notice handling & audit support.
-            </p>
-            <ul class="feature-list">
-              <li><i class="fas fa-check-circle"></i> GSTR-1, 3B, 9, 9C</li>
-              <li>
-                <i class="fas fa-check-circle"></i> Input Tax Credit
-                reconciliation
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Annual returns & audit
-                assistance
-              </li>
-            </ul>
-            <button class="hover-btn" onclick="event.stopPropagation()">
-              Explore GST <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- 2. INCOME TAX RETURN CARD (bg image) -->
-        <div
-          class="service-card-bg"
-          style="
-            background-image: url(&quot;https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&auto=format&fit=crop&q=80&quot;);
-          "
-        >
-          <div class="card-overlay"></div>
-          <div class="card-content-front">
-            <div class="card-header">
-              <div class="service-icon-bg">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <h3 class="service-title-bg">Income Tax Return</h3>
-            </div>
-            <div>
-              <button class="btn-light" onclick="event.stopPropagation()">
-                Read More <i class="fas fa-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-          <div class="hover-details">
-            <h4>Tax Filing Simplified</h4>
-            <p>
-              Individual & corporate ITR filing, tax planning, income
-              computation, and digital verification with expert support.
-            </p>
-            <ul class="feature-list">
-              <li><i class="fas fa-check-circle"></i> ITR-1,2,3,4,5,6,7</li>
-              <li>
-                <i class="fas fa-check-circle"></i> Capital gains & business
-                audit
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Belated/revised returns
-              </li>
-            </ul>
-            <button class="hover-btn" onclick="event.stopPropagation()">
-              File Now <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="visual-accent-card">
-          <img
-            src="https://images.unsplash.com/photo-1611125832047-1d7ad1e8e48f?w=700&auto=format&fit=crop&q=80"
-            alt="Accounting strategy visualization"
-          />
-        </div>
-        <div class="visual-accent-card">
-          <img
-            src="https://images.unsplash.com/photo-1629487687207-e0f3980c201a?w=700&auto=format&fit=crop&q=80"
-            alt="Tax planning and analysis"
-          />
-        </div>
-
-        <!-- 3. DIGITAL SIGNATURE (bg card) -->
-        <div
-          class="service-card-bg"
-          style="
-            background-image: url(&quot;https://images.unsplash.com/photo-1670852714979-f73d21652a83?w=800&auto=format&fit=crop&q=80&quot;);
-          "
-        >
-          <div class="card-overlay"></div>
-          <div class="card-content-front">
-            <div class="card-header">
-              <div class="service-icon-bg">
-                <i class="fas fa-signature"></i>
-              </div>
-              <h3 class="service-title-bg">Digital Signature</h3>
-            </div>
-            <div>
-              <button class="btn-light" onclick="event.stopPropagation()">
-                Read More <i class="fas fa-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-          <div class="hover-details">
-            <h4>Legally Compliant DSC</h4>
-            <p>
-              Authorized digital signatures for e-tendering, ROC filings, GST,
-              income tax e-filing, IEC and more. Quick delivery.
-            </p>
-            <ul class="feature-list">
-              <li>
-                <i class="fas fa-check-circle"></i> Class 2 / Class 3
-                certificates
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> USB token & remote install
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Renewal & organization
-                validation
-              </li>
-            </ul>
-            <button class="hover-btn" onclick="event.stopPropagation()">
-              Get DSC <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- 4. TAX PLAN CARD -->
-        <div
-          class="service-card-bg"
-          style="
-            background-image: url(&quot;https://images.unsplash.com/photo-1707902665498-a202981fb5ac?w=800&auto=format&fit=crop&q=80&quot;);
-          "
-        >
-          <div class="card-overlay"></div>
-          <div class="card-content-front">
-            <div class="card-header">
-              <div class="service-icon-bg">
-                <i class="fas fa-calculator"></i>
-              </div>
-              <h3 class="service-title-bg">Tax Plan</h3>
-            </div>
-            <div>
-              <button class="btn-light" onclick="event.stopPropagation()">
-                Read More <i class="fas fa-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-          <div class="hover-details">
-            <h4>Smart Tax Strategy</h4>
-            <p>
-              Proactive planning to minimize outgo, maximize savings: from
-              wealth management to NRI taxation & succession plans.
-            </p>
-            <ul class="feature-list">
-              <li>
-                <i class="fas fa-check-circle"></i> Corporate & individual
-                planning
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> HUF & retirement
-                optimization
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> International tax advisory
-              </li>
-            </ul>
-            <button class="hover-btn" onclick="event.stopPropagation()">
-              Plan Strategy <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="demo-note">
-        ✨ Hover over any service card — detailed info slides from top to bottom
-        ✨
-      </div> -->
-    </div>
+    </section>
 
     <script>
-      // Minor tweak: to avoid any event bubbling conflicts on hover buttons we already used stopPropagation.
-      // also ensure all hover-details clicks don't interfere and remain interactive.
-      document.querySelectorAll(".hover-btn, .btn-light").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.stopPropagation();
+      (function () {
+        // All expandable buttons with unique data attributes
+        const allUniqueButtons = document.querySelectorAll(
+          ".fintax-premium-expand-btn",
+        );
+        allUniqueButtons.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const card = btn.closest(".fintax-premium-service-card");
+            const serviceTitle =
+              card?.querySelector(".fintax-premium-card-title")?.innerText ||
+              "Service";
+            console.log(`[FinTax Premium] Action triggered: ${serviceTitle}`);
+            // Optional: Add any custom analytics or redirection logic here
+          });
         });
-      });
-      // For background card any accidental clicks on card (optional)
-      const cards = document.querySelectorAll(".service-card-bg");
-      cards.forEach((card) => {
-        card.addEventListener("click", (e) => {
-          // do nothing but avoid accidental if needed: remains interactive via buttons only
+
+        // Prevent card click bubbling for overlay clicks
+        const uniqueCards = document.querySelectorAll(
+          ".fintax-premium-service-card",
+        );
+        uniqueCards.forEach((card) => {
+          card.addEventListener("click", (e) => {
+            if (
+              e.target === card ||
+              e.target.classList.contains("fintax-premium-card-overlay")
+            ) {
+              e.stopPropagation();
+            }
+          });
         });
-      });
+      })();
     </script>
   </body>
 </html>
@@ -3550,9 +3692,9 @@
               </p>
               <div class="apc-btn-wrap">
                 <button class="apc-service-btn">View Our Services</button>
-                <button class="apc-circle-btn" aria-label="next">
+                <!-- <button class="apc-circle-btn" aria-label="next">
                   <i class="fa-solid fa-arrow-right"></i>
-                </button>
+                </button> -->
               </div>
             </div>
           </div>
@@ -4564,15 +4706,15 @@
         margin-top: auto;
       }
 
-      .latest-news-readmore::after {
+      /* .latest-news-readmore::after {
         content: "→";
         font-size: 14px;
         transition: transform 0.2s;
-      }
+      } */
 
-      .latest-news-card:hover .latest-news-readmore::after {
+      /* .latest-news-card:hover .latest-news-readmore::after {
         transform: translateX(4px);
-      }
+      } */
 
       /* optional category badge (light modern detail) */
       .news-meta {
@@ -4971,10 +5113,7 @@
       </p>
     </div>
 
-    <a href="#contact" class="cta-btn">
-      Contact Us
-      <i class="fas fa-arrow-right"></i>
-    </a>
+    <a href="#contact" class="cta-btn"> Contact Us </a>
   </div>
 </section>
 

@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
-    <title>Latest News | Modern & Compact Section</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Circle Hover Button</title>
+
     <style>
       * {
         margin: 0;
@@ -15,403 +14,58 @@
       }
 
       body {
-        font-family:
-          "Inter",
-          system-ui,
-          -apple-system,
-          "Segoe UI",
-          Roboto,
-          Helvetica,
-          Arial,
-          sans-serif;
-        background: #eef2f5; /* subtle background to showcase section */
-      }
-
-      /* ===== Latest News Section (refined, smaller height, premium look) ===== */
-      .latest-news-section {
-        padding: 48px 6%; /* reduced vertical padding for smaller height */
-        background: #ffffff;
-        border-top: 1px solid rgba(0, 0, 0, 0.03);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-      }
-
-      .latest-news-container {
-        max-width: 1280px;
-        margin: 0 auto;
-      }
-
-      /* header — compact but elegant */
-      .latest-news-header {
-        text-align: center;
-        margin-bottom: 32px; /* less space, tighter */
-      }
-
-      .latest-news-header span {
-        display: inline-block;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 1.2px;
-        text-transform: uppercase;
-        color: #1e5b9e;
-        background: #eef3fc;
-        padding: 4px 12px;
-        border-radius: 30px;
-        margin-bottom: 12px;
-      }
-
-      .latest-news-header h2 {
-        font-size: clamp(24px, 4vw, 36px);
-        font-weight: 700;
-        color: #0a1c2f;
-        letter-spacing: -0.3px;
-      }
-
-      /* 3-col grid */
-      .latest-news-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 22px;
-      }
-
-      /* card — smaller image height, clean shadow/hover */
-      .latest-news-card {
-        background: #fff;
-        border-radius: 20px;
-        overflow: hidden;
-        text-decoration: none;
-        transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
-        box-shadow:
-          0 5px 18px rgba(0, 0, 0, 0.02),
-          0 0 0 1px #f0f2f5;
+        height: 100vh;
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #0b1220;
+        font-family: Arial, sans-serif;
       }
 
-      .latest-news-card:hover {
-        transform: translateY(-4px);
-        box-shadow:
-          0 20px 32px -12px rgba(0, 0, 0, 0.12),
-          0 0 0 1px #e2e8f0;
-      }
-
-      /* image — reduced height (more compact) */
-      .latest-news-image {
-        height: 160px; /* smaller than original 190px – saves vertical space */
+      .btn-hover {
+        position: relative;
         overflow: hidden;
-        background-color: #f4f7fb;
-      }
-
-      .latest-news-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.4s ease-out;
-        display: block;
-      }
-
-      .latest-news-card:hover .latest-news-image img {
-        transform: scale(1.03);
-      }
-
-      /* content – tighter padding but still breathable */
-      .latest-news-content {
-        padding: 20px 22px 22px 22px;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .latest-news-content h3 {
-        font-size: 19px;
-        line-height: 1.35;
-        color: #0b2b3f;
-        margin-bottom: 10px;
-        font-weight: 700;
-        letter-spacing: -0.2px;
-        transition: color 0.2s;
-      }
-
-      .latest-news-card:hover .latest-news-content h3 {
-        color: #1e5b9e;
-      }
-
-      .latest-news-content p {
-        font-size: 14px;
-        line-height: 1.55;
-        color: #4a5b6e;
-        margin-bottom: 18px;
-
-        /* clamp to 3 lines for compactness (originally 4) -> smaller height */
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-
-      .latest-news-readmore {
-        font-size: 13px;
+        padding: 16px 38px;
+        border: none;
+        outline: none;
+        background: linear-gradient(100deg, #1a5f9e, #2b7fc1);
+        color: #fff;
+        font-size: 16px;
         font-weight: 600;
-        color: #1e5b9e;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        transition: gap 0.2s ease;
-        letter-spacing: 0.3px;
-        text-transform: uppercase;
-        margin-top: auto;
+        border-radius: 14px;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+        z-index: 1;
+        transition:
+          color 0.4s ease,
+          transform 0.3s ease;
       }
 
-      .latest-news-readmore::after {
-        content: "→";
-        font-size: 14px;
-        transition: transform 0.2s;
+      .btn-hover::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #1b07a1d9;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.7s ease;
+        z-index: -1;
       }
 
-      .latest-news-card:hover .latest-news-readmore::after {
-        transform: translateX(4px);
+      .btn-hover:hover::before {
+        transform: translate(-50%, -50%) scale(25);
       }
 
-      /* optional category badge (light modern detail) */
-      .news-meta {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 10px;
-        flex-wrap: wrap;
+      .btn-hover:hover {
+        /* transform: translateY(-3px); */
       }
-
-      .news-category {
-        font-size: 11px;
-        font-weight: 600;
-        text-transform: uppercase;
-        background: #eef2fa;
-        padding: 3px 9px;
-        border-radius: 30px;
-        color: #1e5b9e;
-        letter-spacing: 0.4px;
-      }
-
-      .news-date {
-        font-size: 11px;
-        color: #6f7e91;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-      }
-
-      .news-date svg {
-        width: 12px;
-        height: 12px;
-        fill: none;
-        stroke: #6f7e91;
-        stroke-width: 2;
-      }
-
-      /* responsive: tablet */
-      @media (max-width: 992px) {
-        .latest-news-section {
-          padding: 44px 5%;
-        }
-        .latest-news-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-        }
-        .latest-news-image {
-          height: 150px;
-        }
-        .latest-news-content {
-          padding: 18px 20px 20px;
-        }
-        .latest-news-content h3 {
-          font-size: 18px;
-        }
-      }
-
-      /* responsive: mobile (single column, compact) */
-      @media (max-width: 768px) {
-        .latest-news-section {
-          padding: 40px 5%;
-        }
-        .latest-news-header {
-          margin-bottom: 28px;
-        }
-        .latest-news-header span {
-          font-size: 11px;
-          padding: 3px 10px;
-        }
-        .latest-news-header h2 {
-          font-size: 26px;
-        }
-        .latest-news-grid {
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
-        .latest-news-image {
-          height: 180px; /* slightly taller on mobile for readability but still compact */
-        }
-        .latest-news-content {
-          padding: 18px;
-        }
-        .latest-news-content h3 {
-          font-size: 18px;
-          margin-bottom: 8px;
-        }
-        .latest-news-content p {
-          font-size: 13.5px;
-          -webkit-line-clamp: 3;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .latest-news-section {
-          padding: 36px 4%;
-        }
-        .latest-news-image {
-          height: 160px;
-        }
-        .latest-news-content h3 {
-          font-size: 17px;
-        }
-      }
-
-      /* demo images placeholder — pure css gradient fallback + unsplash like? but we use img with placeholder */
-      /* optional inline SVG nice background if no image loaded */
     </style>
   </head>
+
   <body>
-    <section class="latest-news-section">
-      <div class="latest-news-container">
-        <div class="latest-news-header">
-          <span>📰 LATEST NEWS</span>
-          <h2>Fresh insights & updates</h2>
-        </div>
-
-        <div class="latest-news-grid">
-          <!-- Card 1 - with meta info, smaller height, rich look -->
-          <a href="#" class="latest-news-card">
-            <div class="latest-news-image">
-              <!-- High-quality placeholder (realistic, tax/office theme) -->
-              <img
-                src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=500&h=350&fit=crop&auto=format"
-                alt="Tax filing documents and calculator"
-                loading="lazy"
-              />
-            </div>
-            <div class="latest-news-content">
-              <div class="news-meta">
-                <span class="news-category">Tax & Finance</span>
-                <span class="news-date">
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  Apr 12, 2026
-                </span>
-              </div>
-              <h3>New tax filing rules for FY 2026-27 unveiled</h3>
-              <p>
-                The latest compliance framework introduces digital-first
-                verification, faster refunds, and stricter disclosure norms.
-                Salaried individuals & SMEs must adapt before July deadline.
-              </p>
-              <div class="latest-news-readmore">Read more</div>
-            </div>
-          </a>
-
-          <!-- Card 2 - GST theme -->
-          <a href="#" class="latest-news-card">
-            <div class="latest-news-image">
-              <img
-                src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=500&h=350&fit=crop&auto=format"
-                alt="GST invoice and business documents"
-                loading="lazy"
-              />
-            </div>
-            <div class="latest-news-content">
-              <div class="news-meta">
-                <span class="news-category">GST Updates</span>
-                <span class="news-date">
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  Apr 8, 2026
-                </span>
-              </div>
-              <h3>GST compliance changes every business must know</h3>
-              <p>
-                Simplified e-invoicing, updated return filing structure, and new
-                penalty relief for MSMEs. Learn how to stay compliant and reduce
-                costs with automated GST tools.
-              </p>
-              <div class="latest-news-readmore">Read more</div>
-            </div>
-          </a>
-
-          <!-- Card 3 - Smart accounting strategies -->
-          <a href="#" class="latest-news-card">
-            <div class="latest-news-image">
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=350&fit=crop&auto=format"
-                alt="modern accounting dashboard and charts"
-                loading="lazy"
-              />
-            </div>
-            <div class="latest-news-content">
-              <div class="news-meta">
-                <span class="news-category">Strategy</span>
-                <span class="news-date">
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  Apr 5, 2026
-                </span>
-              </div>
-              <h3>Smart accounting strategies for business growth</h3>
-              <p>
-                Modern automation, AI-driven insights, and real-time reporting
-                help CFOs improve margins and reduce errors. Case studies from
-                leading Indian enterprises.
-              </p>
-              <div class="latest-news-readmore">Read more</div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- additional subtle note: images from Unsplash showcase real high-quality visuals. fully responsive, compact & modern -->
+    <button class="btn-hover">Contact Us</button>
   </body>
 </html>
