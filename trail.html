@@ -2,18 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=yes"
-    />
-    <title>Income Tax e-Filing | Next Steps After Filing</title>
-    <!-- Google Fonts: Inter for modern readability -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Khata Dost Logo</title>
+
+    <!-- Font -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <!-- Lucide CDN - crisp icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
       * {
         margin: 0;
@@ -22,340 +20,84 @@
       }
 
       body {
-        font-family: "Inter", sans-serif;
-        background: #0a0f1a;
-      }
-
-      /* Full width, compact height section with premium dark background image */
-      .process-section {
         width: 100%;
-        position: relative;
-        padding: 48px 0 56px;
-        overflow-x: hidden;
-        /* Premium Unsplash background - dark blue abstract tech gradient (same beautiful image) */
-        background-image: url("https://images.unsplash.com/photo-1712397943847-e104395a1a8b?w=1600&auto=format&fit=crop&q=80");
-        background-size: cover;
-        background-position: center 35%;
-        background-repeat: no-repeat;
-        background-color: #0a1a2a;
-        background-blend-mode: overlay;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f6f6f6;
+        overflow: hidden;
+        padding: 20px;
       }
 
-      /* Gradient overlay for better text contrast and depth */
-      .process-section::before {
-        content: "";
+      .logo {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        font-family: "Cormorant Garamond", serif;
+        line-height: 0.82;
+      }
+
+      /* LEAF ICON */
+      .leaf {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -45px;
+        left: 12px;
+        width: 85px;
+        height: 85px;
+        transform: rotate(-15deg);
+        z-index: 5;
+      }
+
+      .leaf img {
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-          135deg,
-          rgba(3, 18, 32, 0.85) 0%,
-          rgba(0, 10, 22, 0.92) 100%
-        );
-        pointer-events: none;
-        z-index: 1;
-      }
-
-      .container {
-        max-width: 1300px;
-        margin: 0 auto;
-        padding: 0 32px;
-        position: relative;
-        z-index: 3;
-      }
-
-      /* section title - modern, bold, fits tax theme */
-      .section-title.center {
-        text-align: center;
-        margin-bottom: 32px;
-      }
-
-      .section-title.center h2 {
-        font-size: 2rem;
-        font-weight: 800;
-        letter-spacing: -0.02em;
-        background: linear-gradient(125deg, #ffffff, #c8e2ff, #9ac8ff);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        display: inline-block;
-        margin-bottom: 6px;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      }
-
-      .section-title.center:after {
-        content: "";
+        object-fit: contain;
         display: block;
-        width: 70px;
-        height: 3px;
-        background: linear-gradient(90deg, #3b82f6, #90caf9);
-        margin: 12px auto 0;
-        border-radius: 4px;
       }
 
-      /* process grid: 3 steps, compact height, full width usage */
-      .process-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 28px;
-        margin-top: 12px;
+      /* TEXT */
+      .logo-text {
+        font-size: 180px;
+        font-weight: 500;
+        letter-spacing: -4px;
+        white-space: nowrap;
       }
 
-      /* glassmorphic cards with subtle border & premium feel */
-      .process-card {
-        background: rgba(18, 40, 58, 0.6);
-        backdrop-filter: blur(10px);
-        border-radius: 32px;
-        padding: 26px 18px 28px;
-        text-align: center;
-        transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        box-shadow: 0 18px 32px -14px rgba(0, 0, 0, 0.4);
+      /* KHATA */
+      .dark {
+        color: #003f8f;
       }
 
-      .process-card:hover {
-        background: rgba(35, 72, 102, 0.7);
-        border-color: rgba(100, 180, 255, 0.6);
-        transform: translateY(-5px);
+      /* DOST */
+      .light {
+        background: linear-gradient(to right, #6fd1ff, #b9eeff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
-      /* step badge - modern minimal, floating style */
-      .step-badge {
-        display: inline-block;
-        background: rgba(0, 45, 70, 0.8);
-        backdrop-filter: blur(4px);
-        font-weight: 700;
-        font-size: 0.75rem;
-        padding: 5px 16px;
-        border-radius: 60px;
-        letter-spacing: 0.6px;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        color: #c8e2ff;
-        margin-bottom: 16px;
-      }
-
-      /* lucide icon container - vibrant rounded gradient */
-      .icon-wrapper {
-        width: 74px;
-        height: 74px;
-        margin: 0 auto 16px;
-        background: linear-gradient(145deg, #1a6a91, #0e4464);
-        border-radius: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.25s ease;
-        box-shadow:
-          0 12px 20px -10px rgba(0, 0, 0, 0.35),
-          inset 0 1px 0 rgba(255, 255, 255, 0.2);
-      }
-
-      .process-card:hover .icon-wrapper {
-        background: linear-gradient(145deg, #2583ae, #145a7c);
-        transform: scale(1.02);
-      }
-
-      /* lucide icons styling */
-      .icon-wrapper svg {
-        stroke: white;
-        stroke-width: 1.7;
-        width: 38px;
-        height: 38px;
-      }
-
-      .process-card h4 {
-        font-size: 1.4rem;
-        font-weight: 700;
-        margin: 14px 0 10px;
-        color: #ffffff;
-        letter-spacing: -0.2px;
-      }
-
-      .process-card p {
-        font-size: 0.85rem;
-        line-height: 1.48;
-        color: #e6f0fa;
-        opacity: 0.92;
-        font-weight: 400;
-        padding: 0 8px;
-      }
-
-      /* responsive behaviors: tablet -> stack to 2 then mobile 1 */
       @media (max-width: 900px) {
-        .process-grid {
-          gap: 22px;
+        .logo {
+          transform: scale(0.58);
         }
-        .process-card h4 {
-          font-size: 1.25rem;
-        }
-        .icon-wrapper {
-          width: 66px;
-          height: 66px;
-        }
-        .icon-wrapper svg {
-          width: 34px;
-          height: 34px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .process-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-        }
-        .process-section {
-          padding: 44px 0 52px;
-        }
-        .section-title.center h2 {
-          font-size: 1.7rem;
-        }
-        .container {
-          padding: 0 24px;
-        }
-      }
-
-      @media (max-width: 550px) {
-        .process-grid {
-          grid-template-columns: 1fr;
-          gap: 18px;
-          max-width: 380px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .process-section {
-          padding: 40px 0 48px;
-        }
-        .section-title.center h2 {
-          font-size: 1.5rem;
-          padding: 0 8px;
-        }
-        .process-card {
-          padding: 22px 16px;
-        }
-      }
-
-      /* accent line at bottom for visual polish */
-      .bg-accent-line {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          #5f9eff,
-          #b0d0ff,
-          transparent
-        );
-        opacity: 0.5;
-        pointer-events: none;
-        z-index: 4;
-      }
-
-      /* small extra glow for cards */
-      .process-card:active {
-        transform: scale(0.98);
       }
     </style>
   </head>
   <body>
-    <section class="process-section">
-      <div class="container">
-        <div class="section-title center">
-          <h2>✅ Finished Income Tax e-Filing? Here’s What to Do Next!</h2>
-        </div>
-        <div class="process-grid">
-          <!-- STEP 1: Login to Your Account (Lucide: LogIn + UserCheck style) -->
-          <div class="process-card">
-            <div class="step-badge">STEP 01</div>
-            <div class="icon-wrapper">
-              <i
-                data-lucide="log-in"
-                style="color: white; width: 38px; height: 38px"
-              ></i>
-            </div>
-            <h4>Login to Your Account</h4>
-            <p>
-              After filing, go to e-verification page & access your dashboard
-              securely
-            </p>
-          </div>
-
-          <!-- STEP 2: Choose Verification Method (Lucide: Smartphone / Key / ShieldCheck) – Use "smartphone" for OTP + "key" -->
-          <div class="process-card">
-            <div class="step-badge">STEP 02</div>
-            <div class="icon-wrapper">
-              <i
-                data-lucide="smartphone"
-                style="color: white; width: 38px; height: 38px"
-              ></i>
-            </div>
-            <h4>Choose Verification Method</h4>
-            <p>
-              Aadhaar OTP or Bank EVC — select the fastest option for instant
-              verification
-            </p>
-          </div>
-
-          <!-- STEP 3: Complete e-Verification (Lucide: Fingerprint / ShieldCheck / CheckCircle) -->
-          <div class="process-card">
-            <div class="step-badge">STEP 03</div>
-            <div class="icon-wrapper">
-              <i
-                data-lucide="check-circle"
-                style="color: white; width: 38px; height: 38px"
-              ></i>
-            </div>
-            <h4>Complete e-Verification</h4>
-            <p>
-              Enter OTP to finalize ITR filing and get instant acknowledgement
-            </p>
-          </div>
-        </div>
+    <div class="logo">
+      <!-- LEAF -->
+      <div class="leaf">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/9629/9629324.png"
+          alt="leaf"
+        />
       </div>
-      <div class="bg-accent-line"></div>
-    </section>
 
-    <!-- Initialize Lucide Icons: Transform data-lucide attributes into actual SVG icons -->
-    <script>
-      (function () {
-        // function to init lucide icons
-        function initLucide() {
-          if (typeof lucide !== "undefined" && lucide.createIcons) {
-            lucide.createIcons();
-            return true;
-          }
-          return false;
-        }
-
-        // Try on DOM ready
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", function () {
-            if (!initLucide()) {
-              // wait a bit more if CDN slow
-              setTimeout(initLucide, 300);
-            }
-          });
-        } else {
-          if (!initLucide()) {
-            setTimeout(initLucide, 200);
-          }
-        }
-
-        // fallback interval for safety
-        let attempts = 0;
-        const interval = setInterval(function () {
-          if (typeof lucide !== "undefined" && lucide.createIcons) {
-            lucide.createIcons();
-            clearInterval(interval);
-          }
-          attempts++;
-          if (attempts > 15) clearInterval(interval);
-        }, 150);
-      })();
-    </script>
+      <!-- TEXT -->
+      <div class="logo-text">
+        <span class="dark">Khata</span>
+        <span class="light">Dost</span>
+      </div>
+    </div>
   </body>
 </html>

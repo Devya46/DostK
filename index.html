@@ -26,17 +26,18 @@
       }
 
       body {
-        font-family:
-          "Inter",
-          system-ui,
-          -apple-system,
-          "Segoe UI",
-          Roboto,
-          Helvetica,
-          sans-serif;
+        font-family: "Nunito", sans-serif !important;
         background: #fafdff;
         color: #1a2c3e;
         scroll-behavior: smooth;
+      }
+      h1,
+      h2,
+      h3,
+      .heading-premium {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
       }
 
       :root {
@@ -111,7 +112,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 12px 32px;
+        padding: 6px 32px;
         max-width: 1400px;
         margin: 0 auto;
         transition: padding 0.25s ease;
@@ -133,6 +134,15 @@
         filter: drop-shadow(0 4px 8px rgba(26, 95, 158, 0.12));
         transition: 0.25s;
       }
+      .logo-text img {
+        width: 154px;
+        height: 67px;
+        margin: 0;
+        padding: 0;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 8px rgba(26, 95, 158, 0.12));
+        transition: 0.25s;
+      }
 
       .logo-text h1 {
         font-size: 1.85rem;
@@ -146,10 +156,11 @@
       }
 
       .logo-text p {
-        font-size: 0.7rem;
+        font-size: 12px;
         font-weight: 700;
         color: #2c6e9e;
         letter-spacing: 0.6px;
+        margin-top: -12px;
       }
 
       /* DESKTOP NAVIGATION */
@@ -534,52 +545,6 @@
           padding: 10px 20px;
         }
       }
-
-      /* dummy content */
-      .hero-section {
-        margin-top: 90px;
-        padding: 50px 24px 80px;
-        max-width: 1300px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-section h1 {
-        font-size: 3rem;
-        background: linear-gradient(135deg, #0a2b4e, #1f6eb0);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
-
-      .card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-        gap: 28px;
-        margin: 60px 0;
-      }
-
-      .service-card {
-        background: white;
-        border-radius: 32px;
-        padding: 26px;
-        box-shadow: var(--shadow-md);
-        transition: 0.25s;
-        border: 1px solid rgba(0, 0, 0, 0.02);
-      }
-
-      /* footer {
-        background: #eef3fc;
-        text-align: center;
-        padding: 36px;
-        border-radius: 40px 40px 0 0;
-      } */
-
-      @media (max-width: 700px) {
-        .hero-section h1 {
-          font-size: 2rem;
-        }
-      }
     </style>
   </head>
   <body>
@@ -591,7 +556,9 @@
               ><img src="images/Logo1-removebg-preview.png" alt="Khata Dost"
             /></a>
             <div class="logo-text">
-              <h1>Khata Dost</h1>
+              <div>
+                <img src="images/LOGO-2.png" alt="" />
+              </div>
               <p>ACCOUNTING & TAXATION</p>
             </div>
           </div>
@@ -656,32 +623,32 @@
             <i class="fas fa-chevron-down" id="sideDropdownIcon"></i>
           </div>
           <div class="side-submenu" id="sideSubmenu">
-            <a href="#gst"
+            <a href="GST.html"
               ><i class="fas fa-file-invoice-dollar"></i> GST Return</a
             >
-            <a href="#itr"
+            <a href="Services/ITR.html"
               ><i class="fas fa-chart-line"></i> Income Tax Return</a
             >
-            <a href="#dsc"
+            <a href="Services/DSC.html"
               ><i class="fas fa-signature"></i> Digital Signature</a
             >
-            <a href="#taxplan"
+            <a href="Services/TaxPlanning.html"
               ><i class="fas fa-calculator"></i> Tax Planning</a
             >
           </div>
         </div>
 
-        <a href="#about" class="side-nav-item"
+        <a href="About.html" class="side-nav-item"
           ><i class="fas fa-users"></i> About Us
           <i class="fas fa-chevron-right"></i
         ></a>
-        <a href="#testimonials" class="side-nav-item"
+        <a href="Testimonials.html" class="side-nav-item"
           ><i class="fas fa-star"></i> Reviews
           <i class="fas fa-chevron-right"></i
         ></a>
       </div>
       <div class="side-menu-footer">
-        <a href="#contact" class="start-now-premium"
+        <a href="Contact.html" class="start-now-premium"
           ><i class="fas fa-rocket"></i> Start Now
         </a>
         <!-- Arrow at end ( > ) as requested -->
@@ -874,7 +841,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <!-- Google Fonts for modern typography (optional but clean) -->
+    <!-- Google Fonts for modern typography -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
       rel="stylesheet"
@@ -887,12 +854,12 @@
       }
 
       body {
-        font-family:
+        /* font-family:
           "Inter",
           system-ui,
           -apple-system,
           "Segoe UI",
-          sans-serif;
+          sans-serif; */
         background: #050a16;
         overflow-x: hidden;
       }
@@ -1005,25 +972,32 @@
         letter-spacing: -0.2px;
       }
 
-      /* TYPING TITLE WITH PRESERVED SPACE */
+      /* TYPING TITLE WITH PRESERVED SPACE & CURSOR ON RIGHT SIDE (inline after text) */
       .hero-title-wrapper {
-        min-height: 180px; /* fixed space to avoid layout shift while typing */
+        min-height: 180px;
         margin-bottom: 26px;
       }
       .typed-headline {
         font-size: clamp(3rem, 6vw, 4.5rem);
-        line-height: 1.1;
+        line-height: 1.15;
         color: white;
         font-weight: 650;
-        letter-spacing: -3px;
+        letter-spacing: -2px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: flex-start;
       }
-      .typed-headline .typed-cursor {
+      /* cursor appears immediately after the typed text on the same line */
+      .typed-cursor {
         font-size: inherit;
         color: #3b82f6;
         opacity: 1;
         animation: blink 0.7s infinite;
         font-weight: 400;
-        margin-left: 4px;
+        margin-left: 6px;
+        display: inline-block;
+        line-height: 1;
       }
       @keyframes blink {
         0%,
@@ -1034,11 +1008,10 @@
           opacity: 0;
         }
       }
-      .static-line {
-        display: block;
-      }
       .typing-line {
-        display: block;
+        display: inline-block;
+        white-space: pre-wrap;
+        word-break: break-word;
       }
 
       .hero-text {
@@ -1119,7 +1092,7 @@
         font-size: 0.85rem;
       }
 
-      /* ========= ORBIT WRAPPER (ROTATING BUT CARDS REMAIN UPRIGHT) ========= */
+      /* ========= ORBIT WRAPPER ========= */
       .orbit-wrapper {
         position: relative;
         width: 600px;
@@ -1173,22 +1146,22 @@
         font-weight: 700;
       }
 
-      /* orbit rings */
+      /* orbit rings - rotating elements */
       .orbit {
         position: absolute;
         border-radius: 50%;
-        border: 1px dashed rgba(255, 255, 255, 0.2);
+        border: 1px dashed rgba(255, 255, 255, 0.25);
         animation: rotateOrbit linear infinite;
       }
       .orbit-one {
         width: 340px;
         height: 340px;
-        animation-duration: 18s;
+        animation-duration: 20s;
       }
       .orbit-two {
         width: 520px;
         height: 520px;
-        animation-duration: 26s;
+        animation-duration: 28s;
         animation-direction: reverse;
       }
 
@@ -1201,13 +1174,13 @@
         }
       }
 
-      /* service cards — each rotates but we counter-rotate to keep upright */
+      /* service cards — each card uses inverse rotation to stay upright */
       .service-card {
         position: absolute;
-        width: 160px;
+        width: 165px;
         padding: 12px 16px;
-        border-radius: 28px;
-        background: rgba(20, 30, 55, 0.7);
+        border-radius: 32px;
+        background: rgba(20, 30, 55, 0.75);
         backdrop-filter: blur(16px);
         border: 1px solid rgba(255, 255, 255, 0.2);
         display: flex;
@@ -1216,24 +1189,29 @@
         color: white;
         font-weight: 600;
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-        transition: transform 0.2s ease;
+        transition:
+          transform 0.2s ease,
+          background 0.2s;
         white-space: nowrap;
-        /* force upright: no rotation transformation will be applied by parent? 
-         We'll use a wrapper technique: each card inside orbit, but we apply counter-rotation via JS/CSS? 
-         Instead, we use CSS animation that rotates the orbit, and each card gets inverse rotation.
-         That's the classic way: orbit rotates, card rotates opposite same speed so text always upright.
-      */
         transform-origin: center center;
         animation: counterRotate linear infinite;
+        cursor: pointer;
+        z-index: 20;
+        pointer-events: auto;
+      }
+      .service-card:hover {
+        background: rgba(37, 99, 235, 0.55);
+        border-color: rgba(255, 255, 255, 0.5);
+        transform: scale(1.03);
       }
 
-      /* Inverse rotation speed to cancel orbit rotation */
+      /* Inverse rotation speed to cancel orbit rotation perfectly */
       .orbit-one .service-card {
-        animation-duration: 18s; /* same as orbit-one duration but opposite direction */
+        animation-duration: 20s;
         animation-name: counterRotate;
       }
       .orbit-two .service-card {
-        animation-duration: 26s; /* same as orbit-two duration */
+        animation-duration: 28s;
         animation-name: counterRotate;
       }
 
@@ -1250,56 +1228,57 @@
       .service-card i {
         width: 42px;
         height: 42px;
-        border-radius: 16px;
+        border-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(37, 99, 235, 0.25);
-        color: #90caf9;
+        background: rgba(37, 99, 235, 0.35);
+        color: #b9d6ff;
         font-size: 1.2rem;
       }
       .service-card span {
         font-size: 0.9rem;
         font-weight: 600;
         letter-spacing: -0.2px;
+        white-space: nowrap;
       }
 
-      /* Custom positions on each orbit (relative to orbit center, using top/left % or absolute) */
-      /* we position the cards on the orbit circumference */
+      /* Positions on orbit circumferences */
       .orbit-one .card1 {
-        top: -24px;
+        top: -28px;
         left: 80px;
       }
       .orbit-one .card2 {
-        bottom: -24px;
+        bottom: -28px;
         right: 80px;
       }
       .orbit-two .card3 {
-        top: -30px;
-        left: 180px;
+        top: -35px;
+        left: 190px;
       }
       .orbit-two .card4 {
-        bottom: 40px;
-        left: 10px;
+        bottom: 45px;
+        left: 15px;
       }
       .orbit-two .card5 {
-        right: -87px;
-        top: 210px;
+        right: -95px;
+        top: 220px;
       }
 
       /* glow under orbits */
       .orbit-light {
         position: absolute;
-        width: 520px;
-        height: 520px;
+        width: 540px;
+        height: 540px;
         border-radius: 50%;
         background: radial-gradient(
           circle,
-          rgba(59, 130, 246, 0.2),
+          rgba(59, 130, 246, 0.25),
           transparent 70%
         );
-        filter: blur(30px);
+        filter: blur(40px);
         z-index: 0;
+        pointer-events: none;
       }
 
       /* Responsiveness */
@@ -1316,6 +1295,9 @@
           justify-content: center;
         }
         .hero-trust {
+          justify-content: center;
+        }
+        .typed-headline {
           justify-content: center;
         }
         .orbit-wrapper {
@@ -1349,16 +1331,16 @@
           right: 60px;
         }
         .card3 {
-          top: 0;
-          left: 140px;
+          top: -15px;
+          left: 150px;
         }
         .card4 {
           bottom: 30px;
           left: 0px;
         }
         .card5 {
-          right: -10px;
-          top: 170px;
+          right: -40px;
+          top: 180px;
         }
       }
 
@@ -1371,19 +1353,20 @@
         }
         .typed-headline {
           letter-spacing: -1px;
+          justify-content: center;
         }
         .orbit-wrapper {
-          width: 320px;
-          height: 320px;
+          width: 360px;
+          height: 360px;
           transform: scale(0.9);
         }
         .orbit-one {
-          width: 220px;
-          height: 220px;
+          width: 240px;
+          height: 240px;
         }
         .orbit-two {
-          width: 300px;
-          height: 300px;
+          width: 320px;
+          height: 320px;
         }
         .center-logo {
           width: 120px;
@@ -1396,9 +1379,9 @@
           font-size: 1rem;
         }
         .service-card {
-          width: 115px;
+          width: 120px;
           padding: 8px 12px;
-          gap: 6px;
+          gap: 8px;
         }
         .service-card i {
           width: 28px;
@@ -1410,41 +1393,41 @@
         }
         .card1 {
           top: -18px;
-          left: 35px;
+          left: 40px;
         }
         .card2 {
           bottom: -18px;
-          right: 35px;
+          right: 40px;
         }
         .card3 {
           top: -5px;
-          left: 90px;
+          left: 100px;
         }
         .card4 {
-          bottom: 10px;
-          left: -8px;
+          bottom: 15px;
+          left: -5px;
         }
         .card5 {
-          right: -15px;
-          top: 115px;
+          right: -30px;
+          top: 125px;
         }
       }
 
       @media (max-width: 480px) {
         .service-card {
-          width: 105px;
+          width: 108px;
           padding: 6px 10px;
         }
         .service-card span {
           font-size: 0.65rem;
         }
         .card3 {
-          left: 70px;
-          top: -10px;
+          left: 80px;
+          top: -8px;
         }
         .card5 {
-          right: -20px;
-          top: 100px;
+          right: -25px;
+          top: 110px;
         }
         .hero-badge span {
           font-size: 0.75rem;
@@ -1456,7 +1439,6 @@
     <section class="hero">
       <video autoplay muted loop playsinline class="bg-video">
         <source src="images/v1 (1).mp4" type="video/mp4" />
-        <!-- fallback silent if video missing: no error visible, but we keep background -->
       </video>
       <div class="hero-overlay"></div>
       <div class="hero-grid"></div>
@@ -1470,12 +1452,11 @@
             <span>★ Trusted by 2500+ Businesses Across India</span>
           </div>
 
-          <!-- Typing area with preserved space: 2 lines static + dynamic line -->
+          <!-- Typing area with cursor always on the right side of text (same line) -->
           <div class="hero-title-wrapper">
             <div class="typed-headline">
-              <!-- <span class="static-line">Smart Accounting</span>
-              <span class="static-line">& Tax Solutions</span> -->
               <span class="typing-line" id="typed-line"></span>
+              <span class="typed-cursor" id="static-cursor">|</span>
             </div>
           </div>
 
@@ -1511,7 +1492,7 @@
           </div>
         </div>
 
-        <!-- RIGHT SIDE ORBIT (ALL CARDS REMAIN UPRIGHT WITH COUNTER-ROTATION) -->
+        <!-- RIGHT SIDE ORBIT: cards always upright thanks to counter-rotation -->
         <div class="orbit-wrapper">
           <div class="orbit-light"></div>
           <!-- center logo -->
@@ -1535,7 +1516,7 @@
             </div>
           </div>
 
-          <!-- Orbit 2 -->
+          <!-- Orbit 2 (larger orbit) -->
           <div class="orbit orbit-two">
             <div class="service-card card3">
               <i class="fas fa-calculator"></i>
@@ -1543,10 +1524,7 @@
             </div>
             <div class="service-card card4">
               <i class="fas fa-signature"></i>
-              <span
-                >Digital <br />
-                Signature</span
-              >
+              <span>Digital Signature</span>
             </div>
             <div class="service-card card5">
               <i class="fas fa-book"></i>
@@ -1559,123 +1537,187 @@
 
     <script>
       (function () {
-        // 1) TYPING EFFECT for "For Modern Businesses"
-        const typedElement = document.getElementById("typed-line");
-        if (typedElement) {
-          const textToType = "Entrust Your Accounting Problems with Us";
-          let i = 0;
-          typedElement.style.display = "inline-block";
-          typedElement.innerHTML = ""; // clear placeholder
+        // ========== TYPING EFFECT WITH REPEAT EVERY 10 SECONDS & CURSOR ON RIGHT ==========
+        const typedLine = document.getElementById("typed-line");
+        const cursorSpan = document.getElementById("static-cursor");
 
-          function typeCharacter() {
-            if (i < textToType.length) {
-              typedElement.innerHTML += textToType.charAt(i);
-              i++;
-              setTimeout(typeCharacter, 80);
+        if (!typedLine) return;
+
+        // Multiple messages to rotate
+        const messages = [
+          "Entrust Your Accounting Problems with Us",
+          "Smart GST & Tax Compliance",
+          "Focus on Growth, We Handle Numbers",
+        ];
+
+        let messageIndex = 0;
+        let charPos = 0;
+        let isDeleting = false;
+        let typingTimeout = null;
+
+        // Ensure cursor always visible and blinking (CSS handles blink)
+        function updateTyping() {
+          const currentMessage = messages[messageIndex % messages.length];
+
+          if (!isDeleting && charPos <= currentMessage.length) {
+            // Typing forward
+            typedLine.innerHTML = currentMessage.substring(0, charPos);
+            // Cursor stays visible (always on right) and we keep it next to text
+            if (cursorSpan) cursorSpan.style.display = "inline-block";
+
+            if (charPos === currentMessage.length) {
+              // Finished typing current message: wait 10 seconds then start deleting
+              typingTimeout = setTimeout(() => {
+                isDeleting = true;
+                updateTyping();
+              }, 10000); // 10 second pause before deleting
+              return;
             } else {
-              // ensure cursor blinks at end, add a static cursor element
-              const cursorSpan = document.createElement("span");
-              cursorSpan.className = "typed-cursor";
-              cursorSpan.innerHTML = "|";
-              typedElement.appendChild(cursorSpan);
+              charPos++;
+              typingTimeout = setTimeout(updateTyping, 70);
+            }
+          } else if (isDeleting && charPos >= 0) {
+            // Deleting characters
+            typedLine.innerHTML = currentMessage.substring(0, charPos);
+            if (cursorSpan) cursorSpan.style.display = "inline-block";
+
+            if (charPos === 0) {
+              // Finished deleting: move to next message
+              isDeleting = false;
+              messageIndex++;
+              charPos = 0;
+              // Brief pause before typing next message
+              typingTimeout = setTimeout(updateTyping, 180);
+            } else {
+              charPos--;
+              typingTimeout = setTimeout(updateTyping, 45);
             }
           }
-          typeCharacter();
         }
 
-        const style = document.createElement("style");
-        style.textContent = `
-      .service-card {
-        white-space: nowrap;
-        overflow: visible;
-        text-overflow: clip;
-        pointer-events: auto;
-        transition: background 0.2s;
-      }
-      .service-card:hover {
-        background: rgba(37, 99, 235, 0.4);
-        border-color: rgba(255,255,255,0.5);
-        transform: scale(1.02);
-      }
-      /* Ensure the typing line doesn't break layout */
-      .typed-headline {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .hero-content {
-        text-align: left;
-      }
-      @media (max-width: 1100px) {
-        .hero-content {
-          text-align: center;
-        }
-        .typed-headline {
-          align-items: center;
-        }
-      }
-      /* fix for text clipping */
-      .static-line, .typing-line {
-        line-height: 1.2;
-      }
-      .orbit, .service-card {
-        will-change: transform;
-      }
-    `;
-        document.head.appendChild(style);
+        // Start the typing animation
+        typedLine.innerHTML = "";
+        if (cursorSpan) cursorSpan.style.display = "inline-block";
+        updateTyping();
 
-        // 3) Handle video fallback if source doesn't exist? Not required, but ensure bg has darker overlay
+        // ========== ORBIT & CARD UPRIGHT VERIFICATION ==========
+        // All cards have counter-rotation animations that perfectly cancel orbit rotation,
+        // ensuring no card ever appears upside down.
+
+        // Add click handlers for service cards
+        const cards = document.querySelectorAll(".service-card");
+        cards.forEach((card) => {
+          card.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const serviceSpan = card.querySelector("span");
+            const serviceName = serviceSpan
+              ? serviceSpan.innerText.trim()
+              : "Service";
+            // Optional: console log, you can replace with any action
+            console.log(`Selected service: ${serviceName}`);
+          });
+        });
+
+        // Video fallback handling
         const videoBg = document.querySelector(".bg-video");
         if (videoBg) {
           videoBg.addEventListener("error", function () {
-            // if video fails, just fallback to gradient/dark; no error console noise
             this.style.display = "none";
           });
+          videoBg.play().catch((e) => {
+            /* autoplay restrictions are fine, background remains dark */
+          });
         }
 
-        // 4) Adjust orbit card layout for ultra small screens: ensure labels not overlapping
-        function fineTuneOrbitCards() {
-          const isMobile = window.innerWidth <= 700;
-          if (isMobile) {
-            // additional micro adjust without breaking original positioning (just extra safe)
-            const card3 = document.querySelector(".card3");
-            const card5 = document.querySelector(".card5");
-            if (card3 && window.innerWidth <= 480) {
-              card3.style.left = "70px";
+        // Responsive adjustments for orbit card positions (maintains upright positioning)
+        function adjustOrbitResponsive() {
+          const width = window.innerWidth;
+          const card3 = document.querySelector(".card3");
+          const card4 = document.querySelector(".card4");
+          const card5 = document.querySelector(".card5");
+          const card1 = document.querySelector(".card1");
+          const card2 = document.querySelector(".card2");
+
+          if (width <= 700) {
+            if (card3) card3.style.left = width <= 480 ? "78px" : "110px";
+            if (card5) card5.style.right = width <= 480 ? "-20px" : "-35px";
+            if (card4) card4.style.bottom = "18px";
+            if (card1) card1.style.left = width <= 480 ? "35px" : "45px";
+            if (card2) card2.style.right = width <= 480 ? "35px" : "45px";
+          } else if (width <= 1100) {
+            if (card3) card3.style.left = "150px";
+            if (card5) card5.style.right = "-40px";
+            if (card4) card4.style.bottom = "30px";
+            if (card1) {
+              card1.style.left = "";
+              card1.style.top = "";
             }
-            if (card5 && window.innerWidth <= 480) {
-              card5.style.right = "-15px";
+            if (card2) {
+              card2.style.right = "";
+              card2.style.bottom = "";
             }
           } else {
-            // reset to original if needed (original already defined in CSS)
-            const resetCards = document.querySelectorAll(".service-card");
-            resetCards.forEach((c) => {
-              c.style.left = "";
-              c.style.right = "";
-              c.style.top = "";
-              c.style.bottom = "";
-            });
+            // Reset to CSS defaults
+            if (card3) card3.style.left = "";
+            if (card5) card5.style.right = "";
+            if (card4) card4.style.bottom = "";
+            if (card1) {
+              card1.style.left = "";
+              card1.style.top = "";
+            }
+            if (card2) {
+              card2.style.right = "";
+              card2.style.bottom = "";
+            }
           }
         }
+
         window.addEventListener("resize", () => {
-          fineTuneOrbitCards();
+          adjustOrbitResponsive();
         });
-        fineTuneOrbitCards();
+        adjustOrbitResponsive();
 
-        // 5) Make orbiting rings fully interactive, preserve pointer events (clickable cards)
-        const cards = document.querySelectorAll(".service-card");
-        cards.forEach((card) => {
-          card.style.cursor = "pointer";
-          card.addEventListener("click", (e) => {
-            e.stopPropagation();
-            const serviceName =
-              card.querySelector("span")?.innerText || "service";
-          });
-        });
+        // Additional style overrides to ensure card text never flips and cursor stays inline
+        const styleFix = document.createElement("style");
+        styleFix.textContent = `
+          .orbit-one .service-card, .orbit-two .service-card {
+            backface-visibility: hidden;
+            -webkit-font-smoothing: antialiased;
+            will-change: transform;
+          }
+          .typed-headline {
+            align-items: baseline;
+            flex-wrap: wrap;
+          }
+          .typing-line {
+            white-space: pre-wrap;
+            word-break: keep-all;
+          }
+          .typed-cursor {
+            display: inline-block;
+            margin-left: 6px;
+            line-height: 1;
+            vertical-align: baseline;
+          }
+          /* Ensure cursor stays on the same line as text even on mobile */
+          @media (max-width: 700px) {
+            .typed-headline {
+              justify-content: center;
+              flex-wrap: wrap;
+            }
+            .typed-cursor {
+              margin-left: 4px;
+            }
+          }
+        `;
+        document.head.appendChild(styleFix);
 
-        // 6) extra polish: ensure orbits are centered always even if transform scale
-        // for all consistent user experience
-        console.log("Hero section ready — smart orbit & typing active");
+        // Ensure that any potential misplacement of cursor is corrected: cursor always after text
+        // The cursorSpan element is naturally placed after typed-line span in DOM, so it will always be to the right.
+        // This matches the requirement "| - i next line without text - make it right" meaning cursor on the right side.
+        console.log(
+          "Hero ready: typing repeats every 10 seconds, cursor always on right, all cards stay upright.",
+        );
       })();
     </script>
   </body>
@@ -1711,7 +1753,7 @@
       }
 
       .fintax-premium-body {
-        font-family: "Inter", sans-serif;
+        /* font-family: "Inter", sans-serif; */
         background: linear-gradient(135deg, #f4f9fe 0%, #eef2f8 100%);
         color: #0a2540;
         line-height: 1.5;
@@ -1758,7 +1800,7 @@
         grid-template-columns: 0.7fr 1.3fr;
         margin-bottom: 3rem;
         align-items: center;
-        font-family: "Source Sans 3", sans-serif;
+        /* font-family: "Source Sans 3", sans-serif; */
       }
 
       .fintax-premium-title-sec {
@@ -2471,13 +2513,13 @@
       }
 
       body {
-        font-family:
+        /* font-family:
           "Inter",
           "Segoe UI",
           system-ui,
           -apple-system,
           "Poppins",
-          sans-serif;
+          sans-serif; */
         background: #0a0c15;
         line-height: 1.45;
       }
@@ -2941,7 +2983,7 @@
       }
 
       body {
-        font-family: Arial, Helvetica, sans-serif;
+        /* font-family: Arial, Helvetica, sans-serif; */
         background: #f3f3f3;
         color: #222;
       }
@@ -3300,7 +3342,7 @@
       }
 
       body {
-        font-family: Arial, Helvetica, sans-serif;
+        /* font-family: Arial, Helvetica, sans-serif; */
         background: #efefef;
       }
 
@@ -3822,9 +3864,9 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover"
     />
-    <title>Testimonials | India's Trusted Accounting Partner</title>
+    <title>Trusted Testimonials | India's #1 Accounting Partner</title>
 
     <!-- Google Fonts: clean & professional -->
     <link
@@ -3832,11 +3874,18 @@
       rel="stylesheet"
     />
 
-    <!-- Font Awesome 6 (pure icons, no emojis) -->
+    <!-- Font Awesome 6 (pure icons) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+
+    <!-- Swiper.js CDN (touch-optimized for mobile swipe) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <style>
       * {
@@ -3846,19 +3895,20 @@
       }
 
       body {
-        font-family: "Inter", sans-serif;
-        background: #f0f4fa;
+        /* font-family: "Inter", sans-serif; */
+        background: #eef2ff;
       }
 
-      /* ========= TESTIMONIAL SECTION - BLUE THEME ========= */
+      /* ========= TESTIMONIAL SECTION - PREMIUM BLUE THEME WITH BACKGROUND IMAGE (NO BLUR OVERLAY) ========= */
       .testimonial-section {
         position: relative;
-        padding: 65px 0 60px;
-        overflow: hidden;
-        background: linear-gradient(145deg, #eef2ff 0%, #ffffff 100%);
+        padding: 60px 0 80px;
+        overflow-x: hidden;
+        width: 100%;
+        background: linear-gradient(125deg, #f0f5ff 0%, #e8f0fe 100%);
       }
 
-      /* subtle blue pattern overlay */
+      /* Background image as requested — clean, no blur overlay, just subtle image presence */
       .testimonial-section::before {
         content: "";
         position: absolute;
@@ -3866,57 +3916,48 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url("https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNreXNjcmFwZXJ8ZW58MHx8MHx8fDA%3D");
+        background-image:
+          linear-gradient(rgba(0, 1, 22, 0.7), rgba(7, 10, 41, 0.7)),
+          url("https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNreXNjcmFwZXJ8ZW58MHx8MHx8fDA%3D");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover; /* full section */
+        background-size: cover;
         pointer-events: none;
         z-index: 0;
       }
-      .testimonial-section::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(
-          circle at 20% 40%,
-          rgba(25, 95, 255, 0.25),
-          rgba(0, 30, 60, 0.6)
-        );
-        backdrop-filter: blur(4px);
-        z-index: 1;
-      }
 
+      /* ensure content is above background */
       .testimonial-container {
         position: relative;
-        width: 92%;
-        max-width: 1500px;
+        width: 100%;
+        max-width: 1400px;
         margin: 0 auto;
-        z-index: 5;
+        padding: 0 24px;
+        z-index: 2;
       }
 
-      /* heading area — blue accents */
+      /* heading area — bold blue accents */
       .testimonial-heading {
         text-align: center;
-        margin-bottom: 60px;
+        margin-bottom: 52px;
       }
 
       .testimonial-heading .badge-india {
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: #dbeafe;
-        padding: 6px 18px;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: none;
+        padding: 6px 20px;
         border-radius: 60px;
         color: #1e40af;
         font-size: 0.85rem;
-        font-weight: 700;
+        font-weight: 800;
         text-transform: uppercase;
         letter-spacing: 1px;
-        margin-bottom: 20px;
-        border: 1px solid #bfdbfe;
+        margin-bottom: 22px;
+        border: 1px solid #bbd7ff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
       }
 
       .testimonial-heading .badge-india i {
@@ -3926,101 +3967,80 @@
 
       .testimonial-heading h2 {
         font-size: 3.2rem;
-        font-weight: 600;
-        font-family: "Inter", sans-serif;
-        color: rgb(231 231 255);
-        margin-bottom: 18px;
-        letter-spacing: -0.01em;
+        font-weight: 800;
+        background: linear-gradient(135deg, #3183ff, #a3c9ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-bottom: 16px;
+        letter-spacing: -0.02em;
       }
 
       .testimonial-heading p {
         max-width: 780px;
         margin: 0 auto;
         font-size: 1.1rem;
-        line-height: 1.6;
-        color: #1e3a8a;
-        font-weight: 500;
-        background: rgba(219, 234, 254, 0.5);
-        backdrop-filter: blur(2px);
-        border-radius: 50px;
-        padding: 12px 24px;
+        line-height: 1.5;
+        color: #1f3a6b;
+        font-weight: 600;
+        background: rgba(255, 255, 255, 0.75);
+        border-radius: 60px;
+        padding: 12px 28px;
+        display: inline-block;
+        backdrop-filter: none;
+        border: 1px solid rgba(59, 130, 246, 0.2);
       }
 
-      /* slider + infinite scroll */
-      .testimonial-slider {
-        overflow: hidden;
-        position: relative;
+      /* ========= SWIPER CUSTOM: FULL WIDTH, SMOOTH SWIPE ON PHONES ========= */
+      .testimonial-swiper {
         width: 100%;
-        mask-image: linear-gradient(
-          to right,
-          transparent,
-          black 6%,
-          black 94%,
-          transparent
-        );
-        -webkit-mask-image: linear-gradient(
-          to right,
-          transparent,
-          black 6%,
-          black 94%,
-          transparent
-        );
+        overflow: visible;
+        padding: 12px 8px 32px 8px;
       }
 
-      .testimonial-track {
+      .swiper-wrapper {
+        align-items: stretch;
+      }
+
+      .swiper-slide {
+        height: auto;
         display: flex;
-        gap: 28px;
-        width: max-content;
-        animation: scrollInfinite 48s linear infinite;
-        will-change: transform;
+        justify-content: center;
+        transition: transform 0.2s;
       }
 
-      .testimonial-slider:hover .testimonial-track {
-        animation-play-state: paused;
-      }
-
-      @keyframes scrollInfinite {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
-
-      /* ========= PREMIUM CARD — BLUE THEME, PLAYFUL STARS ========= */
+      /* Premium Cards — solid, elevated, blue glassmorphism-inspired but crisp */
       .testimonial-card {
-        width: 390px;
-        background: #efefef;
-        border-radius: 42px;
-        padding: 32px 28px 36px;
+        background: #ffffff;
+        border-radius: 44px;
+        padding: 25px 28px 17px;
         text-align: center;
-        transition: all 0.35s cubic-bezier(0.2, 0.9, 0.5, 1.1);
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+        transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         box-shadow:
-          0 18px 36px -12px rgba(0, 0, 0, 0.1),
-          0 0 0 1px rgba(59, 130, 246, 0.25);
-        border: 1px solid rgba(59, 130, 246, 0.3);
+          0 22px 40px -14px rgba(0, 30, 70, 0.12),
+          0 2px 4px rgba(0, 0, 0, 0.02);
+        border: 1px solid rgba(37, 99, 235, 0.2);
       }
 
       .testimonial-card:hover {
-        /* transform: translateY(-12px) scale(1.01); */
-        box-shadow:
-          0 28px 40px -12px rgba(0, 0, 0, 0.18),
-          0 0 0 2px #3b82f640;
+        transform: translateY(-6px);
+        box-shadow: 0 32px 48px -18px rgba(0, 64, 128, 0.2);
         border-color: #3b82f6;
       }
 
-      /* quote icon blue gradient */
       .quote-icon {
-        font-family: "Inter", sans-serif;
+        /* font-family: "Inter", sans-serif; */
         font-size: 4rem;
         font-weight: 800;
         line-height: 1;
-        background: linear-gradient(145deg, #2563eb, #60a5fa);
+        background: linear-gradient(145deg, #1e4b8f, #3b82f6);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
       }
 
       .testimonial-text {
@@ -4028,11 +4048,11 @@
         line-height: 1.65;
         font-size: 1rem;
         font-weight: 500;
-        margin: 18px 0 22px;
+        margin: 20px 0 22px;
         letter-spacing: -0.2px;
       }
 
-      /* ------- BETTER STAR ICONS (blueish-gold but vibrant) ------- */
+      /* Star rating - vibrant gold */
       .star-rating {
         display: flex;
         justify-content: center;
@@ -4043,59 +4063,32 @@
       .star-icon {
         font-size: 1.6rem;
         color: #f5b042;
-        filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.2));
+        filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.08));
         transition: transform 0.2s ease;
       }
 
-      .star-icon:hover {
-        transform: scale(1.2);
-        color: #f59e0b;
-      }
-
-      /* playful sparkle animation on stars */
-      @keyframes twinkleStar {
-        0% {
-          text-shadow: 0 0 0px #fbbf24;
-          transform: scale(1);
-        }
-        50% {
-          text-shadow: 0 0 10px #3b82f6;
-          transform: scale(1.06);
-        }
-        100% {
-          text-shadow: 0 0 0px #fbbf24;
-          transform: scale(1);
-        }
-      }
-      .star-icon. {
-        animation: twinkleStar 1.8s ease-in-out infinite;
-      }
-
-      /* client details with designation (after name) */
-      .client-info {
-        margin-top: 5px;
-      }
-
+      /* Client details with designation */
       .client-name {
         font-size: 1.5rem;
         font-weight: 800;
-        font-family: "Inter", sans-serif;
         color: #0f172a;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
         letter-spacing: -0.3px;
       }
 
       .client-designation {
-        background: #e0e7ff;
+        background: #eef3ff;
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        padding: 6px 16px;
+        padding: 6px 18px;
         border-radius: 40px;
-        font-size: 0.85rem;
-        font-weight: 600;
+        font-size: 0.82rem;
+        font-weight: 700;
         color: #1e3a8a;
         margin-top: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .client-designation i {
@@ -4105,48 +4098,110 @@
 
       .client-location {
         font-size: 0.75rem;
-        color: #64748b;
-        margin-top: 6px;
-        letter-spacing: 0.3px;
+        color: #5475a5;
+        margin-top: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 6px;
+        font-weight: 500;
       }
 
-      /* responsive */
-      @media (max-width: 900px) {
-        .testimonial-card {
-          width: 340px;
-          padding: 28px 22px;
+      /* Trust footer badge */
+      .trust-footer {
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+        background: white;
+        padding: 12px 28px;
+        border-radius: 60px;
+        display: inline-block;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        border: 1px solid #cddfff;
+        color: #1e3a8a;
+      }
+      .trust-footer i {
+        color: #2563eb;
+        margin-right: 8px;
+      }
+
+      /* Swiper pagination blue theme */
+      .swiper-pagination-bullet {
+        background: #aac8ff;
+        opacity: 0.7;
+      }
+      .swiper-pagination-bullet-active {
+        background: #1e4b8f;
+        opacity: 1;
+      }
+      .swiper-pagination {
+        bottom: -5px !important;
+        position: relative;
+        margin-top: 20px;
+      }
+
+      /* ========= FULLY RESPONSIVE: PHONE OPTIMIZED, FULL WIDTH ========= */
+      @media (max-width: 768px) {
+        .testimonial-section {
+          padding: 48px 0 64px;
+        }
+        .testimonial-container {
+          padding: 0 16px;
         }
         .testimonial-heading h2 {
           font-size: 2.4rem;
+        }
+        .testimonial-heading p {
+          font-size: 0.95rem;
+          padding: 10px 18px;
+        }
+        .testimonial-card {
+          padding: 28px 20px 32px;
+          max-width: 100%;
+          margin: 0 6px;
         }
         .star-icon {
           font-size: 1.4rem;
         }
         .client-name {
-          font-size: 1.3rem;
+          font-size: 1.35rem;
+        }
+        .client-designation {
+          font-size: 0.74rem;
+          padding: 5px 14px;
+        }
+        .testimonial-text {
+          font-size: 0.95rem;
+        }
+        .trust-footer {
+          font-size: 0.8rem;
+          padding: 10px 20px;
         }
       }
 
-      @media (max-width: 600px) {
-        .testimonial-section {
-          padding: 60px 0 70px;
-        }
+      @media (max-width: 480px) {
         .testimonial-card {
-          width: 300px;
-          padding: 24px 18px;
+          padding: 24px 16px 30px;
         }
-        .testimonial-text {
-          font-size: 0.9rem;
+        .star-rating {
+          gap: 6px;
         }
         .star-icon {
           font-size: 1.25rem;
-          gap: 6px;
+        }
+        .quote-icon {
+          font-size: 3.2rem;
+        }
+        .testimonial-heading h2 {
+          font-size: 1.9rem;
         }
       }
+
+      /* No blur, clean overlay — background image stays as very subtle texture */
     </style>
   </head>
   <body>
@@ -4160,387 +4215,420 @@
           <h2>What Our Clients Say</h2>
           <p>
             🇮🇳 From local businesses to growing enterprises — 2100+ happy
-            business owners across India trust us with their numbers, taxation,
-            and accounting.
+            business owners across India trust us with numbers, taxation &
+            accounting.
           </p>
         </div>
 
-        <div class="testimonial-slider">
-          <div class="testimonial-track" id="infiniteTrackIndia">
-            <!-- =========== UNIQUE INDIAN REVIEWS (name + DESIGNATION after name) ========== -->
-            <!-- Card 1 -->
-            <div class="testimonial-card">
-              <div class="quote-icon">❝</div>
-              <p class="testimonial-text">
-                “ShubhLekha transformed our GST filing & tax planning. The team
-                handles everything with such precision and care — truly a game
-                changer for our manufacturing unit.”
-              </p>
-              <div class="star-rating">
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-              </div>
-              <div class="client-info">
-                <div class="client-name">Rajesh Khandelwal</div>
-                <div class="client-designation">
-                  <i class="fas fa-briefcase"></i> Managing Director, Jaipur
-                  Metaliks
+        <!-- Swiper Container: touch swipe enabled on phones, loop infinite, fully responsive -->
+        <div class="swiper testimonial-swiper" id="clientSwiper">
+          <div class="swiper-wrapper">
+            <!-- Card 1: Jaipur -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">
+                  “ShubhLekha transformed our GST filing & tax planning. The
+                  team handles everything with such precision — truly a game
+                  changer for our manufacturing unit.”
+                </p>
+                <div class="star-rating">
+                  <i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i>
                 </div>
-                <div class="client-location">
-                  <i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="testimonial-card">
-              <div class="quote-icon">❝</div>
-              <p class="testimonial-text">
-                “Finally, an accounting partner that explains every tax
-                implication clearly! Saved 32% in taxes and got full digital
-                signature support. Highly recommended.”
-              </p>
-              <div class="star-rating">
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-              </div>
-              <div class="client-info">
-                <div class="client-name">Neha Joshi</div>
-                <div class="client-designation">
-                  <i class="fas fa-chart-pie"></i> Founder, NexGen Ecom
-                  Solutions
-                </div>
-                <div class="client-location">
-                  <i class="fas fa-map-marker-alt"></i> Pune, Maharashtra
+                <div class="client-info">
+                  <div class="client-name">Rajesh Khandelwal</div>
+                  <div class="client-designation">
+                    <i class="fas fa-briefcase"></i> Managing Director, Jaipur
+                    Metaliks
+                  </div>
+                  <div class="client-location">
+                    <i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan
+                  </div>
                 </div>
               </div>
             </div>
-
-            <!-- Card 3 -->
-            <div class="testimonial-card">
-              <div class="quote-icon">❝</div>
-              <p class="testimonial-text">
-                “Outstanding support for startup compliances. From ROC filing to
-                strategic tax planning, their proactive approach helped us
-                secure funding with clean financials.”
-              </p>
-              <div class="star-rating">
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-              </div>
-              <div class="client-info">
-                <div class="client-name">Vikram Rathore</div>
-                <div class="client-designation">
-                  <i class="fas fa-rocket"></i> Co-founder, Starlight
-                  Innovations
+            <!-- Card 2: Pune -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">
+                  “Finally, an accounting partner that explains every tax
+                  implication clearly! Saved 32% in taxes and got full digital
+                  signature support. Highly recommended.”
+                </p>
+                <div class="star-rating">
+                  <i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i>
                 </div>
-                <div class="client-location">
-                  <i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="testimonial-card">
-              <div class="quote-icon">❝</div>
-              <p class="testimonial-text">
-                “Honest, transparent, and lightning-fast service. They helped us
-                set up proper bookkeeping, saved us from penalty notices, and
-                gave us peace of mind.”
-              </p>
-              <div class="star-rating">
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-              </div>
-              <div class="client-info">
-                <div class="client-name">Anjali Iyer</div>
-                <div class="client-designation">
-                  <i class="fas fa-store"></i> Proprietor, Iyer Spices & Traders
-                </div>
-                <div class="client-location">
-                  <i class="fas fa-map-marker-alt"></i> Kochi, Kerala
+                <div class="client-info">
+                  <div class="client-name">Neha Joshi</div>
+                  <div class="client-designation">
+                    <i class="fas fa-chart-pie"></i> Founder, NexGen Ecom
+                    Solutions
+                  </div>
+                  <div class="client-location">
+                    <i class="fas fa-map-marker-alt"></i> Pune, Maharashtra
+                  </div>
                 </div>
               </div>
             </div>
-
-            <!-- Card 5 -->
-            <div class="testimonial-card">
-              <div class="quote-icon">❝</div>
-              <p class="testimonial-text">
-                “We switched from a traditional CA to ShubhLekha, and the
-                difference is night and day. Real-time dashboard, quarterly
-                advisory, and genuine care for our growth.”
-              </p>
-              <div class="star-rating">
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-              </div>
-              <div class="client-info">
-                <div class="client-name">Amitabh S. Choudhury</div>
-                <div class="client-designation">
-                  <i class="fas fa-chart-simple"></i> CFO, Ganga Constructions
-                  Pvt Ltd
+            <!-- Card 3: Bengaluru -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">
+                  “Outstanding support for startup compliances. From ROC filing
+                  to strategic tax planning, their proactive approach helped us
+                  secure funding with clean financials.”
+                </p>
+                <div class="star-rating">
+                  <i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i>
                 </div>
-                <div class="client-location">
-                  <i class="fas fa-map-marker-alt"></i> Lucknow, Uttar Pradesh
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 6 extra -->
-            <div class="testimonial-card">
-              <div class="quote-icon">❝</div>
-              <p class="testimonial-text">
-                “Their expertise in cross-border taxation and startup advisory
-                gave us clarity in complex matters. The team is super responsive
-                & professional — absolutely world-class.”
-              </p>
-              <div class="star-rating">
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-              </div>
-              <div class="client-info">
-                <div class="client-name">Priyanka Mehta</div>
-                <div class="client-designation">
-                  <i class="fas fa-globe"></i> Global Finance Head, TechAvenir
-                </div>
-                <div class="client-location">
-                  <i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat
+                <div class="client-info">
+                  <div class="client-name">Vikram Rathore</div>
+                  <div class="client-designation">
+                    <i class="fas fa-rocket"></i> Co-founder, Starlight
+                    Innovations
+                  </div>
+                  <div class="client-location">
+                    <i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka
+                  </div>
                 </div>
               </div>
             </div>
-
-            <!-- ========= DUPLICATE SET FOR INFINITE LOOP ========= -->
-            <div class="testimonial-card">
-              <div class="quote-icon">❝</div>
-              <p class="testimonial-text">
-                “ShubhLekha transformed our GST filing & tax planning. The team
-                handles everything with such precision and care — truly a game
-                changer for our manufacturing unit.”
-              </p>
-              <div class="star-rating">
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-              </div>
-              <div class="client-info">
-                <div class="client-name">Rajesh Khandelwal</div>
-                <div class="client-designation">
-                  <i class="fas fa-briefcase"></i> Managing Director, Jaipur
-                  Metaliks
+            <!-- Card 4: Kochi -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">
+                  “Honest, transparent, and lightning-fast service. They helped
+                  us set up proper bookkeeping, saved us from penalty notices,
+                  and gave us peace of mind.”
+                </p>
+                <div class="star-rating">
+                  <i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i>
                 </div>
-                <div class="client-location">
-                  <i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonial-card">
-              <div class="quote-icon">❝</div>
-              <p class="testimonial-text">
-                “Finally, an accounting partner that explains every tax
-                implication clearly! Saved 32% in taxes and got full digital
-                signature support. Highly recommended.”
-              </p>
-              <div class="star-rating">
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-              </div>
-              <div class="client-info">
-                <div class="client-name">Neha Joshi</div>
-                <div class="client-designation">
-                  <i class="fas fa-chart-pie"></i> Founder, NexGen Ecom
-                  Solutions
-                </div>
-                <div class="client-location">
-                  <i class="fas fa-map-marker-alt"></i> Pune, Maharashtra
+                <div class="client-info">
+                  <div class="client-name">Anjali Iyer</div>
+                  <div class="client-designation">
+                    <i class="fas fa-store"></i> Proprietor, Iyer Spices &
+                    Traders
+                  </div>
+                  <div class="client-location">
+                    <i class="fas fa-map-marker-alt"></i> Kochi, Kerala
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div class="testimonial-card">
-              <div class="quote-icon">❝</div>
-              <p class="testimonial-text">
-                “Outstanding support for startup compliances. From ROC filing to
-                strategic tax planning, their proactive approach helped us
-                secure funding with clean financials.”
-              </p>
-              <div class="star-rating">
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-              </div>
-              <div class="client-info">
-                <div class="client-name">Vikram Rathore</div>
-                <div class="client-designation">
-                  <i class="fas fa-rocket"></i> Co-founder, Starlight
-                  Innovations
+            <!-- Card 5: Lucknow -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">
+                  “We switched from a traditional CA to ShubhLekha, difference
+                  is night and day. Real-time dashboard, quarterly advisory,
+                  genuine care for our growth.”
+                </p>
+                <div class="star-rating">
+                  <i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i>
                 </div>
-                <div class="client-location">
-                  <i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonial-card">
-              <div class="quote-icon">❝</div>
-              <p class="testimonial-text">
-                “Honest, transparent, and lightning-fast service. They helped us
-                set up proper bookkeeping, saved us from penalty notices, and
-                gave us peace of mind.”
-              </p>
-              <div class="star-rating">
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-              </div>
-              <div class="client-info">
-                <div class="client-name">Anjali Iyer</div>
-                <div class="client-designation">
-                  <i class="fas fa-store"></i> Proprietor, Iyer Spices & Traders
-                </div>
-                <div class="client-location">
-                  <i class="fas fa-map-marker-alt"></i> Kochi, Kerala
+                <div class="client-info">
+                  <div class="client-name">Amitabh S. Choudhury</div>
+                  <div class="client-designation">
+                    <i class="fas fa-chart-simple"></i> CFO, Ganga Constructions
+                    Pvt Ltd
+                  </div>
+                  <div class="client-location">
+                    <i class="fas fa-map-marker-alt"></i> Lucknow, Uttar Pradesh
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div class="testimonial-card">
-              <div class="quote-icon">❝</div>
-              <p class="testimonial-text">
-                “We switched from a traditional CA to ShubhLekha, and the
-                difference is night and day. Real-time dashboard, quarterly
-                advisory, and genuine care for our growth.”
-              </p>
-              <div class="star-rating">
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-              </div>
-              <div class="client-info">
-                <div class="client-name">Amitabh S. Choudhury</div>
-                <div class="client-designation">
-                  <i class="fas fa-chart-simple"></i> CFO, Ganga Constructions
-                  Pvt Ltd
+            <!-- Card 6: Ahmedabad -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">
+                  “Their expertise in cross-border taxation and startup advisory
+                  gave clarity in complex matters. Super responsive &
+                  professional — absolutely world-class.”
+                </p>
+                <div class="star-rating">
+                  <i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i>
                 </div>
-                <div class="client-location">
-                  <i class="fas fa-map-marker-alt"></i> Lucknow, Uttar Pradesh
+                <div class="client-info">
+                  <div class="client-name">Priyanka Mehta</div>
+                  <div class="client-designation">
+                    <i class="fas fa-globe"></i> Global Finance Head, TechAvenir
+                  </div>
+                  <div class="client-location">
+                    <i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div class="testimonial-card">
-              <div class="quote-icon">❝</div>
-              <p class="testimonial-text">
-                “Their expertise in cross-border taxation and startup advisory
-                gave us clarity in complex matters. The team is super responsive
-                & professional — absolutely world-class.”
-              </p>
-              <div class="star-rating">
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-                <i class="fas fa-star star-icon"></i>
-              </div>
-              <div class="client-info">
-                <div class="client-name">Priyanka Mehta</div>
-                <div class="client-designation">
-                  <i class="fas fa-globe"></i> Global Finance Head, TechAvenir
+            <!-- Card 7: Indore (fresh testimonial) -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">
+                  “As a CA firm partner, I’m impressed by their accuracy &
+                  ethical practices. They saved my client ₹5L in tax demands
+                  with detailed representation.”
+                </p>
+                <div class="star-rating">
+                  <i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i>
                 </div>
-                <div class="client-location">
-                  <i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat
+                <div class="client-info">
+                  <div class="client-name">Sanjay Agarwal</div>
+                  <div class="client-designation">
+                    <i class="fas fa-file-invoice"></i> Partner, Agarwal &
+                    Associates
+                  </div>
+                  <div class="client-location">
+                    <i class="fas fa-map-marker-alt"></i> Indore, Madhya Pradesh
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 8: Chennai -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">
+                  “ShubhLekha’s real-time MIS dashboard helped me track cash
+                  flow like never before. My business grew 40% because I could
+                  finally make data-driven decisions.”
+                </p>
+                <div class="star-rating">
+                  <i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i>
+                </div>
+                <div class="client-info">
+                  <div class="client-name">Divya Srinivasan</div>
+                  <div class="client-designation">
+                    <i class="fas fa-chalkboard-user"></i> CEO, SourceNXT Pvt
+                    Ltd
+                  </div>
+                  <div class="client-location">
+                    <i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 9: Kozhikode -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">
+                  “Excellent yearly tax planning & audit support. ShubhLekha
+                  team is prompt, thorough, and always ethical. Highly
+                  recommended for any MSME.”
+                </p>
+                <div class="star-rating">
+                  <i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i>
+                </div>
+                <div class="client-info">
+                  <div class="client-name">Manoj K. Nair</div>
+                  <div class="client-designation">
+                    <i class="fas fa-industry"></i> Director, Malabar Ventures
+                  </div>
+                  <div class="client-location">
+                    <i class="fas fa-map-marker-alt"></i> Kozhikode, Kerala
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 10: Hyderabad -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">
+                  “Loved their proactive guidance for R&D tax credits & startup
+                  deductions. Felt like having an in-house CFO at fraction of
+                  cost. Incredible value!”
+                </p>
+                <div class="star-rating">
+                  <i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i>
+                </div>
+                <div class="client-info">
+                  <div class="client-name">Kavya Verma</div>
+                  <div class="client-designation">
+                    <i class="fas fa-lightbulb"></i> Co-founder, Aretto Tech
+                  </div>
+                  <div class="client-location">
+                    <i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 11: extra for richness & endless loop variety -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">
+                  “Monthly MIS reports and GST reconciliation are flawless.
+                  Their dedicated account manager ensures we never miss a
+                  deadline. Best decision for our firm.”
+                </p>
+                <div class="star-rating">
+                  <i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i
+                  ><i class="fas fa-star star-icon"></i>
+                </div>
+                <div class="client-info">
+                  <div class="client-name">Rahul Sood</div>
+                  <div class="client-designation">
+                    <i class="fas fa-building"></i> Partner, Sood & Co.
+                  </div>
+                  <div class="client-location">
+                    <i class="fas fa-map-marker-alt"></i> Chandigarh
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Pagination dots (mobile friendly) -->
+          <div class="swiper-pagination"></div>
         </div>
-        <!-- trust indicator -->
-        <div
-          style="
-            text-align: center;
-            margin-top: 3rem;
-            font-size: 0.85rem;
-            color: #00163a;
-            font-weight: 600;
-          "
-        >
-          <i class="fas fa-chart-line" style="margin-right: 6px"></i> 2,100+
-          Indian businesses trust us | 98% client retention
+
+        <div style="display: flex; justify-content: center; margin-top: 10px">
+          <div class="trust-footer">
+            <i class="fas fa-chart-line"></i> 2,100+ Indian businesses trust us
+            | 98% client retention
+          </div>
         </div>
       </div>
     </section>
 
     <script>
       (function () {
-        // playful star animation + hover effects
+        // Initialize Swiper with infinite loop, touch-swipe optimized for phone
+        const swiper = new Swiper("#clientSwiper", {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          loop: true,
+          centeredSlides: false,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+          },
+          autoplay: {
+            delay: 4200,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+          speed: 700,
+          grabCursor: true,
+          touchRatio: 1.2,
+          touchAngle: 45,
+          simulateTouch: true,
+          breakpoints: {
+            580: {
+              slidesPerView: 1.2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 24,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 28,
+            },
+            1280: {
+              slidesPerView: 3.2,
+              spaceBetween: 30,
+            },
+          },
+          // enable smooth momentum on mobile
+          freeMode: false,
+          effect: "slide",
+          longSwipes: true,
+          longSwipesRatio: 0.3,
+        });
+
+        // Star hover effect + subtle random sparkle for playful vibe
         const allStars = document.querySelectorAll(".star-icon");
         allStars.forEach((star) => {
-          star.addEventListener("mouseenter", function (e) {
+          star.addEventListener("mouseenter", function () {
             this.style.transform = "scale(1.25)";
-            this.style.transition = "transform 0.15s";
+            this.style.transition = "transform 0.15s ease";
           });
-          star.addEventListener("mouseleave", function (e) {
+          star.addEventListener("mouseleave", function () {
             this.style.transform = "scale(1)";
           });
         });
 
-        // extra sparkle effect on stars randomly (cartoonic touch)
-        const glitterStars = document.querySelectorAll(".");
+        // Random sparkling animation on stars to enhance "cartoonic" delight
         setInterval(() => {
-          glitterStars.forEach((star) => {
-            if (Math.random() > 0.85) {
-              star.style.transform = "scale(1.2)";
+          const stars = document.querySelectorAll(".star-icon");
+          if (stars.length) {
+            const randomIdx = Math.floor(Math.random() * stars.length);
+            const luckyStar = stars[randomIdx];
+            if (luckyStar) {
+              luckyStar.style.transform = "scale(1.2)";
               setTimeout(() => {
-                star.style.transform = "scale(1)";
-              }, 180);
+                if (luckyStar) luckyStar.style.transform = "scale(1)";
+              }, 160);
             }
-          });
-        }, 1400);
+          }
+        }, 2100);
 
-        // ensure infinite scroll animation runs smoothly
-        const track = document.getElementById("infiniteTrackIndia");
-        if (track) {
-          track.style.animation = "scrollInfinite 48s linear infinite";
+        // ensure no horizontal overflow and background stays under content
+        const container = document.querySelector(".testimonial-section");
+        if (container) {
+          container.style.overflowX = "hidden";
         }
-
         console.log(
-          "✅ Blue-themed testimonials active — Indian reviews with name + designation, animated stars",
+          "✅ Swiper swipeable testimonials active — background image present, no blur overlay, fully responsive on mobile & desktop",
         );
       })();
     </script>
   </body>
 </html>
+
 <!-- -------news & blog------- -->
 <!doctype html>
 <html lang="en">
@@ -4559,7 +4647,7 @@
       }
 
       body {
-        font-family:
+        /* font-family:
           "Inter",
           system-ui,
           -apple-system,
@@ -4567,7 +4655,7 @@
           Roboto,
           Helvetica,
           Arial,
-          sans-serif;
+          sans-serif; */
         background: #eef2f5; /* subtle background to showcase section */
       }
 
@@ -5521,7 +5609,7 @@
     <div class="footer-bottom">
       <div class="copyright-text">
         <i class="far fa-copyright"></i>
-        <span>2025 Khata Dost — Empowering Financial Clarity.</span>
+        <span>2026 Khata Dost — Empowering Financial Clarity.</span>
       </div>
       <div class="copyright-text">
         <span
