@@ -524,7 +524,7 @@
         <title>Khata Dost | ACCOUNTING & TAXATION</title>
         <link
           rel="shortcut icon"
-          href="images/Logo1-removebg-preview.png"
+          href="../images/Logo1-removebg-preview.png"
           type="image/x-icon"
         />
         <!-- Font Awesome 6 -->
@@ -540,17 +540,18 @@
           }
 
           body {
-            font-family:
-              "Inter",
-              system-ui,
-              -apple-system,
-              "Segoe UI",
-              Roboto,
-              Helvetica,
-              sans-serif;
+            font-family: "Nunito", sans-serif !important;
             background: #fafdff;
             color: #1a2c3e;
             scroll-behavior: smooth;
+          }
+          h1,
+          h2,
+          h3,
+          .heading-premium {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
           }
 
           :root {
@@ -647,6 +648,15 @@
             filter: drop-shadow(0 4px 8px rgba(26, 95, 158, 0.12));
             transition: 0.25s;
           }
+          .logo-text img {
+            width: 154px;
+            height: 67px;
+            margin: 0;
+            padding: 0;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(26, 95, 158, 0.12));
+            transition: 0.25s;
+          }
 
           .logo-text h1 {
             font-size: 1.85rem;
@@ -660,10 +670,11 @@
           }
 
           .logo-text p {
-            font-size: 0.7rem;
+            font-size: 12px;
             font-weight: 700;
             color: #2c6e9e;
             letter-spacing: 0.6px;
+            margin-top: -12px;
           }
 
           /* DESKTOP NAVIGATION */
@@ -1037,6 +1048,12 @@
           }
 
           /* responsive */
+          @media (max-width: 750px) {
+            .logo-text img {
+              width: 130px;
+              height: 55px;
+            }
+          }
           @media (max-width: 950px) {
             .nav-links {
               display: none;
@@ -1055,13 +1072,15 @@
           <div class="navbar" id="mainNavbar">
             <div class="nav-container">
               <div class="logo-area">
-                <a href="index.html"
+                <a href="../index.html"
                   ><img
                     src="../images/Logo1-removebg-preview.png"
                     alt="Khata Dost"
                 /></a>
                 <div class="logo-text">
-                  <h1>Khata Dost</h1>
+                  <div>
+                    <img src="../images/LOGO-2.png" alt="" />
+                  </div>
                   <p>ACCOUNTING & TAXATION</p>
                 </div>
               </div>
@@ -1080,10 +1099,10 @@
                     <a href="ITR.html"
                       ><i class="fas fa-chart-line"></i> Income Tax Return</a
                     >
-                    <a href="#dsc"
+                    <a href="DigitalSignature.html"
                       ><i class="fas fa-signature"></i> Digital Signature</a
                     >
-                    <a href="#taxplan"
+                    <a href="TaxConsultancy.html"
                       ><i class="fas fa-calculator"></i> Tax Planning</a
                     >
                   </div>
@@ -1115,7 +1134,7 @@
             </button>
           </div>
           <div class="side-nav">
-            <a href="index.html" class="side-nav-item"
+            <a href="../index.html" class="side-nav-item"
               ><i class="fas fa-home"></i> Home
               <i class="fas fa-chevron-right"></i
             ></a>
@@ -1127,32 +1146,32 @@
                 <i class="fas fa-chevron-down" id="sideDropdownIcon"></i>
               </div>
               <div class="side-submenu" id="sideSubmenu">
-                <a href="#gst"
+                <a href="../GST.html"
                   ><i class="fas fa-file-invoice-dollar"></i> GST Return</a
                 >
-                <a href="#itr"
+                <a href="ITR.html"
                   ><i class="fas fa-chart-line"></i> Income Tax Return</a
                 >
-                <a href="#dsc"
+                <a href="DigitalSignature.html"
                   ><i class="fas fa-signature"></i> Digital Signature</a
                 >
-                <a href="#taxplan"
+                <a href="TaxConsultancy.html"
                   ><i class="fas fa-calculator"></i> Tax Planning</a
                 >
               </div>
             </div>
 
-            <a href="#about" class="side-nav-item"
+            <a href="About.html" class="side-nav-item"
               ><i class="fas fa-users"></i> About Us
               <i class="fas fa-chevron-right"></i
             ></a>
-            <a href="#testimonials" class="side-nav-item"
+            <a href="Testimonials.html" class="side-nav-item"
               ><i class="fas fa-star"></i> Reviews
               <i class="fas fa-chevron-right"></i
             ></a>
           </div>
           <div class="side-menu-footer">
-            <a href="#contact" class="start-now-premium"
+            <a href="Contact.html" class="start-now-premium"
               ><i class="fas fa-rocket"></i> Start Now
             </a>
             <!-- Arrow at end ( > ) as requested -->
@@ -1464,195 +1483,755 @@
         <span><i class="fas fa-file-invoice"></i> TaxPartner</span>
       </div> -->
 
-      <div class="grid-2col" data-aos="fade-right">
-        <div class="text-col">
-          <div
-            class="pill"
-            style="
+      <!doctype html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+          />
+          <title>Khata Dost | Smart Income Tax Filing Platform</title>
+          <!-- Font Awesome 6 (free CDN) -->
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+          />
+          <!-- AOS CSS for scroll animations -->
+          <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+          />
+          <style>
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+
+            /* body {
+        font-family:
+          system-ui,
+          "Segoe UI",
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Roboto",
+          sans-serif;
+        background: #ffffff;
+        color: #1a2c3e;
+        line-height: 1.4;
+        scroll-behavior: smooth;
+      } */
+
+            .container {
+              max-width: 1280px;
+              margin: 0 auto;
+              padding: 2rem 2rem;
+            }
+
+            /* Typography improvements */
+            .section-title {
+              font-size: 2.4rem;
+              font-weight: 700;
+              line-height: 1.25;
+              margin-top: 1.2rem;
+              margin-bottom: 0.5rem;
+              letter-spacing: -0.01em;
+            }
+
+            .gradient-text {
+              background: linear-gradient(135deg, #0f5e89, #18a0e3, #2b9fd9);
+              background-clip: text;
+              -webkit-background-clip: text;
+              color: transparent;
+              font-weight: 700;
+            }
+
+            .underline-accent {
+              width: 70px;
+              height: 4px;
+              background: linear-gradient(90deg, #18a0e3, #7fc9f0);
+              border-radius: 4px;
+              margin: 0.6rem 0 1rem 0;
+            }
+
+            /* Light underline for dark section */
+            .underline-light {
+              width: 70px;
+              height: 4px;
+              background: linear-gradient(90deg, #5bc0ff, #a0dcff);
+              border-radius: 4px;
+              margin: 0.6rem 0 1.5rem 0;
+            }
+
+            /* Pill badge */
+            .pill {
               background: #e6f3fe;
-              display: inline-block;
-              padding: 0.2rem 1rem;
+              display: inline-flex;
+              align-items: center;
+              gap: 0.5rem;
+              padding: 0.3rem 1.2rem;
               border-radius: 40px;
               font-weight: 600;
+              font-size: 0.85rem;
               color: #0a5f8a;
-            "
-          >
-            <i class="fas fa-check-circle"></i> Simplicity First
-          </div>
-          <h2 class="section-title" style="margin-top: 0.8rem">
-            Tax filing made simple
-            <span class="gradient-text">for all income types</span>
-          </h2>
-          <div class="underline-accent"></div>
-          <div class="feature-icon-list">
-            <p>
-              <i
-                class="fas fa-scissors"
-                style="color: #18a0e3; font-size: 1.2rem"
-              ></i>
-              <strong>Claim all eligible deductions accurately</strong>Maximize
-              refunds using 80C, 80D, HRA & more.
-            </p>
-            <p>
-              <i
-                class="fas fa-bell"
-                style="color: #18a0e3; font-size: 1.2rem"
-              ></i>
-              <strong>Free notice management & comprehensive support</strong
-              >Experts handle tax notices, peace of mind guaranteed.
-            </p>
-          </div>
-        </div>
-        <div class="img-col">
-          <img src="../images/ITR-2.png" alt="tax filing illustration" />
-        </div>
-      </div>
+              backdrop-filter: blur(2px);
+              letter-spacing: -0.2px;
+            }
 
-      <div
-        class="grid-2col reverse"
-        data-aos="fade-left"
-        style="flex-direction: row-reverse; padding-top: 40px"
-      >
-        <div class="text-col">
-          <div
-            class="pill"
-            style="
-              background: #e6f3fe;
+            /* Grid 2 column refined */
+            .grid-2col {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 2.8rem;
+              margin: 2rem 0;
+              align-items: center;
+              justify-content: space-between;
+            }
+
+            .grid-2col.reverse {
+              flex-direction: row-reverse;
+            }
+
+            .text-col,
+            .img-col {
+              flex: 1;
+              min-width: 260px;
+            }
+
+            .img-col {
+              border-radius: 2rem;
+              overflow: hidden;
+              box-shadow: 0 24px 36px -16px rgba(0, 32, 64, 0.12);
+              transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+              background: #f8fafc;
+            }
+
+            .img-col:hover {
+              transform: scale(1.01);
+              box-shadow: 0 28px 40px -18px rgba(24, 160, 227, 0.2);
+            }
+
+            .img-col img {
+              width: 100%;
+              height: auto;
+              display: block;
+              object-fit: cover;
+            }
+
+            .feature-icon-list {
+              display: flex;
+              flex-direction: column;
+              gap: 1.2rem;
+              margin-top: 1.5rem;
+            }
+
+            .feature-icon-list p {
+              display: flex;
+              align-items: flex-start;
+              gap: 14px;
+              font-size: 1rem;
+              font-weight: 500;
+              background: #f9fdfe;
+              padding: 0.8rem 1rem;
+              border-radius: 20px;
+              transition: all 0.25s;
+              border: 1px solid #e7f0f8;
+            }
+
+            .feature-icon-list p i {
+              margin-top: 2px;
+              font-size: 1.2rem;
+              color: #18a0e3;
+            }
+
+            .feature-icon-list p strong {
+              display: block;
+              font-size: 1rem;
+              margin-bottom: 4px;
+              color: #0f3b4f;
+            }
+            .btn-sm {
+              padding: 3px 10px;
+              background: #18a0e3;
+              border-radius: 10px;
+              font-size: 12px;
+              font-weight: 600;
+              color: white;
+              border: none;
+            }
+            /* ========= DARK SECTION: Who Can File ITR (no buttons, elegant) ========= */
+            .dark-category-section {
+              background: linear-gradient(125deg, #0b2b38 0%, #0a1f2a 100%);
+              border-radius: 2rem;
+              padding: 2.5rem 2rem;
+              margin: 2rem 0 2rem;
+              box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.3);
+              transition: all 0.2s;
+            }
+
+            .dark-category-section .section-title {
+              color: #ffffff;
+              margin-top: 0;
+            }
+
+            .dark-category-section .section-title .gradient-text {
+              background: linear-gradient(135deg, #9ad7ff, #6ec3ff);
+              background-clip: text;
+              -webkit-background-clip: text;
+            }
+
+            .dark-category-section .underline-light {
+              margin-bottom: 1.8rem;
+            }
+
+            .category-grid-dark {
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+              gap: 1.6rem;
+            }
+
+            .category-card-dark {
+              background: rgba(255, 255, 255, 0.06);
+              backdrop-filter: blur(2px);
+              border-radius: 1.8rem;
+              padding: 1.6rem 1.2rem;
+              border: 1px solid rgba(90, 180, 220, 0.25);
+              transition: all 0.3s ease;
+              text-align: center;
+              cursor: default;
+            }
+
+            .category-card-dark:hover {
+              transform: translateY(-6px);
+              background: rgba(255, 255, 255, 0.12);
+              border-color: rgba(90, 200, 255, 0.6);
+              box-shadow: 0 20px 28px -12px rgba(0, 0, 0, 0.4);
+            }
+
+            .category-card-dark i {
+              font-size: 2.4rem;
+              color: #7acdff;
+              margin-bottom: 1rem;
+              background: rgba(24, 160, 227, 0.2);
+              padding: 10px 10px;
+              border-radius: 60px;
+              width: 5rem;
               display: inline-block;
-              padding: 0.2rem 1rem;
-              border-radius: 40px;
-            "
-          >
-            <i class="fas fa-chart-simple"></i> Impact & Trust
-          </div>
-          <h2 class="section-title">
-            <span class="gradient-text">94% of users save tax</span> with Khata
-            Dost
-          </h2>
-          <div class="underline-accent"></div>
-          <p>
-            Over 13 Lakh+ users from 2600+ towns trust Khata Dost for ITR
-            filing. Ex-IRS joint commissioners and seasoned CAs lead our
-            platform — India’s highest rated assisted filing platform.
-          </p>
-        </div>
-        <div class="img-col">
-          <img src="../images/ITR-1.png" alt="impact" />
-        </div>
-      </div>
+              transition: 0.2s;
+            }
 
-      <h2 class="section-title" data-aos="fade-up" style="padding-top: 40px">
-        Who Can File ITR with Khata Dost?
-      </h2>
-      <div class="underline-accent"></div>
-      <div class="category-grid" data-aos="fade-up">
-        <div class="category-card">
-          <i class="fas fa-briefcase"></i>
-          <h4>Salaried Individuals</h4>
-          <p>Upload Form 16, auto-fill returns</p>
-          <button class="btn-sm cat-btn">Start now</button>
-        </div>
-        <div class="category-card">
-          <i class="fas fa-laptop-code"></i>
-          <h4>Self-Employed</h4>
-          <p>Freelancers, consultants, professionals</p>
-          <button class="btn-sm cat-btn">Start now</button>
-        </div>
-        <div class="category-card">
-          <i class="fas fa-store"></i>
-          <h4>Business Owners</h4>
-          <p>SMEs, MSMEs, ERP, Tally users</p>
-          <button class="btn-sm cat-btn">Start now</button>
-        </div>
-        <div class="category-card">
-          <i class="fas fa-globe"></i>
-          <h4>Foreign Income</h4>
-          <p>NRIs, RNORs, foreign assets</p>
-          <button class="btn-sm cat-btn">Start now</button>
-        </div>
-        <div class="category-card">
-          <i class="fas fa-chart-line"></i>
-          <h4>Stocks & Crypto</h4>
-          <p>Capital gains, F&O, crypto</p>
-          <button class="btn-sm cat-btn">Start now</button>
-        </div>
-        <div class="category-card">
-          <i class="fas fa-home"></i>
-          <h4>HUF Filing</h4>
-          <p>Hindu Undivided Family</p>
-          <button class="btn-sm cat-btn">Start now</button>
-        </div>
-        <div class="category-card">
-          <i class="fas fa-pen"></i>
-          <h4>Revised ITR</h4>
-          <p>Fix mistakes with ease</p>
-          <button class="btn-sm cat-btn">Start now</button>
-        </div>
-        <div class="category-card">
-          <i class="fas fa-hourglass-half"></i>
-          <h4>Belated ITR</h4>
-          <p>File after deadline without hassle</p>
-          <button class="btn-sm cat-btn">Start now</button>
-        </div>
-      </div>
+            .category-card-dark:hover i {
+              color: #ffffff;
+              background: #18a0e3;
+            }
 
-      <h2 class="section-title" data-aos="fade-up">
-        Three convenient ways for Income Tax Filing
-      </h2>
-      <div class="underline-accent"></div>
-      <div class="ways-grid" data-aos="fade-up">
-        <div class="way-card">
-          <i
-            class="fas fa-digital-tiling"
-            style="font-size: 2rem; color: #18a0e3"
-          ></i>
-          <h4>Digital Signature (DSC)</h4>
-          <p>Secure e-filing with DSC authenticity</p>
-        </div>
-        <div class="way-card">
-          <i class="fas fa-file-signature"></i>
-          <h4>ITR-V without DSC</h4>
-          <p>Print, sign & send to CPC Bangalore</p>
-        </div>
-        <div class="way-card">
-          <i class="fas fa-qrcode"></i>
-          <h4>e-Verify with Aadhaar/Bank</h4>
-          <p>Instant OTP verification, no physical form</p>
-        </div>
-      </div>
+            .category-card-dark h4 {
+              font-size: 1.2rem;
+              margin: 0.6rem 0 0.4rem;
+              color: #f0fcff;
+              font-weight: 600;
+            }
 
-      <div class="expert-row" data-aos="fade-up">
-        <h3 style="font-size: 1.9rem">
-          Expert-Assisted ITR Filing with Khata Dost
-        </h3>
-        <p>
-          Let our tax experts handle your Income Tax Filing from start to finish
-          — choose your category below.
-        </p>
-        <div class="expert-buttons">
-          <div class="expert-cat">
-            <span><i class="fas fa-user"></i> Salaried</span
-            ><button class="btn-sm cat-btn">Start</button>
-          </div>
-          <div class="expert-cat">
-            <span><i class="fas fa-chart-line"></i> Capital Gains</span
-            ><button class="btn-sm cat-btn">Start</button>
-          </div>
-          <div class="expert-cat">
-            <span><i class="fas fa-globe"></i> Foreign Income</span
-            ><button class="btn-sm cat-btn">Start</button>
-          </div>
-          <div class="expert-cat">
-            <span><i class="fas fa-coins"></i> Crypto Investors</span
-            ><button class="btn-sm cat-btn">Start</button>
-          </div>
-          <div class="expert-cat">
-            <span><i class="fas fa-home"></i> HUF Filing</span
-            ><button class="btn-sm cat-btn">Start</button>
-          </div>
-        </div>
-      </div>
+            .category-card-dark p {
+              color: #bfd9e8;
+              font-size: 0.85rem;
+              line-height: 1.4;
+              margin-top: 0.3rem;
+            }
 
+            /* ways grid - responsive */
+            .ways-grid {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 2rem;
+              margin: 2rem 0 2.5rem;
+            }
+
+            .way-card {
+              background: #ffffff;
+              border-radius: 1.5rem;
+              padding: 1.6rem;
+              flex: 1 1 240px;
+              border-left: 6px solid #18a0e3;
+              box-shadow: 0 12px 22px -10px rgba(0, 0, 0, 0.05);
+              transition: all 0.2s;
+            }
+
+            .way-card:hover {
+              transform: translateY(-3px);
+              border-left-width: 8px;
+            }
+
+            .way-card i {
+              font-size: 2rem;
+              color: #18a0e3;
+              margin-bottom: 0.8rem;
+              display: inline-block;
+            }
+
+            .way-card h4 {
+              font-size: 1.2rem;
+              margin-bottom: 0.5rem;
+            }
+
+            .way-card p {
+              color: #3e5e7a;
+              line-height: 1.4;
+            }
+
+            /* expert row refined */
+            .expert-row {
+              background: linear-gradient(105deg, #f1f9ff 0%, #ffffff 100%);
+              border-radius: 2rem;
+              padding: 2.2rem;
+              margin: 2.5rem 0;
+              border: 1px solid #dceefb;
+              box-shadow: 0 12px 18px -12px rgba(0, 0, 0, 0.05);
+            }
+
+            .expert-row h3 {
+              font-size: 1.9rem;
+              font-weight: 700;
+              margin-bottom: 0.8rem;
+            }
+
+            .expert-buttons {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+              gap: 1rem;
+              margin-top: 1.8rem;
+            }
+
+            .expert-cat {
+              background: white;
+              border-radius: 60px;
+              padding: 17px 26px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 0.8rem;
+              border: 1px solid #cde5f5;
+              transition: 0.2s;
+            }
+
+            .expert-cat span {
+              font-weight: 600;
+              font-size: 18px;
+              white-space: nowrap;
+              color: #3b3b3b;
+            }
+
+            .expert-cat:hover {
+              background: #f6fbfe;
+              border-color: #18a0e3;
+              transform: translateX(4px);
+            }
+
+            /* Trust Badge Row */
+            .trust-badge-row {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 2rem;
+              background: #fafeff;
+              border-radius: 2rem;
+              padding: 1.8rem 2rem;
+              margin: 2rem 0;
+              border: 1px solid #e2f0fa;
+              text-align: center;
+            }
+
+            .trust-item {
+              display: flex;
+              align-items: center;
+              gap: 12px;
+              font-size: 1.05rem;
+              font-weight: 600;
+              color: #115e7a;
+            }
+
+            .trust-item i {
+              font-size: 1.8rem;
+              color: #18a0e3;
+            }
+
+            /* closing trust */
+            .closing-trust {
+              background: linear-gradient(125deg, #eef6fd, #ffffff);
+              border-radius: 2rem;
+              padding: 2rem 2rem;
+              text-align: center;
+              margin: 2rem 0 1rem;
+              border: 1px solid #cde2f2;
+            }
+
+            .closing-trust p {
+              font-size: 1.1rem;
+              font-weight: 500;
+              color: #1e4a6e;
+              margin-bottom: 1.2rem;
+            }
+
+            .mini-stats {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 2.5rem;
+            }
+
+            .stat-block {
+              text-align: center;
+            }
+
+            .stat-number {
+              font-size: 2rem;
+              font-weight: 800;
+              background: linear-gradient(135deg, #0f5e89, #18a0e3);
+              background-clip: text;
+              -webkit-background-clip: text;
+              color: transparent;
+            }
+
+            .stat-label {
+              font-size: 0.85rem;
+              color: #4a6f8f;
+              font-weight: 500;
+            }
+
+            .btn-primary {
+              background: #18a0e3;
+              color: white;
+              border: none;
+              padding: 0.8rem 2rem;
+              border-radius: 60px;
+              font-weight: 700;
+              font-size: 0.95rem;
+              display: inline-flex;
+              align-items: center;
+              gap: 8px;
+              cursor: pointer;
+              transition: 0.2s;
+              box-shadow: 0 6px 12px -6px rgba(24, 160, 227, 0.4);
+            }
+
+            .btn-primary:hover {
+              background: #0f7bb3;
+              transform: translateY(-2px);
+            }
+
+            footer {
+              text-align: center;
+              padding: 2rem 1rem 1rem;
+              border-top: 1px solid #e2edf6;
+              color: #5b7f9c;
+              font-size: 0.85rem;
+              margin-top: 1.5rem;
+            }
+
+            /* responsive refinements */
+            @media (max-width: 900px) {
+              .container {
+                padding: 1.5rem;
+              }
+              .section-title {
+                font-size: 1.9rem;
+              }
+              .grid-2col,
+              .grid-2col.reverse {
+                flex-direction: column;
+                gap: 1.8rem;
+              }
+              .expert-row h3 {
+                font-size: 1.5rem;
+              }
+              .expert-cat span {
+                white-space: normal;
+                font-size: 0.85rem;
+              }
+              .expert-buttons {
+                grid-template-columns: 1fr;
+              }
+              .expert-cat {
+                border-radius: 40px;
+              }
+              .dark-category-section {
+                padding: 1.8rem;
+              }
+              .category-grid-dark {
+                gap: 1rem;
+              }
+              .trust-badge-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+              }
+              .mini-stats {
+                flex-direction: column;
+                gap: 1rem;
+              }
+            }
+
+            @media (max-width: 550px) {
+              .section-title {
+                font-size: 1.65rem;
+              }
+              .pill {
+                font-size: 0.7rem;
+                padding: 0.2rem 1rem;
+              }
+              .feature-icon-list p {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+              }
+              .expert-row {
+                padding: 1.3rem;
+              }
+              .category-card-dark {
+                padding: 1.2rem;
+              }
+              .category-card-dark i {
+                font-size: 2rem;
+              }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <!-- First grid: simplicity first -->
+            <div class="grid-2col" data-aos="fade-right">
+              <div class="text-col">
+                <div class="pill">
+                  <i class="fas fa-check-circle"></i> Simplicity First
+                </div>
+                <h2 class="section-title" style="margin-top: 0.8rem">
+                  Tax filing made simple
+                  <span class="gradient-text">for all income types</span>
+                </h2>
+                <div class="underline-accent"></div>
+                <div class="feature-icon-list">
+                  <p>
+                    <i class="fas fa-scissors"></i>
+                    <span
+                      ><strong>Claim all eligible deductions accurately</strong
+                      ><br />Maximize refunds using 80C, 80D, HRA & more.</span
+                    >
+                  </p>
+                  <p>
+                    <i class="fas fa-bell"></i>
+                    <span
+                      ><strong
+                        >Free notice management & comprehensive support</strong
+                      ><br />Experts handle tax notices, peace of mind
+                      guaranteed.</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="img-col">
+                <img
+                  src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202406/itr-filing-2024-25-1938551-16x9_1.jpg?VersionId=Enopb0gdiV54GgID0I.RGzKlzPcILWaA&size=690:388"
+                  alt="tax filing illustration"
+                  style="background: #eef3fa"
+                />
+              </div>
+            </div>
+
+            <!-- Second grid: Impact & Trust (reverse) -->
+            <div
+              class="grid-2col reverse"
+              data-aos="fade-left"
+              style="flex-direction: row-reverse; padding-top: 10px"
+            >
+              <div class="text-col">
+                <div class="pill">
+                  <i class="fas fa-chart-simple"></i> Impact & Trust
+                </div>
+                <h2 class="section-title">
+                  <span class="gradient-text">94% of users save tax</span> with
+                  Khata Dost
+                </h2>
+                <div class="underline-accent"></div>
+                <p style="font-size: 1.05rem; line-height: 1.5">
+                  Over 13 Lakh+ users from 2600+ towns trust Khata Dost for ITR
+                  filing. Ex-IRS joint commissioners and seasoned CAs lead our
+                  platform — India’s highest rated assisted filing platform.
+                </p>
+              </div>
+              <div class="img-col">
+                <img src="../images/ITR-2.png" alt="impact illustration" />
+              </div>
+            </div>
+
+            <!-- DARK SECTION: Who Can File ITR with Khata Dost? (no buttons, fully dark) -->
+            <div class="dark-category-section" data-aos="fade-up">
+              <h2 class="section-title">
+                Who Can File ITR with
+                <span class="gradient-text">Khata Dost?</span>
+              </h2>
+              <div class="underline-light"></div>
+              <div class="category-grid-dark">
+                <div class="category-card-dark">
+                  <i class="fas fa-briefcase"></i>
+                  <h4>Salaried Individuals</h4>
+                  <p>Upload Form 16, auto-fill returns, HRA & deductions</p>
+                </div>
+                <div class="category-card-dark">
+                  <i class="fas fa-laptop-code"></i>
+                  <h4>Self-Employed</h4>
+                  <p>Freelancers, consultants, professionals with 44ADA/44AD</p>
+                </div>
+                <div class="category-card-dark">
+                  <i class="fas fa-store"></i>
+                  <h4>Business Owners</h4>
+                  <p>SMEs, MSMEs, ERP, Tally, partnership firms</p>
+                </div>
+                <div class="category-card-dark">
+                  <i class="fas fa-globe"></i>
+                  <h4>Foreign Income</h4>
+                  <p>NRIs, RNORs, foreign assets, foreign tax credit</p>
+                </div>
+                <div class="category-card-dark">
+                  <i class="fas fa-chart-line"></i>
+                  <h4>Stocks & Crypto</h4>
+                  <p>Capital gains, F&O trading, crypto gains, staking</p>
+                </div>
+                <div class="category-card-dark">
+                  <i class="fas fa-home"></i>
+                  <h4>HUF Filing</h4>
+                  <p>Hindu Undivided Family with ancestral income</p>
+                </div>
+                <div class="category-card-dark">
+                  <i class="fas fa-pen"></i>
+                  <h4>Revised ITR</h4>
+                  <p>Fix errors or missed deductions in previous filings</p>
+                </div>
+                <div class="category-card-dark">
+                  <i class="fas fa-hourglass-half"></i>
+                  <h4>Belated ITR</h4>
+                  <p>File after deadline, pay late fee and avoid penalties</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Three convenient ways -->
+            <h2 class="section-title" data-aos="fade-up">
+              Three convenient ways for Income Tax Filing
+            </h2>
+            <div class="underline-accent"></div>
+            <div class="ways-grid" data-aos="fade-up">
+              <div class="way-card">
+                <i class="fas fa-digital-tiling"></i>
+                <h4>Digital Signature (DSC)</h4>
+                <p>Secure e-filing with DSC authenticity</p>
+              </div>
+              <div class="way-card">
+                <i class="fas fa-file-signature"></i>
+                <h4>ITR-V without DSC</h4>
+                <p>Print, sign & send to CPC Bangalore</p>
+              </div>
+              <div class="way-card">
+                <i class="fas fa-qrcode"></i>
+                <h4>e-Verify with Aadhaar/Bank</h4>
+                <p>Instant OTP verification, no physical form</p>
+              </div>
+            </div>
+
+            <!-- Expert-Assisted ITR Filing -->
+            <div class="expert-row" data-aos="fade-up">
+              <h3>Expert-Assisted ITR Filing with Khata Dost</h3>
+              <p>
+                Let our tax experts handle your Income Tax Filing from start to
+                finish — choose your category below.
+              </p>
+              <div class="expert-buttons">
+                <div class="expert-cat">
+                  <span><i class="fas fa-user"></i> Salaried</span
+                  ><button class="btn-sm cat-btn">Start</button>
+                </div>
+                <div class="expert-cat">
+                  <span><i class="fas fa-chart-line"></i> Capital Gains</span
+                  ><button class="btn-sm cat-btn">Start</button>
+                </div>
+                <div class="expert-cat">
+                  <span><i class="fas fa-globe"></i> Foreign Income</span
+                  ><button class="btn-sm cat-btn">Start</button>
+                </div>
+                <div class="expert-cat">
+                  <span><i class="fas fa-coins"></i> Crypto Investors</span
+                  ><button class="btn-sm cat-btn">Start</button>
+                </div>
+                <div class="expert-cat">
+                  <span><i class="fas fa-home"></i> HUF Filing</span
+                  ><button class="btn-sm cat-btn">Start</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trust Badge Row - enhanced social proof -->
+            <div class="trust-badge-row" data-aos="fade-up">
+              <div class="trust-item">
+                <i class="fas fa-users"></i> <span>13 Lakh+ returns filed</span>
+              </div>
+              <div class="trust-item">
+                <i class="fas fa-star"></i> <span>4.9 ★ Trustpilot rating</span>
+              </div>
+              <div class="trust-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>2600+ towns served</span>
+              </div>
+              <div class="trust-item">
+                <i class="fas fa-chalkboard-user"></i>
+                <span>Ex-IRS & CA led platform</span>
+              </div>
+            </div>
+
+            <!-- Closing CTA & mini stats (no redundant sections from old) -->
+            <div class="closing-trust" data-aos="fade-up">
+              <p>
+                <i
+                  class="fas fa-file-invoice"
+                  style="margin-right: 8px; color: #18a0e3"
+                ></i>
+                <strong>India’s highest rated assisted filing platform</strong>
+                — hassle-free ITR, expert support at every step.
+              </p>
+              <div class="mini-stats">
+                <div class="stat-block">
+                  <div class="stat-number">94%</div>
+                  <div class="stat-label">users save more tax</div>
+                </div>
+                <div class="stat-block">
+                  <div class="stat-number">15min</div>
+                  <div class="stat-label">avg filing time</div>
+                </div>
+                <div class="stat-block">
+                  <div class="stat-number">24/7</div>
+                  <div class="stat-label">expert chat support</div>
+                </div>
+              </div>
+              <!-- <button class="btn-primary" style="margin-top: 1.5rem">
+                <i class="fas fa-hand-holding-usd"></i> File your ITR now
+              </button> -->
+            </div>
+          </div>
+
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script>
+            AOS.init({
+              duration: 700,
+              once: true,
+              offset: 30,
+            });
+          </script>
+        </body>
+      </html>
+
+      <!-- steps-----------  -->
       <!doctype html>
       <html lang="en">
         <head>
@@ -2461,7 +3040,13 @@
             src="../images/Logo1-removebg-preview.png"
             alt="Khata Dost Logo"
           />
-          <h3>Khata Dost</h3>
+          <div>
+            <img
+              src="../images/LOGO-2.png"
+              style="width: 71%; height: auto"
+              alt=""
+            />
+          </div>
         </div>
         <p class="tagline">
           Every number matters. We simplify accounting, tax, and compliance for
