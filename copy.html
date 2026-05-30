@@ -286,44 +286,6 @@
         border-radius: 4px;
       }
 
-      /* --- Service Cards with BACKGROUND IMAGES --- */
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.8rem;
-        margin: 2rem 0 3rem;
-      }
-
-      .service-card-glass {
-        position: relative;
-        border-radius: 1.8rem;
-        overflow: hidden;
-        transition: all 0.35s ease;
-        box-shadow: var(--shadow-sm);
-        cursor: pointer;
-        min-height: 320px;
-      }
-
-      .service-card-glass:hover {
-        transform: translateY(-8px);
-        box-shadow: var(--shadow-hover);
-      }
-
-      .service-bg {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        z-index: 0;
-        transition: transform 0.4s ease;
-      }
-
-      .service-card-glass:hover .service-bg {
-        transform: scale(1.05);
-      }
-
       .service-bg::after {
         content: "";
         position: absolute;
@@ -334,70 +296,6 @@
           rgba(10, 43, 68, 0.92) 100%
         );
         z-index: 1;
-      }
-
-      .service-content {
-        position: relative;
-        z-index: 2;
-        padding: 2rem 1.5rem;
-        text-align: center;
-        color: white;
-      }
-
-      .service-icon {
-        width: 68px;
-        height: 68px;
-        background: rgba(24, 160, 227, 0.25);
-        backdrop-filter: blur(8px);
-        border-radius: 28px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 1rem;
-        border: 1px solid rgba(24, 160, 227, 0.5);
-      }
-
-      .service-icon i {
-        font-size: 2rem;
-        color: var(--blue);
-      }
-
-      .service-content h3 {
-        font-size: 1.4rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-      }
-
-      .service-content p {
-        font-size: 0.85rem;
-        line-height: 1.5;
-        opacity: 0.92;
-      }
-
-      /* Unique background images for each tax service */
-      .srv1-bg {
-        background-image: url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&auto=format");
-      }
-      .srv2-bg {
-        background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&auto=format");
-      }
-      .srv3-bg {
-        background-image: url("https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format");
-      }
-      .srv4-bg {
-        background-image: url("https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?w=600&auto=format");
-      }
-      .srv5-bg {
-        background-image: url("https://images.unsplash.com/photo-1554224154-26032ffc0f07?w=600&auto=format");
-      }
-      .srv6-bg {
-        background-image: url("https://images.unsplash.com/photo-1554224155-1696413565d3?w=600&auto=format");
-      }
-      .srv7-bg {
-        background-image: url("https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=600&auto=format");
-      }
-      .srv8-bg {
-        background-image: url("https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=600&auto=format");
       }
 
       /* Why Choose Khata Dost - Dark Background using --dark-blue */
@@ -657,79 +555,1616 @@
       </div>
     </div>
 
+    <!-- -------services-------------- -->
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>TaxConsult Pro | Strategic Tax & Compliance Solutions</title>
+
+        <!-- Font Awesome 6 (free icons) -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <!-- Google Fonts: clean & modern typography -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+          rel="stylesheet"
+        />
+
+        <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+
+          .servicebody {
+            background: linear-gradient(135deg, #f0f5fe 0%, #e9f0fa 100%);
+            padding: 40px 24px;
+            color: #0a1e42;
+          }
+
+          .tax-section {
+            max-width: 1400px;
+            margin: 0 auto;
+          }
+
+          /* --- TOP SECTION (professional card) --- */
+          .top-box {
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow:
+              0 20px 35px -12px rgba(0, 20, 45, 0.12),
+              0 1px 2px rgba(0, 0, 0, 0.02);
+            margin-bottom: 40px;
+            transition: all 0.2s ease;
+            overflow: hidden;
+            border: 1px solid rgba(11, 47, 102, 0.08);
+          }
+
+          .top-heading {
+            background: linear-gradient(98deg, #0b2f66 0%, #0f3b7a 100%);
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 32px 14px 28px;
+            border-radius: 0 0 28px 0;
+            font-weight: 700;
+            font-size: 1.35rem;
+            letter-spacing: -0.2px;
+            box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.02);
+          }
+
+          .top-heading i {
+            font-size: 1.4rem;
+            opacity: 0.9;
+          }
+
+          .top-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            padding: 28px 12px 32px 12px;
+            gap: 0;
+          }
+
+          .top-item {
+            text-align: center;
+            padding: 12px 12px;
+            transition: all 0.25s ease-in-out;
+            border-right: 1px solid #eef2fa;
+            cursor: default;
+          }
+
+          .top-item:last-child {
+            border-right: none;
+          }
+
+          .top-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 18px auto;
+            background: linear-gradient(145deg, #ffffff, #f5f9ff);
+            border-radius: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: #0b57d0;
+            box-shadow:
+              0 12px 18px -8px rgba(11, 47, 102, 0.12),
+              inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            transition:
+              transform 0.2s ease,
+              box-shadow 0.2s;
+          }
+
+          .top-item:hover .top-icon {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -12px rgba(11, 47, 102, 0.2);
+            background: white;
+          }
+
+          .top-item h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.35;
+            color: #122c52;
+            letter-spacing: -0.2px;
+          }
+
+          /* --- MAIN SERVICE BOX (modern glassmorphism touch) --- */
+          .service-box {
+            background: #ffffff;
+            border-radius: 40px;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.12);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(216, 223, 239, 0.6);
+            transition: all 0.2s;
+            padding-top: 68px;
+          }
+
+          .service-title {
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(105deg, #0b2f66 0%, #12478f 100%);
+            color: white;
+            padding: 14px 42px;
+            border-radius: 0 0 30px 30px;
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+            white-space: nowrap;
+            box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.2);
+            z-index: 5;
+            backdrop-filter: blur(2px);
+          }
+
+          .services-gridd {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: white;
+          }
+
+          .service-card {
+            padding: 38px 26px 38px 26px;
+            border-right: 1px solid #edf2fc;
+            border-bottom: 1px solid #edf2fc;
+            transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+            cursor: pointer;
+            background: white;
+          }
+
+          /* removing border-right for last column */
+          .service-card:nth-child(4),
+          .service-card:nth-child(8) {
+            border-right: none;
+          }
+
+          .service-card:nth-child(n + 5) {
+            border-bottom: none;
+          }
+
+          /* hover effect with subtle lift & border glow */
+          .service-card:hover {
+            background: #fefefe;
+            box-shadow:
+              0 12px 20px -12px rgba(0, 0, 0, 0.08),
+              inset 0 0 0 1px rgba(43, 104, 204, 0.1);
+            transform: translateY(-4px);
+            z-index: 2;
+            position: relative;
+            border-radius: 8px;
+          }
+
+          .service-flex {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+          }
+
+          /* modern gradient icons with subtle shadows */
+          .service-icon {
+            min-width: 80px;
+            width: 80px;
+            height: 80px;
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            color: white;
+            transition: all 0.2s ease;
+            box-shadow: 0 8px 14px -6px rgba(0, 0, 0, 0.2);
+          }
+
+          /* unique color palette (original but improved consistency) */
+          .blue {
+            background: linear-gradient(135deg, #1e56c4, #0b3d8c);
+          }
+          .green {
+            background: linear-gradient(135deg, #21a06b, #117a4e);
+          }
+          .orange {
+            background: linear-gradient(135deg, #fb8b2c, #e06e1a);
+          }
+          .pink {
+            background: linear-gradient(135deg, #ff6b8b, #e64870);
+          }
+          .purple {
+            background: linear-gradient(135deg, #8d6be0, #6c48c5);
+          }
+          .red {
+            background: linear-gradient(135deg, #f25e5a, #da3a36);
+          }
+          .darkblue {
+            background: linear-gradient(135deg, #2a6df5, #0b48bf);
+          }
+          .darkgreen {
+            background: linear-gradient(135deg, #2b8c4a, #1b6a38);
+          }
+
+          .service-card:hover .service-icon {
+            transform: scale(1.02);
+            box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.25);
+          }
+
+          .service-content h3 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 12px;
+            color: #0a2540;
+            letter-spacing: -0.3px;
+          }
+
+          .service-content p {
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: #4a5b7a;
+            font-weight: 400;
+          }
+
+          /* small micro interaction + badge style for cta */
+          .service-card:active {
+            transform: translateY(-2px);
+          }
+
+          /* Decorative element */
+          .service-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #0b2f66, #2d7aff, #0b2f66);
+            opacity: 0.8;
+            z-index: 3;
+          }
+
+          /* Responsive Excellence */
+          @media (max-width: 1200px) {
+            .service-content h3 {
+              font-size: 1.3rem;
+            }
+            .service-flex {
+              gap: 14px;
+            }
+            .service-icon {
+              min-width: 70px;
+              width: 70px;
+              height: 70px;
+              font-size: 32px;
+            }
+          }
+
+          @media (max-width: 992px) {
+            .top-grid {
+              grid-template-columns: repeat(3, 1fr);
+              gap: 12px;
+            }
+            .top-item {
+              border-right: none;
+            }
+            .services-gridd {
+              grid-template-columns: repeat(2, 1fr);
+            }
+            .service-card:nth-child(2),
+            .service-card:nth-child(4),
+            .service-card:nth-child(6),
+            .service-card:nth-child(8) {
+              border-right: none;
+            }
+            .service-card:nth-child(5),
+            .service-card:nth-child(6),
+            .service-card:nth-child(7) {
+              border-bottom: 1px solid #edf2fc;
+            }
+            .service-card:nth-child(8) {
+              border-bottom: none;
+            }
+            .service-title {
+              font-size: 1.4rem;
+              padding: 12px 28px;
+              white-space: nowrap;
+            }
+          }
+
+          @media (max-width: 768px) {
+            body {
+              padding: 24px 16px;
+            }
+            .top-grid {
+              grid-template-columns: 1fr 1fr;
+              padding: 16px 12px 20px;
+            }
+            .top-icon {
+              width: 70px;
+              height: 70px;
+              font-size: 30px;
+            }
+            .top-item h4 {
+              font-size: 0.95rem;
+            }
+            .service-title {
+              font-size: 1.25rem;
+              padding: 10px 20px;
+              white-space: normal;
+              width: 85%;
+              text-align: center;
+              letter-spacing: -0.2px;
+            }
+            .services-gridd {
+              grid-template-columns: 1fr;
+            }
+            .service-card {
+              border-right: none !important;
+              border-bottom: 1px solid #edf2fc !important;
+              padding: 28px 20px;
+            }
+            .service-card:last-child {
+              border-bottom: none !important;
+            }
+            .service-flex {
+              flex-direction: row;
+              text-align: left;
+              align-items: center;
+            }
+            .service-content h3 {
+              font-size: 1.3rem;
+            }
+            .top-heading {
+              font-size: 1.1rem;
+              padding: 12px 20px;
+              border-radius: 0 0 20px 0;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .service-flex {
+              flex-direction: column;
+              text-align: center;
+              align-items: center;
+            }
+            .service-content {
+              text-align: center;
+            }
+            .service-icon {
+              margin-bottom: 8px;
+            }
+            .top-icon {
+              width: 60px;
+              height: 60px;
+              font-size: 28px;
+            }
+            .top-heading i {
+              display: none;
+            }
+            .service-title {
+              font-size: 1.1rem;
+              width: 95%;
+              padding: 10px 12px;
+            }
+          }
+
+          /* accessibility & smooth scroll */
+          html {
+            scroll-behavior: smooth;
+          }
+
+          /* optional badge: little extra polish on icons */
+          .service-icon i {
+            filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+          }
+
+          /* custom subtle animation on load */
+          @keyframes fadeSlideUp {
+            0% {
+              opacity: 0;
+              transform: translateY(16px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .service-card,
+          .top-item {
+            animation: fadeSlideUp 0.35s ease-out forwards;
+            opacity: 0;
+          }
+
+          .service-card:nth-child(1) {
+            animation-delay: 0.02s;
+          }
+          .service-card:nth-child(2) {
+            animation-delay: 0.05s;
+          }
+          .service-card:nth-child(3) {
+            animation-delay: 0.08s;
+          }
+          .service-card:nth-child(4) {
+            animation-delay: 0.11s;
+          }
+          .service-card:nth-child(5) {
+            animation-delay: 0.14s;
+          }
+          .service-card:nth-child(6) {
+            animation-delay: 0.17s;
+          }
+          .service-card:nth-child(7) {
+            animation-delay: 0.2s;
+          }
+          .service-card:nth-child(8) {
+            animation-delay: 0.23s;
+          }
+          .top-item:nth-child(1) {
+            animation-delay: 0.02s;
+          }
+          .top-item:nth-child(2) {
+            animation-delay: 0.05s;
+          }
+          .top-item:nth-child(3) {
+            animation-delay: 0.08s;
+          }
+          .top-item:nth-child(4) {
+            animation-delay: 0.11s;
+          }
+          .top-item:nth-child(5) {
+            animation-delay: 0.14s;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="servicebody">
+          <section class="tax-section">
+            <!-- Professional Tax Solutions for Clients: top segment improved readability -->
+            <div class="top-box">
+              <div class="top-heading">
+                <i class="fa-solid fa-badge-check"></i>
+                Professional Tax Solutions for:
+              </div>
+              <div class="top-grid">
+                <div class="top-item">
+                  <div class="top-icon">
+                    <i class="fa-solid fa-user-graduate"></i>
+                  </div>
+                  <h4>Individuals &<br />Salaried Employees</h4>
+                </div>
+                <div class="top-item">
+                  <div class="top-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                  </div>
+                  <h4>Freelancers &<br />Professionals</h4>
+                </div>
+                <div class="top-item">
+                  <div class="top-icon">
+                    <i class="fa-solid fa-charging-station"></i>
+                  </div>
+                  <h4>Startups &<br />MSMEs</h4>
+                </div>
+                <div class="top-item">
+                  <div class="top-icon"><i class="fa-solid fa-shop"></i></div>
+                  <h4>Shops & Local<br />Businesses</h4>
+                </div>
+                <div class="top-item">
+                  <div class="top-icon">
+                    <i class="fa-solid fa-building-user"></i>
+                  </div>
+                  <h4>LLPs & Private<br />Limited Companies</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- SERVICES CORE: enhanced color, readability, hover fx -->
+            <div class="service-box">
+              <div class="service-title">✦ OUR TAX CONSULTANCY SERVICES ✦</div>
+              <div class="services-gridd">
+                <!-- 1 -->
+                <div class="service-card" data-service="income-tax">
+                  <div class="service-flex">
+                    <div class="service-icon blue">
+                      <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="service-content">
+                      <h3>Income Tax Consultancy</h3>
+                      <p>
+                        Expert support for tax planning, filing guidance,
+                        deductions, exemptions, and full compliance — from ITR-1
+                        to ITR-7.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 2 -->
+                <div class="service-card" data-service="gst">
+                  <div class="service-flex">
+                    <div class="service-icon green">
+                      <i class="fa-solid fa-receipt"></i>
+                    </div>
+                    <div class="service-content">
+                      <h3>GST Consultancy</h3>
+                      <p>
+                        Professional assistance for GST registration, returns
+                        (GSTR-1,3B), reconciliation, annual returns, notices,
+                        and audit support.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 3 -->
+                <div class="service-card" data-service="business">
+                  <div class="service-flex">
+                    <div class="service-icon orange">
+                      <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="service-content">
+                      <h3>Business Tax Advisory</h3>
+                      <p>
+                        Customized tax strategies for startups, growing
+                        businesses, and corporate entities — minimizing
+                        liability while staying compliant.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 4 -->
+                <div class="service-card" data-service="saving">
+                  <div class="service-flex">
+                    <div class="service-icon pink">
+                      <i class="fa-solid fa-piggy-bank"></i>
+                    </div>
+                    <div class="service-content">
+                      <h3>Tax Saving Planning</h3>
+                      <p>
+                        Optimize your taxes legally with smart investment and
+                        deduction planning under 80C, 80D, and beyond — maximize
+                        refunds.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 5 -->
+                <div class="service-card" data-service="tds">
+                  <div class="service-flex">
+                    <div class="service-icon purple">
+                      <i class="fa-solid fa-file-signature"></i>
+                    </div>
+                    <div class="service-content">
+                      <h3>TDS & TCS Consultancy</h3>
+                      <p>
+                        End-to-end support for TDS deduction, timely return
+                        filing (24Q, 26Q), corrections, form 16/16A, and full
+                        compliance.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 6 -->
+                <div class="service-card" data-service="notice">
+                  <div class="service-flex">
+                    <div class="service-icon red">
+                      <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                    <div class="service-content">
+                      <h3>Tax Notice & Scrutiny Support</h3>
+                      <p>
+                        Expert handling of income tax and GST notices, strategic
+                        documentation, legal representation & effective response
+                        drafting.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 7 -->
+                <div class="service-card" data-service="advance">
+                  <div class="service-flex">
+                    <div class="service-icon darkblue">
+                      <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <div class="service-content">
+                      <h3>Advance Tax Planning</h3>
+                      <p>
+                        Avoid penalties and interest with accurate advance tax
+                        calculation, quarterly payment scheduling & proactive
+                        tax management.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 8 -->
+                <div class="service-card" data-service="financial">
+                  <div class="service-flex">
+                    <div class="service-icon darkgreen">
+                      <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <div class="service-content">
+                      <h3>Financial & Compliance Advisory</h3>
+                      <p>
+                        Improve financial planning and maintain end-to-end tax
+                        compliance including bookkeeping support, risk
+                        mitigation & audits.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Interactive micro-interactions: ripple + subtle toast like console greeting & improved hover state (overriding free) -->
+        <script>
+          (function () {
+            // 1. Smooth interactive feedback on service cards with dynamic pointer
+            const cards = document.querySelectorAll(".service-card");
+
+            // Helper to create quick non-intrusive feedback (brief console info and optional subtle highlight)
+            function handleCardClick(e) {
+              const card = e.currentTarget;
+              const serviceTitleElem = card.querySelector(
+                ".service-content h3",
+              );
+              if (!serviceTitleElem) return;
+              const serviceName = serviceTitleElem.innerText;
+
+              // Simple console interaction to showcase dynamic enhancement without intrusive modals
+              console.log(
+                `🔍 [TaxConsult Pro] Service selected: ${serviceName} — expert assistance available.`,
+              );
+
+              // Add a temporary ripple-like effect (minimal border pulse)
+              card.style.transition = "all 0.1s ease";
+              const originalBorder = card.style.boxShadow;
+              card.style.boxShadow =
+                "0 0 0 2px rgba(11, 47, 102, 0.3), 0 8px 18px rgba(0,0,0,0.1)";
+              setTimeout(() => {
+                card.style.boxShadow = originalBorder || "";
+              }, 200);
+            }
+
+            cards.forEach((card) => {
+              // remove any existing listener to avoid duplication, then attach
+              card.removeEventListener("click", handleCardClick);
+              card.addEventListener("click", handleCardClick);
+
+              // Enhance hover from CSS already, but add a11y role
+              card.setAttribute("role", "button");
+              card.setAttribute("tabindex", "0");
+              card.style.cursor = "pointer";
+
+              // keyboard support
+              card.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  handleCardClick(e);
+                }
+              });
+            });
+
+            // 2. Top items micro effect: subtle click feedback for demo (non-obtrusive)
+            const topItems = document.querySelectorAll(".top-item");
+            topItems.forEach((item) => {
+              item.addEventListener("click", (e) => {
+                const targetHeading =
+                  item.querySelector("h4")?.innerText || "segment";
+                console.log(
+                  `✨ [TaxConsult Pro] Explore solutions for: ${targetHeading}`,
+                );
+                // optional mini highlight
+                item.style.transform = "scale(0.99)";
+                setTimeout(() => {
+                  item.style.transform = "";
+                }, 120);
+              });
+              item.style.cursor = "pointer";
+              item.setAttribute(
+                "title",
+                "Click to discover relevant tax services",
+              );
+            });
+
+            // 3. Dynamic year / info (optional)
+            const addSmartBadge = () => {
+              // no overriding, just add floating subtle brand message but no content break
+              const serviceBox = document.querySelector(".service-box");
+              if (serviceBox && !document.querySelector(".info-badge")) {
+                const subtleNote = document.createElement("div");
+                subtleNote.className = "info-badge";
+                subtleNote.style.position = "absolute";
+                subtleNote.style.bottom = "12px";
+                subtleNote.style.right = "20px";
+                subtleNote.style.fontSize = "11px";
+                subtleNote.style.color = "#b9c6e0";
+                subtleNote.style.background = "transparent";
+                subtleNote.style.pointerEvents = "none";
+                subtleNote.style.fontWeight = "400";
+                subtleNote.innerHTML = "✓ expert driven · 24/7 support";
+                serviceBox.style.position = "relative";
+                serviceBox.appendChild(subtleNote);
+              }
+            };
+            addSmartBadge();
+
+            // 4. Ensures responsive border adjustments on window resize to keep consistent grid experience (no layout breaking)
+            function fixGridBorders() {
+              const width = window.innerWidth;
+              const cardsArray = document.querySelectorAll(".service-card");
+              if (width <= 992 && width > 768) {
+                // for tablet 2-col scenario: ensure that card 5,6,7 have bottom border but 8 not
+                cardsArray.forEach((card, idx) => {
+                  if (idx >= 4 && idx <= 6) {
+                    card.style.borderBottom = "1px solid #edf2fc";
+                  } else if (idx === 7) {
+                    card.style.borderBottom = "none";
+                  }
+                });
+              } else if (width <= 768) {
+                cardsArray.forEach((card) => {
+                  card.style.borderBottom = "1px solid #edf2fc";
+                });
+                if (cardsArray.length)
+                  cardsArray[cardsArray.length - 1].style.borderBottom = "none";
+              } else {
+                // default reset
+                cardsArray.forEach((card, idx) => {
+                  card.style.borderBottom = "";
+                  if (idx >= 4) card.style.borderBottom = "none";
+                });
+                // reapply nth-child(4) & nth-child(8) border-right fix
+              }
+            }
+
+            window.addEventListener("resize", () => {
+              fixGridBorders();
+            });
+            fixGridBorders();
+
+            // 5. add a simple floating style for service title visibility on small devices if needed
+            const styleAdjust = () => {
+              if (window.innerWidth < 500) {
+                const title = document.querySelector(".service-title");
+                if (title) title.style.whiteSpace = "normal";
+              } else {
+                const title = document.querySelector(".service-title");
+                if (title) title.style.whiteSpace = "nowrap";
+              }
+            };
+            window.addEventListener("resize", styleAdjust);
+            styleAdjust();
+          })();
+        </script>
+      </body>
+    </html>
+
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>Khata Dost | Tax Consultancy Excellence</title>
+
+        <!-- Font Awesome 6 (sharp & solid for better icons) -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+
+        <!-- Google Fonts for modern typography -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+          rel="stylesheet"
+        />
+
+        <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+
+          body {
+            background: linear-gradient(145deg, #f4f8ff 0%, #eef2fa 100%);
+            padding: 30px 20px;
+            font-family: "Inter", sans-serif;
+            color: #121e3c;
+          }
+
+          .main-wrapper {
+            max-width: 1350px;
+            margin: 0 auto;
+          }
+
+          /* modern card style */
+          .glass-card {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(0px);
+            border-radius: 32px;
+            border: 1px solid rgba(8, 43, 99, 0.12);
+            box-shadow:
+              0 20px 35px -12px rgba(0, 0, 0, 0.08),
+              0 1px 2px rgba(0, 0, 0, 0.02);
+            transition:
+              transform 0.2s ease,
+              box-shadow 0.2s ease;
+          }
+
+          /* top sections grid */
+          .top-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            margin-bottom: 32px;
+          }
+
+          /* unified header style */
+          .section-header {
+            background: linear-gradient(105deg, #0a2b5e 0%, #0f3a7a 100%);
+            padding: 20px 18px;
+            border-radius: 28px 28px 28px 28px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+          }
+
+          .section-header h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+            color: white;
+            margin: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: center;
+          }
+
+          .section-header h2 i {
+            font-size: 1.9rem;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+          }
+
+          /* feature list styling */
+          .feature-list {
+            padding: 28px 26px;
+          }
+
+          .feature-item {
+            display: flex;
+            gap: 22px;
+            padding: 20px 0;
+            border-bottom: 1px solid #e9edf4;
+            transition: all 0.25s ease;
+          }
+
+          .feature-item:last-child {
+            border-bottom: none;
+          }
+
+          .feature-item:hover {
+            transform: translateX(6px);
+          }
+
+          .feature-icon {
+            min-width: 64px;
+            height: 64px;
+            background: #f0f5ff;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            transition: 0.2s;
+          }
+
+          .feature-item:hover .feature-icon {
+            background: #ffffff;
+            box-shadow: 0 8px 18px rgba(8, 43, 99, 0.12);
+            transform: scale(1.02);
+          }
+
+          .blue-icon {
+            color: #1a66ff;
+          }
+          .green-icon {
+            color: #16a34a;
+          }
+          .orange-icon {
+            color: #f97316;
+          }
+          .purple-icon {
+            color: #8b5cf6;
+          }
+          .gold-icon {
+            color: #eab308;
+          }
+          .navy-icon {
+            color: #0f3b7a;
+          }
+
+          .feature-content h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.2px;
+          }
+
+          .feature-content p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #4a5568;
+          }
+
+          /* --- ENHANCED PROCESS SECTION (modern timeline, steps, animations) --- */
+          .process-wrapper {
+            padding: 28px 28px 32px;
+            position: relative;
+          }
+
+          .process-steps-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+          }
+
+          /* better step card design */
+          .step-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 20px 24px;
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            border: 1px solid #eef2fa;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+            margin-bottom: 16px;
+          }
+
+          .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 30px -12px rgba(8, 43, 99, 0.15);
+            border-color: #cddef5;
+          }
+
+          /* icon and number combo */
+          .step-visual {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 110px;
+          }
+
+          .step-badge-icon {
+            width: 68px;
+            height: 68px;
+            background: linear-gradient(135deg, #f0f7ff, #ffffff);
+            border-radius: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            box-shadow: 0 12px 18px -8px rgba(0, 0, 0, 0.08);
+            transition: 0.2s;
+          }
+
+          .step-card:hover .step-badge-icon {
+            transform: scale(1.02) rotate(2deg);
+          }
+
+          .step-number-circle {
+            width: 44px;
+            height: 44px;
+            background: #0f3b7a;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: white;
+            box-shadow: 0 6px 12px rgba(15, 59, 122, 0.2);
+          }
+
+          .step-card:nth-child(1) .step-number-circle {
+            background: #1e40af;
+          }
+          .step-card:nth-child(2) .step-number-circle {
+            background: #059669;
+          }
+          .step-card:nth-child(3) .step-number-circle {
+            background: #ea580c;
+          }
+          .step-card:nth-child(4) .step-number-circle {
+            background: #7c3aed;
+          }
+
+          .step-content {
+            flex: 1;
+          }
+
+          .step-content h3 {
+            font-size: 1.55rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            margin-bottom: 8px;
+          }
+
+          .step-content p {
+            font-size: 0.95rem;
+            color: #4b5565;
+            line-height: 1.5;
+          }
+
+          /* subtle link/arrow inside step */
+          .step-arrow {
+            align-self: center;
+            font-size: 26px;
+            color: #a0b9da;
+            transition: 0.2s;
+          }
+
+          .step-card:hover .step-arrow {
+            transform: translateX(6px);
+            color: #1e40af;
+          }
+
+          /* benefits section - modern */
+          .benefits-box {
+            background: #ffffff;
+            border-radius: 32px;
+            border: 1px solid #e2edff;
+            overflow: hidden;
+            transition: all 0.2s;
+          }
+
+          .benefit-title {
+            background: #f8fbfe;
+            padding: 24px 20px;
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: 800;
+            letter-spacing: -0.2px;
+            color: #0a2b5e;
+            border-bottom: 2px solid #e0ebfa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+          }
+
+          .benefit-title i {
+            font-size: 2rem;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+          }
+
+          .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0;
+            background: white;
+          }
+
+          .benefit-item {
+            text-align: center;
+            padding: 32px 12px;
+            border-right: 1px solid #edf2f9;
+            transition: all 0.25s ease;
+            background: white;
+          }
+
+          .benefit-item:last-child {
+            border-right: none;
+          }
+
+          .benefit-item:hover {
+            background: #fafdff;
+            transform: translateY(-6px);
+          }
+
+          .benefit-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            display: inline-block;
+            transition: 0.2s;
+          }
+
+          .benefit-item:hover .benefit-icon {
+            transform: scale(1.05);
+          }
+
+          .benefit-item h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #1f2a48;
+          }
+
+          /* ANIMATIONS (scroll reveal) */
+          @keyframes fadeUp {
+            0% {
+              opacity: 0;
+              transform: translateY(18px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .animate-fade {
+            animation: fadeUp 0.6s ease forwards;
+          }
+
+          .feature-item,
+          .step-card,
+          .benefit-item {
+            opacity: 0;
+            animation: fadeUp 0.5s ease forwards;
+          }
+
+          .feature-item:nth-child(1) {
+            animation-delay: 0.05s;
+          }
+          .feature-item:nth-child(2) {
+            animation-delay: 0.1s;
+          }
+          .feature-item:nth-child(3) {
+            animation-delay: 0.15s;
+          }
+          .feature-item:nth-child(4) {
+            animation-delay: 0.2s;
+          }
+          .feature-item:nth-child(5) {
+            animation-delay: 0.25s;
+          }
+          .feature-item:nth-child(6) {
+            animation-delay: 0.3s;
+          }
+
+          .step-card:nth-child(1) {
+            animation-delay: 0.1s;
+          }
+          .step-card:nth-child(2) {
+            animation-delay: 0.2s;
+          }
+          .step-card:nth-child(3) {
+            animation-delay: 0.3s;
+          }
+          .step-card:nth-child(4) {
+            animation-delay: 0.4s;
+          }
+
+          .benefit-item:nth-child(1) {
+            animation-delay: 0.1s;
+          }
+          .benefit-item:nth-child(2) {
+            animation-delay: 0.2s;
+          }
+          .benefit-item:nth-child(3) {
+            animation-delay: 0.3s;
+          }
+          .benefit-item:nth-child(4) {
+            animation-delay: 0.4s;
+          }
+          .benefit-item:nth-child(5) {
+            animation-delay: 0.5s;
+          }
+          .benefit-item:nth-child(6) {
+            animation-delay: 0.6s;
+          }
+
+          /* Responsive design */
+          @media (max-width: 1100px) {
+            .top-sections {
+              grid-template-columns: 1fr;
+              gap: 24px;
+            }
+
+            .benefits-grid {
+              grid-template-columns: repeat(3, 1fr);
+            }
+
+            .benefit-item:nth-child(3) {
+              border-right: none;
+            }
+
+            .benefit-item:nth-child(4) {
+              border-right: 1px solid #edf2f9;
+            }
+          }
+
+          @media (max-width: 800px) {
+            .step-card {
+              flex-wrap: wrap;
+              gap: 18px;
+            }
+
+            .step-visual {
+              min-width: auto;
+              width: 100%;
+              justify-content: space-between;
+            }
+
+            .step-arrow {
+              display: none;
+            }
+
+            .step-content h3 {
+              font-size: 1.4rem;
+            }
+
+            .feature-list {
+              padding: 20px 20px;
+            }
+
+            .feature-item {
+              flex-direction: column;
+              text-align: center;
+              align-items: center;
+              gap: 14px;
+            }
+
+            .feature-icon {
+              min-width: 70px;
+            }
+
+            .section-header h2 {
+              font-size: 1.5rem;
+            }
+
+            .benefit-title {
+              font-size: 1.4rem;
+            }
+          }
+
+          @media (max-width: 680px) {
+            body {
+              padding: 20px 12px;
+            }
+
+            .benefits-grid {
+              grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefit-item {
+              border-right: 1px solid #edf2f9;
+            }
+
+            .benefit-item:nth-child(even) {
+              border-right: none;
+            }
+
+            .benefit-item:nth-child(3) {
+              border-right: 1px solid #edf2f9;
+            }
+
+            .benefit-item:nth-child(4) {
+              border-right: none;
+            }
+          }
+
+          @media (max-width: 540px) {
+            .step-badge-icon {
+              width: 56px;
+              height: 56px;
+              font-size: 28px;
+            }
+
+            .step-number-circle {
+              width: 38px;
+              height: 38px;
+              font-size: 1.2rem;
+            }
+
+            .feature-content h3 {
+              font-size: 1.3rem;
+            }
+
+            .section-header h2 {
+              font-size: 1.3rem;
+              gap: 6px;
+            }
+
+            .benefits-grid {
+              grid-template-columns: 1fr;
+            }
+
+            .benefit-item {
+              border-right: none;
+              border-bottom: 1px solid #edf2f9;
+            }
+
+            .benefit-item:last-child {
+              border-bottom: none;
+            }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="main-wrapper">
+          <!-- TOP TWO SECTIONS -->
+          <div class="top-sections">
+            <!-- LEFT: WHY CHOOSE KHATA DOST (fresh icons & style) -->
+            <div class="glass-card">
+              <div class="section-header">
+                <h2>
+                  <i class="fa-regular fa-star"></i>
+                  WHY CHOOSE KHATA DOST?
+                  <i class="fa-regular fa-hand-peace"></i>
+                </h2>
+              </div>
+              <div class="feature-list">
+                <!-- 6 features with premium icons -->
+                <div class="feature-item">
+                  <div class="feature-icon blue-icon">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Experienced Tax Experts</h3>
+                    <p>
+                      Our professionals stay updated with the latest tax laws
+                      and compliance requirements.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <div class="feature-icon green-icon">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Personalized Consultation</h3>
+                    <p>
+                      Every business and individual has different tax needs — we
+                      provide customized solutions.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <div class="feature-icon orange-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Fast & Reliable Support</h3>
+                    <p>
+                      Quick response, proper guidance, and smooth processing for
+                      all tax-related matters.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <div class="feature-icon purple-icon">
+                    <i class="fa-solid fa-file-shield"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Complete Compliance Assistance</h3>
+                    <p>
+                      From consultation to filing and notice handling, we manage
+                      everything professionally.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <div class="feature-icon gold-icon">
+                    <i class="fa-solid fa-coins"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Transparent & Affordable Pricing</h3>
+                    <p>
+                      No hidden charges. Simple, affordable, and value-driven
+                      tax consultancy services.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <div class="feature-icon navy-icon">
+                    <i class="fa-solid fa-fingerprint"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Secure & Confidential</h3>
+                    <p>
+                      Your financial and business information remains fully safe
+                      and confidential.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT: OUR WORKING PROCESS (enhanced, modern, step cards) -->
+            <div class="glass-card">
+              <div class="section-header">
+                <h2>
+                  <i class="fa-regular fa-compass"></i>
+                  OUR WORKING PROCESS
+                  <i class="fa-regular fa-chart-line"></i>
+                </h2>
+              </div>
+              <div class="process-wrapper">
+                <div class="process-steps-container">
+                  <!-- Step 1 -->
+                  <div class="step-card">
+                    <div class="step-visual">
+                      <div class="step-badge-icon" style="color: #1e40af">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                      </div>
+                      <div class="step-number-circle">1</div>
+                    </div>
+                    <div class="step-content">
+                      <h3>Requirement Analysis</h3>
+                      <p>
+                        We deeply understand your income, business structure,
+                        and tax-related requirements to craft a precise roadmap.
+                      </p>
+                    </div>
+                    <div class="step-arrow">
+                      <i class="fa-regular fa-arrow-right-long"></i>
+                    </div>
+                  </div>
+                  <!-- Step 2 -->
+                  <div class="step-card">
+                    <div class="step-visual">
+                      <div class="step-badge-icon" style="color: #059669">
+                        <i class="fa-solid fa-comments-dollar"></i>
+                      </div>
+                      <div class="step-number-circle">2</div>
+                    </div>
+                    <div class="step-content">
+                      <h3>Expert Consultation</h3>
+                      <p>
+                        Our tax professionals deliver strategic guidance and
+                        powerful tax-saving insights tailored to your financial
+                        goals.
+                      </p>
+                    </div>
+                    <div class="step-arrow">
+                      <i class="fa-regular fa-arrow-right-long"></i>
+                    </div>
+                  </div>
+                  <!-- Step 3 -->
+                  <div class="step-card">
+                    <div class="step-visual">
+                      <div class="step-badge-icon" style="color: #ea580c">
+                        <i class="fa-solid fa-folder-open"></i>
+                      </div>
+                      <div class="step-number-circle">3</div>
+                    </div>
+                    <div class="step-content">
+                      <h3>Documentation & Review</h3>
+                      <p>
+                        We meticulously verify each document, ensuring accuracy,
+                        compliance, and error-free filing for maximum
+                        confidence.
+                      </p>
+                    </div>
+                    <div class="step-arrow">
+                      <i class="fa-regular fa-arrow-right-long"></i>
+                    </div>
+                  </div>
+                  <!-- Step 4 -->
+                  <div class="step-card">
+                    <div class="step-visual">
+                      <div class="step-badge-icon" style="color: #7c3aed">
+                        <i class="fa-solid fa-head-side-goggles"></i>
+                      </div>
+                      <div class="step-number-circle">4</div>
+                    </div>
+                    <div class="step-content">
+                      <h3>Compliance & Ongoing Support</h3>
+                      <p>
+                        Timely assistance for filing, notices, regulatory
+                        updates, and future tax planning — we're always a step
+                        ahead.
+                      </p>
+                    </div>
+                    <div class="step-arrow">
+                      <i class="fa-regular fa-arrow-right-long"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BENEFITS SECTION (improved icons & stylish) -->
+          <div class="benefits-box">
+            <div class="benefit-title">
+              <i class="fa-regular fa-chart-line"></i>
+              BENEFITS OF PROFESSIONAL TAX CONSULTANCY
+              <i class="fa-regular fa-circle-check"></i>
+            </div>
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <div class="benefit-icon" style="color: #16a34a">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <h4>Reduce Tax<br />Liability Legally</h4>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon" style="color: #dc2626">
+                  <i class="fa-solid fa-ban"></i>
+                </div>
+                <h4>Avoid Notices<br />& Penalties</h4>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon" style="color: #2563eb">
+                  <i class="fa-solid fa-diagram-project"></i>
+                </div>
+                <h4>Better Financial<br />Planning</h4>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon" style="color: #f97316">
+                  <i class="fa-solid fa-check-double"></i>
+                </div>
+                <h4>Accurate Tax<br />Compliance</h4>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon" style="color: #8b5cf6">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <h4>Expert Guidance<br />for Complex Cases</h4>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon" style="color: #0d9488">
+                  <i class="fa-regular fa-clock"></i>
+                </div>
+                <h4>Save Time<br />& Effort</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- subtle script for additional micro interaction (optional but adds polish) -->
+        <script>
+          (function () {
+            // add smooth parallax hover for benefit items and feature items (just for style)
+            const allCards = document.querySelectorAll(
+              ".feature-item, .step-card, .benefit-item",
+            );
+            for (let card of allCards) {
+              card.addEventListener("mouseenter", function (e) {
+                // already styled with CSS, but smoothness
+                this.style.willChange = "transform";
+              });
+              card.addEventListener("mouseleave", function (e) {
+                this.style.willChange = "auto";
+              });
+            }
+            // Intersection observer to replay animations if needed? Not necessary, but ensures visibility.
+            // already visible on load, we keep the fade-in
+            console.log(
+              "Khata Dost experience — modern, trustworthy tax companion",
+            );
+          })();
+        </script>
+      </body>
+    </html>
+
     <div class="container">
       <!-- OUR TAX CONSULTANCY SERVICES cards with background images -->
-      <div class="section-title"><h2>Our Tax Consultancy Services</h2></div>
-      <div class="services-grid">
-        <div class="service-card-glass">
-          <div class="service-bg srv1-bg"></div>
-          <div class="service-content">
-            <div class="service-icon">
-              <i class="fas fa-file-invoice-dollar"></i>
-            </div>
-            <h3>Income Tax Consultancy</h3>
-            <p>Tax planning, filing guidance, exemptions & compliance.</p>
-          </div>
-        </div>
-        <div class="service-card-glass">
-          <div class="service-bg srv2-bg"></div>
-          <div class="service-content">
-            <div class="service-icon"><i class="fas fa-building"></i></div>
-            <h3>GST Consultancy</h3>
-            <p>Registration, returns, reconciliation & notice handling.</p>
-          </div>
-        </div>
-        <div class="service-card-glass">
-          <div class="service-bg srv3-bg"></div>
-          <div class="service-content">
-            <div class="service-icon">
-              <i class="fas fa-chalkboard-user"></i>
-            </div>
-            <h3>Business Tax Advisory</h3>
-            <p>Custom strategies for startups & corporate entities.</p>
-          </div>
-        </div>
-        <div class="service-card-glass">
-          <div class="service-bg srv4-bg"></div>
-          <div class="service-content">
-            <div class="service-icon"><i class="fas fa-piggy-bank"></i></div>
-            <h3>Tax Saving Planning</h3>
-            <p>Legal tax reduction via investments & deductions.</p>
-          </div>
-        </div>
-        <div class="service-card-glass">
-          <div class="service-bg srv5-bg"></div>
-          <div class="service-content">
-            <div class="service-icon"><i class="fas fa-chart-simple"></i></div>
-            <h3>TDS & TCS Consultancy</h3>
-            <p>Deduction support, returns & corrections.</p>
-          </div>
-        </div>
-        <div class="service-card-glass">
-          <div class="service-bg srv6-bg"></div>
-          <div class="service-content">
-            <div class="service-icon"><i class="fas fa-gavel"></i></div>
-            <h3>Tax Notice & Scrutiny</h3>
-            <p>Expert handling of income tax & GST notices.</p>
-          </div>
-        </div>
-        <div class="service-card-glass">
-          <div class="service-bg srv7-bg"></div>
-          <div class="service-content">
-            <div class="service-icon"><i class="fas fa-clock"></i></div>
-            <h3>Advance Tax Planning</h3>
-            <p>Avoid penalties with accurate advance tax guidance.</p>
-          </div>
-        </div>
-        <div class="service-card-glass">
-          <div class="service-bg srv8-bg"></div>
-          <div class="service-content">
-            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-            <h3>Financial & Compliance</h3>
-            <p>Improve tax compliance & financial planning.</p>
-          </div>
-        </div>
-      </div>
 
       <!-- Why Choose Khata Dost? DARK BACKGROUND using --dark-blue -->
       <div class="why-dark-section">

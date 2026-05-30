@@ -86,6 +86,11 @@
         width: 38px;
         height: 38px;
       }
+      .navbar.is-compact .logo-text img {
+        height: 49px;
+        width: 99px;
+        margin-top: -14px;
+      }
 
       .navbar.is-compact .logo-text h1 {
         font-size: 1.4rem;
@@ -984,7 +989,7 @@
         margin-bottom: 26px;
       }
       .typed-headline {
-        font-size: clamp(3rem, 6vw, 4.5rem);
+        font-size: clamp(2rem, 6vw, 3.5rem);
         line-height: 1.15;
         color: white;
         font-weight: 650;
@@ -1820,8 +1825,11 @@
       }
 
       .fintax-premium-title-sec2 {
-        color: #1a2c3e;
-        font-size: 48px;
+        background: linear-gradient(130deg, #0a2b4e, #1a5f9e);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 42px;
         font-weight: 600;
         line-height: 1.1em;
         margin-top: -50px;
@@ -2090,7 +2098,7 @@
           margin-top: 0;
         }
         .fintax-premium-title-sec2 h2 {
-          font-size: 32px;
+          font-size: 24px;
         }
         .fintax-premium-card-title {
           font-size: 1.45rem;
@@ -2113,6 +2121,9 @@
         }
         .fintax-premium-hover-content {
           padding: 1.4rem;
+        }
+        .fintax-premium-title-sec2 {
+          font-size: 35px;
         }
       }
 
@@ -2623,7 +2634,7 @@
       }
 
       .main-quote {
-        font-size: clamp(1.8rem, 5vw, 2.6rem);
+        font-size: clamp(1.5rem, 5vw, 2.1rem);
         font-weight: 600;
         line-height: 1.2;
         color: white;
@@ -3019,8 +3030,9 @@
       }
 
       .main-heading {
-        font-size: 65px;
+        font-size: 58px;
         line-height: 1.1;
+        letter-spacing: 1.5px;
         font-weight: 700;
         background: linear-gradient(130deg, #0a2b4e, #1a5f9e);
         background-clip: text;
@@ -3457,7 +3469,7 @@
       }
 
       .apc-content-card h2 {
-        font-size: 65px;
+        font-size: 58px;
         line-height: 1.08;
         background: linear-gradient(130deg, #0a2b4e, #1a5f9e);
         background-clip: text;
@@ -4698,10 +4710,13 @@
       }
 
       .latest-news-header h2 {
-        font-size: clamp(24px, 4vw, 36px);
+        font-size: clamp(30px, 4vw, 46px);
         font-weight: 700;
-        color: #0a1c2f;
         letter-spacing: -0.3px;
+        background: linear-gradient(130deg, #0a2b4e, #1a5f9e);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
       }
 
       /* 3-col grid */
