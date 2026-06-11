@@ -1,4 +1,3 @@
-<!-- --------header------ -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -593,13 +592,19 @@
                   ><i class="fas fa-signature"></i> Digital Signature</a
                 >
                 <a href="Services/TaxConsultancy.html"
-                  ><i class="fas fa-calculator"></i> Tax Consultancy</a
+                  ><i class="fas fa-calculator"></i> Tax Planning</a
+                >
+                <a href="Services/TDS.html"
+                  ><i class="fa fa-area-chart"></i> TDS & TCS Compliance</a
+                >
+                <a href="Services/PAN.html"
+                  ><i class="fa fa-book"></i> PAN Services/NDSL</a
                 >
               </div>
             </div>
-            <a href="#about">About Us</a>
-            <a href="#testimonials">Reviews</a>
-            <a href="#contact" class="contact-btn-glow">Start Now</a>
+            <a href="About.html">About Us</a>
+            <a href="Testimonials.html">Reviews</a>
+            <a href="Contact.html" class="contact-btn-glow">Start Now</a>
           </div>
 
           <!-- Hamburger with icon at start & text (premium) -->
@@ -645,7 +650,13 @@
               ><i class="fas fa-signature"></i> Digital Signature</a
             >
             <a href="Services/TaxConsultancy.html"
-              ><i class="fas fa-calculator"></i> Tax Consultancy</a
+              ><i class="fas fa-calculator"></i> Tax Planning</a
+            >
+            <a href="Services/TDS.html"
+              ><i class="fa fa-area-chart"></i> TDS & TCS Compliance</a
+            >
+            <a href="Services/PAN.html"
+              ><i class="fa fa-book"></i> PAN Services/NDSL</a
             >
           </div>
         </div>
@@ -779,12 +790,6 @@
             }
           });
         }
-
-        // Ensure no body scroll when menu open, handled by body.menu-open
-        // All premium touches: side menu width max 320px, no full-page, blurred backdrop, left slide.
-        // Also spacing in hamburger menu dropdown is now minimal & premium (padding 10-12px, gap optimized)
-        // Arrow at end ( > ) included in side-menu footer: end-arrow div with double angle and greater-than.
-        // Also icon at start: hamburger icon shows <i class="fas fa-bars"></i> + text "Menu"
       })();
     </script>
 
@@ -855,7 +860,7 @@
     />
     <!-- Google Fonts for modern typography -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -866,14 +871,14 @@
       }
 
       body {
-        /* font-family:
+        background: #050a16;
+        overflow-x: hidden;
+        font-family:
           "Inter",
           system-ui,
           -apple-system,
           "Segoe UI",
-          sans-serif; */
-        background: #050a16;
-        overflow-x: hidden;
+          sans-serif;
       }
 
       /* HERO SECTION */
@@ -895,18 +900,20 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: -1;
+        z-index: -2;
         pointer-events: none;
+        opacity: 0.55;
       }
+
       .hero::before {
         content: "";
         position: absolute;
         inset: 0;
         background: linear-gradient(
-          rgba(5, 10, 22, 0.789),
-          rgba(5, 10, 22, 0.844)
+          rgba(5, 10, 22, 0.8),
+          rgba(5, 10, 22, 0.88)
         );
-        z-index: 0;
+        z-index: -1;
       }
 
       /* overlay & grid (modern depth) */
@@ -915,21 +922,22 @@
         inset: 0;
         background: radial-gradient(
           circle at top right,
-          rgba(37, 99, 235, 0.3),
+          rgb(37 99 235 / 17%),
           transparent 45%
         );
-        z-index: 0;
+        z-index: -1;
       }
 
       .hero-grid {
         position: absolute;
         inset: 0;
         background-image:
-          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
         background-size: 50px 50px;
         mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
-        z-index: 0;
+        z-index: -1;
+        pointer-events: none;
       }
 
       /* glowing blur effects */
@@ -937,7 +945,7 @@
         position: absolute;
         border-radius: 50%;
         filter: blur(120px);
-        z-index: 0;
+        z-index: -1;
       }
       .blur1 {
         width: 300px;
@@ -953,12 +961,19 @@
         bottom: -120px;
         right: -80px;
       }
+      .blur3 {
+        width: 200px;
+        height: 200px;
+        background: rgba(139, 92, 246, 0.15);
+        top: 50%;
+        left: 50%;
+      }
 
       .hero-container {
         position: relative;
         z-index: 5;
         width: 100%;
-        max-width: 1400px;
+        max-width: 1500px;
         margin: auto;
         display: grid;
         grid-template-columns: 1.1fr 0.9fr;
@@ -970,37 +985,42 @@
       .hero-badge {
         display: inline-flex;
         align-items: center;
-        padding: 10px 18px;
+        padding: 10px 20px;
         border-radius: 50px;
         background: rgba(255, 255, 255, 0.07);
         border: 1px solid rgba(255, 255, 255, 0.12);
         backdrop-filter: blur(12px);
         margin-bottom: 28px;
+        gap: 8px;
+      }
+      .hero-badge i {
+        color: #3b82f6;
+        font-size: 0.85rem;
       }
       .hero-badge span {
         color: #dce9ff;
-        font-size: 0.92rem;
+        font-size: 0.9rem;
         font-weight: 600;
         letter-spacing: -0.2px;
       }
 
-      /* TYPING TITLE WITH PRESERVED SPACE & CURSOR ON RIGHT SIDE (inline after text) */
+      /* TYPING TITLE */
       .hero-title-wrapper {
         min-height: 180px;
         margin-bottom: 26px;
       }
       .typed-headline {
-        font-size: clamp(2rem, 6vw, 3.5rem);
-        line-height: 1.15;
+        font-size: clamp(2rem, 6vw, 3.8rem);
+        line-height: 1.2;
         color: white;
-        font-weight: 650;
+        font-weight: 800;
         letter-spacing: -2px;
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
         justify-content: flex-start;
+        font-family: "Space Grotesk", monospace;
       }
-      /* cursor appears immediately after the typed text on the same line */
       .typed-cursor {
         font-size: inherit;
         color: #3b82f6;
@@ -1010,6 +1030,7 @@
         margin-left: 6px;
         display: inline-block;
         line-height: 1;
+        text-shadow: 0 0 6px #3b82f6;
       }
       @keyframes blink {
         0%,
@@ -1017,20 +1038,24 @@
           opacity: 1;
         }
         50% {
-          opacity: 0;
+          opacity: 0.3;
         }
       }
       .typing-line {
         display: inline-block;
         white-space: pre-wrap;
         word-break: break-word;
+        background: linear-gradient(135deg, #ffffff 30%, #90cdf4 80%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
       }
 
       .hero-text {
-        max-width: 680px;
-        color: rgba(255, 255, 255, 0.78);
+        max-width: 600px;
+        color: rgba(255, 255, 255, 0.8);
         font-size: 1.1rem;
-        line-height: 1.9;
+        line-height: 1.8;
         margin-bottom: 38px;
       }
 
@@ -1104,42 +1129,44 @@
         font-size: 0.85rem;
       }
 
-      /* ========= ORBIT WRAPPER ========= */
+      /* ========= ENHANCED ORBIT WRAPPER (9 services, fully upright) ========= */
       .orbit-wrapper {
         position: relative;
-        width: 600px;
-        height: 600px;
-        margin: auto;
+        width: 100%;
+        max-width: 620px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: transform 0.2s ease-out;
+        transform-style: preserve-3d;
       }
 
       /* center logo */
       .center-logo {
         position: absolute;
-        width: 180px;
-        height: 180px;
+        width: 170px;
+        height: 170px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 15;
+        z-index: 30;
       }
       .logo-ring {
         position: absolute;
         inset: 0;
         border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.2);
         background: radial-gradient(
           circle,
           rgba(59, 130, 246, 0.35),
-          rgba(59, 130, 246, 0.05)
+          rgba(2, 6, 23, 0.95)
         );
-        backdrop-filter: blur(18px);
-        box-shadow:
-          0 0 60px rgba(37, 99, 235, 0.3),
-          inset 0 0 40px rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(96, 165, 250, 0.6);
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+        backdrop-filter: blur(12px);
       }
       .logo-inner {
         position: relative;
@@ -1147,34 +1174,48 @@
         z-index: 2;
       }
       .logo-inner h2 {
-        color: white;
         font-size: 2.3rem;
         line-height: 1;
         font-weight: 800;
+        background: linear-gradient(125deg, #fff, #7db4ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
       }
       .logo-inner span {
-        color: #7db4ff;
+        color: #60a5fa;
         font-size: 1.3rem;
         font-weight: 700;
       }
 
-      /* orbit rings - rotating elements */
+      /* orbit rings */
       .orbit {
         position: absolute;
         border-radius: 50%;
-        border: 1px dashed rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(59, 130, 246, 0.3);
+        box-shadow: 0 0 18px rgba(37, 99, 235, 0.15);
         animation: rotateOrbit linear infinite;
       }
-      .orbit-one {
-        width: 340px;
-        height: 340px;
-        animation-duration: 20s;
+      .orbit-outer {
+        width: 540px;
+        height: 540px;
+        animation-duration: 38s;
+        border-top: 1px solid rgba(96, 165, 250, 0.5);
+        border-bottom: 1px dashed rgba(139, 92, 246, 0.4);
       }
-      .orbit-two {
-        width: 520px;
-        height: 520px;
+      .orbit-mid {
+        width: 390px;
+        height: 390px;
         animation-duration: 28s;
-        animation-direction: reverse;
+        /* animation-direction: reverse; */
+        border-left: 1px solid rgba(6, 182, 212, 0.5);
+        border-right: 1px dashed rgba(59, 130, 246, 0.4);
+      }
+      .orbit-inner {
+        width: 250px;
+        height: 250px;
+        animation-duration: 18s;
+        border: 1px solid rgba(168, 85, 247, 0.35);
       }
 
       @keyframes rotateOrbit {
@@ -1186,44 +1227,45 @@
         }
       }
 
-      /* service cards — each card uses inverse rotation to stay upright */
+      /* service cards - counter rotation to stay upright */
       .service-card {
         position: absolute;
-        width: 165px;
-        padding: 12px 16px;
-        border-radius: 32px;
-        background: rgba(20, 30, 55, 0.75);
-        backdrop-filter: blur(16px);
+        width: 175px;
+        padding: 10px 18px;
+        border-radius: 60px;
+        background: rgba(12, 22, 48, 0.88);
+        backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.2);
         display: flex;
         align-items: center;
         gap: 12px;
         color: white;
         font-weight: 600;
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-        transition:
-          transform 0.2s ease,
-          background 0.2s;
-        white-space: nowrap;
-        transform-origin: center center;
-        animation: counterRotate linear infinite;
         cursor: pointer;
-        z-index: 20;
-        pointer-events: auto;
+        transition: all 0.25s ease;
+        box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.4);
+        z-index: 25;
+        animation: counterRotate linear infinite;
+        transform-origin: center center;
+        white-space: nowrap;
+        font-size: 0.9rem;
       }
       .service-card:hover {
-        background: rgba(37, 99, 235, 0.55);
-        border-color: rgba(255, 255, 255, 0.5);
-        transform: scale(1.03);
+        background: rgba(37, 99, 235, 0.92);
+        border-color: #ffffffcc;
+        transform: scale(1.05);
+        box-shadow: 0 20px 35px -8px #1e3a8a;
       }
-
-      /* Inverse rotation speed to cancel orbit rotation perfectly */
-      .orbit-one .service-card {
-        animation-duration: 20s;
+      .orbit-outer .service-card {
+        animation-duration: 38s;
         animation-name: counterRotate;
       }
-      .orbit-two .service-card {
+      .orbit-mid .service-card {
         animation-duration: 28s;
+        animation-name: counterRotate;
+      }
+      .orbit-inner .service-card {
+        animation-duration: 18s;
         animation-name: counterRotate;
       }
 
@@ -1236,48 +1278,65 @@
         }
       }
 
-      /* card icons */
       .service-card i {
-        width: 42px;
-        height: 42px;
-        border-radius: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(37, 99, 235, 0.35);
-        color: #b9d6ff;
+        background: rgba(59, 130, 246, 0.35);
+        color: #bbd7ff;
         font-size: 1.2rem;
       }
       .service-card span {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         font-weight: 600;
         letter-spacing: -0.2px;
         white-space: nowrap;
       }
 
-      /* Positions on orbit circumferences */
-      .orbit-one .card1 {
+      /* Card positioning on orbits */
+      .orbit-outer .card-out-1 {
         top: -28px;
-        left: 80px;
+        left: 95px;
       }
-      .orbit-one .card2 {
+      .orbit-outer .card-out-2 {
         bottom: -28px;
-        right: 80px;
+        right: 95px;
       }
-      .orbit-two .card3 {
-        top: -35px;
-        left: 190px;
+      .orbit-outer .card-out-3 {
+        top: 42%;
+        right: -55px;
       }
-      .orbit-two .card4 {
-        bottom: 45px;
-        left: 15px;
-      }
-      .orbit-two .card5 {
-        right: -95px;
-        top: 220px;
+      .orbit-outer .card-out-4 {
+        top: 55%;
+        left: -55px;
       }
 
-      /* glow under orbits */
+      .orbit-mid .card-mid-1 {
+        top: -28px;
+        left: 130px;
+      }
+      .orbit-mid .card-mid-2 {
+        bottom: -28px;
+        right: 130px;
+      }
+      .orbit-mid .card-mid-3 {
+        top: 48%;
+        right: -45px;
+      }
+
+      .orbit-inner .card-in-1 {
+        top: -18px;
+        left: 45px;
+      }
+      .orbit-inner .card-in-2 {
+        bottom: -18px;
+        right: 45px;
+      }
+
+      /* orbit glow */
       .orbit-light {
         position: absolute;
         width: 540px;
@@ -1285,7 +1344,7 @@
         border-radius: 50%;
         background: radial-gradient(
           circle,
-          rgba(59, 130, 246, 0.25),
+          rgba(59, 130, 246, 0.2),
           transparent 70%
         );
         filter: blur(40px);
@@ -1293,12 +1352,101 @@
         pointer-events: none;
       }
 
-      /* Responsiveness */
+      .floating-particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #3b82f6;
+        border-radius: 50%;
+        opacity: 0.5;
+        filter: blur(1px);
+        animation: floatPulse 6s infinite alternate;
+        pointer-events: none;
+      }
+      @keyframes floatPulse {
+        0% {
+          transform: translateY(0px) scale(1);
+          opacity: 0.2;
+        }
+        100% {
+          transform: translateY(-20px) scale(1.5);
+          opacity: 0.7;
+        }
+      }
+
+      /* ========= RESPONSIVE BREAKPOINTS ========= */
+      @media (max-width: 1200px) {
+        .hero-container {
+          gap: 40px;
+        }
+        .orbit-outer {
+          width: 480px;
+          height: 480px;
+        }
+        .orbit-mid {
+          width: 350px;
+          height: 350px;
+        }
+        .orbit-inner {
+          width: 220px;
+          height: 220px;
+        }
+        .service-card {
+          width: 160px;
+          padding: 8px 14px;
+          gap: 10px;
+        }
+        .service-card i {
+          width: 34px;
+          height: 34px;
+          font-size: 1rem;
+        }
+        .service-card span {
+          font-size: 0.78rem;
+        }
+        .orbit-outer .card-out-1 {
+          top: -22px;
+          left: 70px;
+        }
+        .orbit-outer .card-out-2 {
+          bottom: -22px;
+          right: 70px;
+        }
+        .orbit-outer .card-out-3 {
+          right: -45px;
+          top: 43%;
+        }
+        .orbit-outer .card-out-4 {
+          left: -45px;
+          top: 53%;
+        }
+        .orbit-mid .card-mid-1 {
+          top: -22px;
+          left: 110px;
+        }
+        .orbit-mid .card-mid-2 {
+          bottom: -22px;
+          right: 110px;
+        }
+        .orbit-mid .card-mid-3 {
+          right: -38px;
+          top: 47%;
+        }
+        .orbit-inner .card-in-1 {
+          top: -15px;
+          left: 35px;
+        }
+        .orbit-inner .card-in-2 {
+          bottom: -15px;
+          right: 35px;
+        }
+      }
+
       @media (max-width: 1100px) {
         .hero-container {
           grid-template-columns: 1fr;
           text-align: center;
-          gap: 30px;
+          gap: 50px;
         }
         .hero-text {
           margin: 0 auto 38px auto;
@@ -1312,87 +1460,52 @@
         .typed-headline {
           justify-content: center;
         }
+        .hero-badge {
+          margin-left: auto;
+          margin-right: auto;
+        }
         .orbit-wrapper {
-          width: 480px;
-          height: 480px;
-          margin-top: 20px;
+          max-width: 520px;
         }
-        .orbit-one {
-          width: 280px;
-          height: 280px;
+        .orbit-outer {
+          width: 460px;
+          height: 460px;
         }
-        .orbit-two {
-          width: 420px;
-          height: 420px;
+        .orbit-mid {
+          width: 330px;
+          height: 330px;
         }
-        .service-card {
-          width: 140px;
-          padding: 10px 14px;
-        }
-        .service-card i {
-          width: 36px;
-          height: 36px;
-          font-size: 1rem;
-        }
-        .card1 {
-          top: -20px;
-          left: 60px;
-        }
-        .card2 {
-          bottom: -20px;
-          right: 60px;
-        }
-        .card3 {
-          top: -15px;
-          left: 150px;
-        }
-        .card4 {
-          bottom: 30px;
-          left: 0px;
-        }
-        .card5 {
-          right: -40px;
-          top: 180px;
+        .orbit-inner {
+          width: 210px;
+          height: 210px;
         }
       }
 
-      @media (max-width: 700px) {
+      @media (max-width: 750px) {
         .hero {
           padding: 110px 20px 70px;
         }
         .hero-title-wrapper {
           min-height: 140px;
         }
-        .typed-headline {
-          letter-spacing: -1px;
-          justify-content: center;
-        }
         .orbit-wrapper {
-          width: 360px;
-          height: 360px;
-          transform: scale(0.9);
+          max-width: 420px;
         }
-        .orbit-one {
-          width: 240px;
-          height: 240px;
+        .orbit-outer {
+          width: 380px;
+          height: 380px;
         }
-        .orbit-two {
-          width: 320px;
-          height: 320px;
+        .orbit-mid {
+          width: 280px;
+          height: 280px;
         }
-        .center-logo {
-          width: 120px;
-          height: 120px;
-        }
-        .logo-inner h2 {
-          font-size: 1.5rem;
-        }
-        .logo-inner span {
-          font-size: 1rem;
+        .orbit-inner {
+          width: 180px;
+          height: 180px;
         }
         .service-card {
-          width: 120px;
-          padding: 8px 12px;
+          width: 135px;
+          padding: 7px 12px;
           gap: 8px;
         }
         .service-card i {
@@ -1403,46 +1516,136 @@
         .service-card span {
           font-size: 0.7rem;
         }
-        .card1 {
+        .center-logo {
+          width: 120px;
+          height: 120px;
+        }
+        .logo-inner h2 {
+          font-size: 1.6rem;
+        }
+        .logo-inner span {
+          font-size: 1rem;
+        }
+
+        .orbit-outer .card-out-1 {
           top: -18px;
-          left: 40px;
+          left: 55px;
         }
-        .card2 {
+        .orbit-outer .card-out-2 {
           bottom: -18px;
-          right: 40px;
+          right: 55px;
         }
-        .card3 {
-          top: -5px;
-          left: 100px;
+        .orbit-outer .card-out-3 {
+          right: -32px;
+          top: 44%;
         }
-        .card4 {
-          bottom: 15px;
-          left: -5px;
+        .orbit-outer .card-out-4 {
+          left: -32px;
+          top: 52%;
         }
-        .card5 {
+        .orbit-mid .card-mid-1 {
+          top: -18px;
+          left: 85px;
+        }
+        .orbit-mid .card-mid-2 {
+          bottom: -18px;
+          right: 85px;
+        }
+        .orbit-mid .card-mid-3 {
           right: -30px;
-          top: 125px;
+          top: 46%;
+        }
+        .orbit-inner .card-in-1 {
+          top: -12px;
+          left: 28px;
+        }
+        .orbit-inner .card-in-2 {
+          bottom: -12px;
+          right: 28px;
         }
       }
 
-      @media (max-width: 480px) {
+      @media (max-width: 500px) {
+        .orbit-wrapper {
+          max-width: 360px;
+        }
+        .orbit-outer {
+          width: 330px;
+          height: 330px;
+        }
+        .orbit-mid {
+          width: 240px;
+          height: 240px;
+        }
+        .orbit-inner {
+          width: 150px;
+          height: 150px;
+        }
         .service-card {
-          width: 108px;
-          padding: 6px 10px;
+          width: 118px;
+          padding: 5px 10px;
+          gap: 6px;
+        }
+        .service-card i {
+          width: 24px;
+          height: 24px;
+          font-size: 0.75rem;
         }
         .service-card span {
-          font-size: 0.65rem;
+          font-size: 0.62rem;
         }
-        .card3 {
-          left: 80px;
-          top: -8px;
+        .center-logo {
+          width: 100px;
+          height: 100px;
         }
-        .card5 {
+        .logo-inner h2 {
+          font-size: 1.3rem;
+        }
+        .logo-inner span {
+          font-size: 0.85rem;
+        }
+
+        .orbit-outer .card-out-1 {
+          top: -14px;
+          left: 40px;
+        }
+        .orbit-outer .card-out-2 {
+          bottom: -14px;
+          right: 40px;
+        }
+        .orbit-outer .card-out-3 {
           right: -25px;
-          top: 110px;
+          top: 45%;
+        }
+        .orbit-outer .card-out-4 {
+          left: -25px;
+          top: 51%;
+        }
+        .orbit-mid .card-mid-1 {
+          top: -14px;
+          left: 65px;
+        }
+        .orbit-mid .card-mid-2 {
+          bottom: -14px;
+          right: 65px;
+        }
+        .orbit-mid .card-mid-3 {
+          right: -22px;
+          top: 45%;
+        }
+        .orbit-inner .card-in-1 {
+          top: -10px;
+          left: 20px;
+        }
+        .orbit-inner .card-in-2 {
+          bottom: -10px;
+          right: 20px;
         }
         .hero-badge span {
-          font-size: 0.75rem;
+          font-size: 0.7rem;
+        }
+        .hero-text {
+          font-size: 0.95rem;
         }
       }
     </style>
@@ -1456,15 +1659,16 @@
       <div class="hero-grid"></div>
       <div class="blur blur1"></div>
       <div class="blur blur2"></div>
+      <div class="blur blur3"></div>
 
       <div class="hero-container">
         <!-- LEFT CONTENT -->
         <div class="hero-content">
           <div class="hero-badge">
-            <span>★ Trusted by 2500+ Businesses Across India</span>
+            <i class="fa-solid fa-circle-check"></i>
+            <span>★ Trusted by 3200+ Businesses Across India</span>
           </div>
 
-          <!-- Typing area with cursor always on the right side of text (same line) -->
           <div class="hero-title-wrapper">
             <div class="typed-headline">
               <span class="typing-line" id="typed-line"></span>
@@ -1473,13 +1677,19 @@
           </div>
 
           <p class="hero-text">
-            GST filing, Income Tax, Accounting, Bookkeeping & Compliance —
-            handled by experts so you can focus on growing your business.
+            GST filing, Income Tax, Accounting, Bookkeeping, Retirement
+            Planning, NSDL/PAN, TDS, TCS & Compliance — handled by experts so
+            you can focus on growing your business.
           </p>
 
           <div class="hero-buttons">
-            <a href="#" class="primary-btn"> Get Free Consultation </a>
-            <a href="#" class="secondary-btn"> Explore Services </a>
+            <a href="#" class="primary-btn"
+              ><i class="fa-regular fa-calendar-check"></i> Get Free
+              Consultation</a
+            >
+            <a href="#" class="secondary-btn"
+              ><i class="fa-regular fa-compass"></i> Explore Services</a
+            >
           </div>
 
           <div class="hero-trust">
@@ -1498,15 +1708,41 @@
               />
             </div>
             <div class="trust-info">
-              <h4>4.9/5 Google Rating</h4>
+              <h4>
+                <i class="fa-solid fa-star" style="color: #fbbf24"></i> 4.9/5
+                Google Rating
+              </h4>
               <p>Fast Support • Expert Team • Secure Process</p>
             </div>
           </div>
         </div>
 
-        <!-- RIGHT SIDE ORBIT: cards always upright thanks to counter-rotation -->
-        <div class="orbit-wrapper">
+        <!-- RIGHT SIDE ENHANCED ORBIT: 9 services, always upright -->
+        <div class="orbit-wrapper" id="orbitWrapper">
           <div class="orbit-light"></div>
+          <div
+            class="floating-particle"
+            style="top: 12%; left: 8%; animation-duration: 5s"
+          ></div>
+          <div
+            class="floating-particle"
+            style="
+              bottom: 18%;
+              right: 10%;
+              background: #8b5cf6;
+              animation-duration: 6.5s;
+            "
+          ></div>
+          <div
+            class="floating-particle"
+            style="
+              top: 45%;
+              right: 20%;
+              background: #06b6d4;
+              animation-duration: 4.2s;
+            "
+          ></div>
+
           <!-- center logo -->
           <div class="center-logo">
             <div class="logo-ring"></div>
@@ -1516,31 +1752,42 @@
             </div>
           </div>
 
-          <!-- Orbit 1 -->
-          <div class="orbit orbit-one">
-            <div class="service-card card1">
-              <i class="fas fa-file-invoice-dollar"></i>
-              <span>GST Return</span>
+          <!-- Outer Orbit (4 cards: Retirement, NSDL/PAN, TDS, TCS) -->
+          <div class="orbit orbit-outer">
+            <div class="service-card card-out-1">
+              <i class="fas fa-chart-pie"></i><span>Retirement Planning</span>
             </div>
-            <div class="service-card card2">
-              <i class="fas fa-chart-line"></i>
-              <span>Income Tax</span>
+            <div class="service-card card-out-2">
+              <i class="fas fa-id-card"></i><span>NSDL / PAN</span>
+            </div>
+            <div class="service-card card-out-3">
+              <i class="fas fa-hand-holding-usd"></i><span>TDS Return</span>
+            </div>
+            <div class="service-card card-out-4">
+              <i class="fas fa-coins"></i><span>TCS Compliance</span>
             </div>
           </div>
 
-          <!-- Orbit 2 (larger orbit) -->
-          <div class="orbit orbit-two">
-            <div class="service-card card3">
-              <i class="fas fa-calculator"></i>
-              <span>Tax Planning</span>
+          <!-- Mid Orbit (3 cards: GST, Income Tax, Tax Planning) -->
+          <div class="orbit orbit-mid">
+            <div class="service-card card-mid-1">
+              <i class="fas fa-file-invoice-dollar"></i><span>GST Filing</span>
             </div>
-            <div class="service-card card4">
-              <i class="fas fa-signature"></i>
-              <span>Digital Signature</span>
+            <div class="service-card card-mid-2">
+              <i class="fas fa-chart-line"></i><span>Income Tax</span>
             </div>
-            <div class="service-card card5">
-              <i class="fas fa-book"></i>
-              <span>Accounting</span>
+            <div class="service-card card-mid-3">
+              <i class="fas fa-calculator"></i><span>Tax Planning</span>
+            </div>
+          </div>
+
+          <!-- Inner Orbit (2 cards: Accounting, Digital Signature) -->
+          <div class="orbit orbit-inner">
+            <div class="service-card card-in-1">
+              <i class="fas fa-book"></i><span>Accounting</span>
+            </div>
+            <div class="service-card card-in-2">
+              <i class="fas fa-signature"></i><span>Digital Signature</span>
             </div>
           </div>
         </div>
@@ -1549,74 +1796,62 @@
 
     <script>
       (function () {
-        // ========== TYPING EFFECT WITH REPEAT EVERY 10 SECONDS & CURSOR ON RIGHT ==========
+        // ========== TYPING EFFECT WITH REPEAT EVERY 10 SECONDS ==========
         const typedLine = document.getElementById("typed-line");
         const cursorSpan = document.getElementById("static-cursor");
 
-        if (!typedLine) return;
+        if (typedLine) {
+          const messages = [
+            "Entrust Your Accounting Problems with Us",
+            "Smart GST & Tax Compliance",
+            "Focus on Growth, We Handle Numbers",
+            "360° Financial Peace of Mind",
+          ];
 
-        // Multiple messages to rotate
-        const messages = [
-          "Entrust Your Accounting Problems with Us",
-          "Smart GST & Tax Compliance",
-          "Focus on Growth, We Handle Numbers",
-        ];
+          let messageIndex = 0;
+          let charPos = 0;
+          let isDeleting = false;
+          let typingTimeout = null;
 
-        let messageIndex = 0;
-        let charPos = 0;
-        let isDeleting = false;
-        let typingTimeout = null;
+          function updateTyping() {
+            const currentMessage = messages[messageIndex % messages.length];
 
-        // Ensure cursor always visible and blinking (CSS handles blink)
-        function updateTyping() {
-          const currentMessage = messages[messageIndex % messages.length];
+            if (!isDeleting && charPos <= currentMessage.length) {
+              typedLine.innerHTML = currentMessage.substring(0, charPos);
+              if (cursorSpan) cursorSpan.style.display = "inline-block";
 
-          if (!isDeleting && charPos <= currentMessage.length) {
-            // Typing forward
-            typedLine.innerHTML = currentMessage.substring(0, charPos);
-            // Cursor stays visible (always on right) and we keep it next to text
-            if (cursorSpan) cursorSpan.style.display = "inline-block";
+              if (charPos === currentMessage.length) {
+                typingTimeout = setTimeout(() => {
+                  isDeleting = true;
+                  updateTyping();
+                }, 10000);
+                return;
+              } else {
+                charPos++;
+                typingTimeout = setTimeout(updateTyping, 70);
+              }
+            } else if (isDeleting && charPos >= 0) {
+              typedLine.innerHTML = currentMessage.substring(0, charPos);
+              if (cursorSpan) cursorSpan.style.display = "inline-block";
 
-            if (charPos === currentMessage.length) {
-              // Finished typing current message: wait 10 seconds then start deleting
-              typingTimeout = setTimeout(() => {
-                isDeleting = true;
-                updateTyping();
-              }, 10000); // 10 second pause before deleting
-              return;
-            } else {
-              charPos++;
-              typingTimeout = setTimeout(updateTyping, 70);
-            }
-          } else if (isDeleting && charPos >= 0) {
-            // Deleting characters
-            typedLine.innerHTML = currentMessage.substring(0, charPos);
-            if (cursorSpan) cursorSpan.style.display = "inline-block";
-
-            if (charPos === 0) {
-              // Finished deleting: move to next message
-              isDeleting = false;
-              messageIndex++;
-              charPos = 0;
-              // Brief pause before typing next message
-              typingTimeout = setTimeout(updateTyping, 180);
-            } else {
-              charPos--;
-              typingTimeout = setTimeout(updateTyping, 45);
+              if (charPos === 0) {
+                isDeleting = false;
+                messageIndex++;
+                charPos = 0;
+                typingTimeout = setTimeout(updateTyping, 180);
+              } else {
+                charPos--;
+                typingTimeout = setTimeout(updateTyping, 45);
+              }
             }
           }
+
+          typedLine.innerHTML = "";
+          if (cursorSpan) cursorSpan.style.display = "inline-block";
+          updateTyping();
         }
 
-        // Start the typing animation
-        typedLine.innerHTML = "";
-        if (cursorSpan) cursorSpan.style.display = "inline-block";
-        updateTyping();
-
-        // ========== ORBIT & CARD UPRIGHT VERIFICATION ==========
-        // All cards have counter-rotation animations that perfectly cancel orbit rotation,
-        // ensuring no card ever appears upside down.
-
-        // Add click handlers for service cards
+        // ========== CLICK HANDLERS FOR SERVICE CARDS ==========
         const cards = document.querySelectorAll(".service-card");
         cards.forEach((card) => {
           card.addEventListener("click", (e) => {
@@ -1625,110 +1860,119 @@
             const serviceName = serviceSpan
               ? serviceSpan.innerText.trim()
               : "Service";
-            // Optional: console log, you can replace with any action
+
+            // Show toast notification
+            const toast = document.createElement("div");
+            toast.innerText = `✨ ${serviceName} — Book expert consultation now!`;
+            toast.style.position = "fixed";
+            toast.style.bottom = "28px";
+            toast.style.left = "50%";
+            toast.style.transform = "translateX(-50%)";
+            toast.style.backgroundColor = "#0f172ad9";
+            toast.style.backdropFilter = "blur(20px)";
+            toast.style.color = "#e0edff";
+            toast.style.padding = "14px 30px";
+            toast.style.borderRadius = "70px";
+            toast.style.fontWeight = "600";
+            toast.style.border = "1px solid #3b82f6";
+            toast.style.boxShadow = "0 15px 30px rgba(0,0,0,0.6)";
+            toast.style.zIndex = "10000";
+            toast.style.fontFamily = "Inter, sans-serif";
+            toast.style.fontSize = "0.9rem";
+            toast.style.letterSpacing = "-0.2px";
+            document.body.appendChild(toast);
+            setTimeout(() => {
+              toast.style.opacity = "0";
+              setTimeout(() => toast.remove(), 500);
+            }, 2800);
+
             console.log(`Selected service: ${serviceName}`);
           });
         });
 
-        // Video fallback handling
+        // ========== VIDEO FALLBACK ==========
         const videoBg = document.querySelector(".bg-video");
         if (videoBg) {
           videoBg.addEventListener("error", function () {
             this.style.display = "none";
           });
-          videoBg.play().catch((e) => {
-            /* autoplay restrictions are fine, background remains dark */
+          videoBg.play().catch(() => {});
+        }
+
+        // ========== 3D TILT EFFECT FOR ORBIT WRAPPER ==========
+        const orbitWrap = document.getElementById("orbitWrapper");
+        if (orbitWrap) {
+          document.addEventListener("mousemove", (e) => {
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 45;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 45;
+            orbitWrap.style.transform = `perspective(1000px) rotateY(${xAxis * 0.5}deg) rotateX(${yAxis * -0.3}deg)`;
+          });
+          orbitWrap.addEventListener("mouseleave", () => {
+            orbitWrap.style.transform =
+              "perspective(1000px) rotateY(0deg) rotateX(0deg)";
           });
         }
 
-        // Responsive adjustments for orbit card positions (maintains upright positioning)
+        // ========== RESPONSIVE POSITION ADJUSTMENTS ==========
         function adjustOrbitResponsive() {
           const width = window.innerWidth;
-          const card3 = document.querySelector(".card3");
-          const card4 = document.querySelector(".card4");
-          const card5 = document.querySelector(".card5");
-          const card1 = document.querySelector(".card1");
-          const card2 = document.querySelector(".card2");
+          const out3 = document.querySelector(".card-out-3");
+          const out4 = document.querySelector(".card-out-4");
+          const mid3 = document.querySelector(".card-mid-3");
 
-          if (width <= 700) {
-            if (card3) card3.style.left = width <= 480 ? "78px" : "110px";
-            if (card5) card5.style.right = width <= 480 ? "-20px" : "-35px";
-            if (card4) card4.style.bottom = "18px";
-            if (card1) card1.style.left = width <= 480 ? "35px" : "45px";
-            if (card2) card2.style.right = width <= 480 ? "35px" : "45px";
-          } else if (width <= 1100) {
-            if (card3) card3.style.left = "150px";
-            if (card5) card5.style.right = "-40px";
-            if (card4) card4.style.bottom = "30px";
-            if (card1) {
-              card1.style.left = "";
-              card1.style.top = "";
-            }
-            if (card2) {
-              card2.style.right = "";
-              card2.style.bottom = "";
-            }
+          if (width <= 750 && width > 500) {
+            if (out3) out3.style.right = "-32px";
+            if (out4) out4.style.left = "-32px";
+            if (mid3) mid3.style.right = "-30px";
+          } else if (width <= 500) {
+            if (out3) out3.style.right = "-25px";
+            if (out4) out4.style.left = "-25px";
+            if (mid3) mid3.style.right = "-22px";
+          } else if (width <= 1200) {
+            if (out3) out3.style.right = "-45px";
+            if (out4) out4.style.left = "-45px";
+            if (mid3) mid3.style.right = "-38px";
           } else {
-            // Reset to CSS defaults
-            if (card3) card3.style.left = "";
-            if (card5) card5.style.right = "";
-            if (card4) card4.style.bottom = "";
-            if (card1) {
-              card1.style.left = "";
-              card1.style.top = "";
-            }
-            if (card2) {
-              card2.style.right = "";
-              card2.style.bottom = "";
-            }
+            if (out3) out3.style.right = "-55px";
+            if (out4) out4.style.left = "-55px";
+            if (mid3) mid3.style.right = "-45px";
           }
         }
 
-        window.addEventListener("resize", () => {
-          adjustOrbitResponsive();
-        });
+        window.addEventListener("resize", adjustOrbitResponsive);
         adjustOrbitResponsive();
 
-        // Additional style overrides to ensure card text never flips and cursor stays inline
+        // Additional style fixes
         const styleFix = document.createElement("style");
         styleFix.textContent = `
-          .orbit-one .service-card, .orbit-two .service-card {
-            backface-visibility: hidden;
-            -webkit-font-smoothing: antialiased;
-            will-change: transform;
-          }
-          .typed-headline {
-            align-items: baseline;
-            flex-wrap: wrap;
-          }
-          .typing-line {
-            white-space: pre-wrap;
-            word-break: keep-all;
-          }
-          .typed-cursor {
-            display: inline-block;
-            margin-left: 6px;
-            line-height: 1;
-            vertical-align: baseline;
-          }
-          /* Ensure cursor stays on the same line as text even on mobile */
-          @media (max-width: 700px) {
-            .typed-headline {
-              justify-content: center;
-              flex-wrap: wrap;
-            }
-            .typed-cursor {
-              margin-left: 4px;
-            }
-          }
-        `;
+      .orbit-outer .service-card, .orbit-mid .service-card, .orbit-inner .service-card {
+        backface-visibility: hidden;
+        -webkit-font-smoothing: antialiased;
+        will-change: transform;
+      }
+      .typed-headline {
+        align-items: baseline;
+        flex-wrap: wrap;
+      }
+      .typed-cursor {
+        display: inline-block;
+        margin-left: 6px;
+        line-height: 1;
+        vertical-align: baseline;
+      }
+      @media (max-width: 700px) {
+        .typed-headline {
+          justify-content: center;
+        }
+        .typed-cursor {
+          margin-left: 4px;
+        }
+      }
+    `;
         document.head.appendChild(styleFix);
 
-        // Ensure that any potential misplacement of cursor is corrected: cursor always after text
-        // The cursorSpan element is naturally placed after typed-line span in DOM, so it will always be to the right.
-        // This matches the requirement "| - i next line without text - make it right" meaning cursor on the right side.
         console.log(
-          "Hero ready: typing repeats every 10 seconds, cursor always on right, all cards stay upright.",
+          "KhataDost Hero Ready: 9 services (Retirement, NSDL/PAN, TDS, TCS, GST, IT, Tax Planning, Accounting, Digital Sign) — all cards stay perfectly upright with counter-rotation!",
         );
       })();
     </script>
@@ -2187,7 +2431,7 @@
           <div
             class="fintax-premium-service-card"
             style="
-              background-image: url(&quot;images/GST-1.png&quot;);
+              background-image: url(&quot;images/hero.jpg&quot;);
               background-size: cover;
               background-position: center;
             "
@@ -2221,13 +2465,15 @@
                 </li>
               </ul>
               <div class="fintax-premium-btn-wrapper">
-                <button
-                  class="fintax-premium-expand-btn"
-                  data-service="GST Services"
+                <a href="GST.html"
+                  ><button
+                    class="fintax-premium-expand-btn"
+                    data-service="GST Services"
+                  >
+                    <i class="fas fa-arrow-right"></i>
+                    <span class="fintax-premium-btn-text">Explore GST</span>
+                  </button></a
                 >
-                  <i class="fas fa-arrow-right"></i>
-                  <span class="fintax-premium-btn-text">Explore GST</span>
-                </button>
               </div>
             </div>
           </div>
@@ -2269,13 +2515,15 @@
                 </li>
               </ul>
               <div class="fintax-premium-btn-wrapper">
-                <button
-                  class="fintax-premium-expand-btn"
-                  data-service="Income Tax Filing"
+                <a href="Services/ITR.html"
+                  ><button
+                    class="fintax-premium-expand-btn"
+                    data-service="Income Tax Filing"
+                  >
+                    <i class="fas fa-arrow-right"></i>
+                    <span class="fintax-premium-btn-text">File Now</span>
+                  </button></a
                 >
-                  <i class="fas fa-arrow-right"></i>
-                  <span class="fintax-premium-btn-text">File Now</span>
-                </button>
               </div>
             </div>
           </div>
@@ -2284,7 +2532,7 @@
           <div
             class="fintax-premium-service-card"
             style="
-              background-image: url(&quot;images/DCS.png&quot;);
+              background-image: url(&quot;images/Dsign.jpg&quot;);
               background-size: cover;
               background-position: center;
             "
@@ -2318,13 +2566,15 @@
                 </li>
               </ul>
               <div class="fintax-premium-btn-wrapper">
-                <button
-                  class="fintax-premium-expand-btn"
-                  data-service="DSC Services"
+                <a href="Services/DigitalSignature.html"
+                  ><button
+                    class="fintax-premium-expand-btn"
+                    data-service="DSC Services"
+                  >
+                    <i class="fas fa-arrow-right"></i>
+                    <span class="fintax-premium-btn-text">Get DSC</span>
+                  </button></a
                 >
-                  <i class="fas fa-arrow-right"></i>
-                  <span class="fintax-premium-btn-text">Get DSC</span>
-                </button>
               </div>
             </div>
           </div>
@@ -2333,7 +2583,7 @@
           <div
             class="fintax-premium-service-card"
             style="
-              background-image: url(&quot;images/tax consultancy.png&quot;);
+              background-image: url(&quot;images/TAX.png&quot;);
               background-size: cover;
               background-position: center;
             "
@@ -2367,13 +2617,15 @@
                 </li>
               </ul>
               <div class="fintax-premium-btn-wrapper">
-                <button
-                  class="fintax-premium-expand-btn"
-                  data-service="Tax Consultancy"
+                <a href="Services/TaxConsultancy.html"
+                  ><button
+                    class="fintax-premium-expand-btn"
+                    data-service="Tax Consultancy"
+                  >
+                    <i class="fas fa-arrow-right"></i>
+                    <span class="fintax-premium-btn-text">Consult</span>
+                  </button></a
                 >
-                  <i class="fas fa-arrow-right"></i>
-                  <span class="fintax-premium-btn-text">Consult</span>
-                </button>
               </div>
             </div>
           </div>
@@ -2382,7 +2634,7 @@
           <div
             class="fintax-premium-service-card"
             style="
-              background-image: url(&quot;images/NSDL.png&quot;);
+              background-image: url(&quot;images/PAN.png&quot;);
               background-size: cover;
               background-position: center;
             "
@@ -2416,13 +2668,15 @@
                 </li>
               </ul>
               <div class="fintax-premium-btn-wrapper">
-                <button
-                  class="fintax-premium-expand-btn"
-                  data-service="NSDL PAN Services"
+                <a href="Services/PAN.html"
+                  ><button
+                    class="fintax-premium-expand-btn"
+                    data-service="NSDL PAN Services"
+                  >
+                    <i class="fas fa-arrow-right"></i>
+                    <span class="fintax-premium-btn-text">Apply Now</span>
+                  </button></a
                 >
-                  <i class="fas fa-arrow-right"></i>
-                  <span class="fintax-premium-btn-text">Apply Now</span>
-                </button>
               </div>
             </div>
           </div>
@@ -2462,13 +2716,15 @@
                 </li>
               </ul>
               <div class="fintax-premium-btn-wrapper">
-                <button
-                  class="fintax-premium-expand-btn"
-                  data-service="TDS TCS Compliance"
+                <a href="Services/TDS.html"
+                  ><button
+                    class="fintax-premium-expand-btn"
+                    data-service="TDS TCS Compliance"
+                  >
+                    <i class="fas fa-arrow-right"></i>
+                    <span class="fintax-premium-btn-text">Manage</span>
+                  </button></a
                 >
-                  <i class="fas fa-arrow-right"></i>
-                  <span class="fintax-premium-btn-text">Manage</span>
-                </button>
               </div>
             </div>
           </div>
@@ -3676,7 +3932,7 @@
         }
       }
 
-      img {
+      .apc-image-card img {
         max-width: 100%;
         height: auto;
         display: block;
@@ -5289,7 +5545,7 @@
     flex-wrap: wrap;
   }
 
-  /* .footer-logo-img {
+  .footer-logo-img {
     width: 52px;
     height: 52px;
     object-fit: cover;
@@ -5301,7 +5557,7 @@
     transition: transform 0.2s;
   }
 
-  .footer-logo-img:hover {
+  /* .footer-logo-img:hover {
     transform: scale(1.02);
   } */
 
