@@ -13,7 +13,7 @@
       href="../images/Logo1-removebg-preview.png"
       type="image/x-icon"
     />
-    <!-- Google Fonts: Plus Jakarta Sans & Inter for modern look -->
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -58,7 +58,7 @@
         display: inline-block;
       }
 
-      /* Hero Section with refined overlay */
+      /* Hero Section */
       .hero-section {
         position: relative;
         width: 100%;
@@ -68,7 +68,7 @@
           rgba(14, 58, 92, 0.78)
         );
         overflow: hidden;
-        padding: 10rem 2rem 7rem;
+        padding: 8rem 2rem 6rem;
       }
       .bg-video {
         position: absolute;
@@ -155,44 +155,6 @@
         color: #ffc107;
         letter-spacing: 2px;
       }
-      .input-group-premium {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-        background: white;
-        border-radius: 100px;
-        padding: 0.4rem;
-        max-width: 520px;
-        box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.25);
-        margin-bottom: 1.8rem;
-      }
-      .input-group-premium input {
-        flex: 1;
-        padding: 0.95rem 1.5rem;
-        border: none;
-        border-radius: 80px;
-        font-size: 1rem;
-        font-family: "Inter", sans-serif;
-        outline: none;
-        background: transparent;
-        font-weight: 500;
-      }
-      .input-group-premium button {
-        background: #18a0e3;
-        border: none;
-        padding: 0.9rem 2rem;
-        border-radius: 80px;
-        font-weight: 700;
-        color: white;
-        cursor: pointer;
-        font-family: "Inter", sans-serif;
-        transition: 0.2s;
-        font-size: 1rem;
-      }
-      .input-group-premium button:hover {
-        background: #0f74a8;
-        transform: scale(0.98);
-      }
       .hero-stats {
         display: flex;
         flex-wrap: wrap;
@@ -233,7 +195,7 @@
       .container {
         max-width: 1320px;
         margin: 0 auto;
-        padding: 0rem 7rem;
+        padding: 0rem 2rem;
       }
       .section-title {
         font-size: 2.6rem;
@@ -248,26 +210,6 @@
         background: linear-gradient(90deg, #18a0e3, #0a2b44);
         border-radius: 4px;
         margin: 0.75rem 0 2rem;
-      }
-      .trust-strip {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        background: #f8fbfe;
-        border-radius: 2rem;
-        padding: 1.2rem 2rem;
-        margin-bottom: 2rem;
-        border: 1px solid #eaf2f9;
-      }
-      .trust-strip span {
-        font-weight: 600;
-        color: #255f8a;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 0.95rem;
       }
       .flex-stats-row {
         display: flex;
@@ -295,7 +237,7 @@
         gap: 2.5rem;
         margin: 2rem 0;
         align-items: center;
-        padding: 40px 0px;
+        padding: 20px 0px;
       }
       .img-col {
         flex: 1;
@@ -323,110 +265,153 @@
         gap: 12px;
         font-weight: 500;
       }
-      .category-grid {
+      .pill {
+        background: #e6f3fe;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.3rem 1.2rem;
+        border-radius: 40px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        color: #0a5f8a;
+        backdrop-filter: blur(2px);
+        letter-spacing: -0.2px;
+      }
+      .underline-light {
+        width: 70px;
+        height: 4px;
+        background: linear-gradient(90deg, #5bc0ff, #a0dcff);
+        border-radius: 4px;
+        margin: 0.6rem 0 1.5rem 0;
+      }
+      /* Dark category section - scrollable on mobile (horizontal overflow handled gracefully) */
+      .dark-category-section {
+        background: linear-gradient(125deg, #0b2b38 0%, #0a1f2a 100%);
+        border-radius: 2rem;
+        padding: 2.5rem 2rem;
+        margin: 2rem 0 2rem;
+        box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.3);
+      }
+      .dark-category-section .section-title {
+        color: #ffffff;
+        margin-top: 0;
+      }
+      .category-grid-dark {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-        gap: 1.8rem;
-        margin: 2rem 0;
+        gap: 1.6rem;
       }
-      .category-card {
-        background: #ffffff;
-        border-radius: 1.5rem;
-        padding: 1.8rem 1.4rem;
-        border: 1px solid #e2eff9;
-        transition: all 0.25s;
+      .category-card-dark {
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(2px);
+        border-radius: 1.8rem;
+        padding: 1.6rem 1.2rem;
+        border: 1px solid rgba(90, 180, 220, 0.25);
+        transition: all 0.3s ease;
         text-align: center;
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
       }
-      .category-card:hover {
-        transform: translateY(-5px);
-        border-color: #18a0e3;
-        box-shadow: 0 20px 25px -12px rgba(24, 160, 227, 0.2);
-      }
-      .category-card i {
+      .category-card-dark i {
         font-size: 2.4rem;
-        color: #18a0e3;
+        color: #7acdff;
         margin-bottom: 1rem;
+        background: rgba(24, 160, 227, 0.2);
+        padding: 10px 10px;
+        border-radius: 60px;
+        width: 5rem;
+        display: inline-block;
       }
-      .btn-sm {
-        background: #e8f3fc;
-        color: #0f5e89;
-        border: none;
-        padding: 0.5rem 1.3rem;
-        border-radius: 40px;
-        font-weight: 700;
-        font-size: 0.75rem;
-        cursor: pointer;
-        transition: 0.2s;
+      .category-card-dark h4 {
+        font-size: 1.2rem;
+        margin: 0.6rem 0 0.4rem;
+        color: #f0fcff;
+        font-weight: 600;
       }
-      .btn-sm:hover {
-        background: #18a0e3;
-        color: white;
+      .category-card-dark p {
+        color: #bfd9e8;
+        font-size: 0.85rem;
       }
       .ways-grid {
         display: flex;
         flex-wrap: wrap;
-        gap: 1.8rem;
-        margin: 2rem 0;
+        gap: 2rem;
+        margin: 2rem 0 2.5rem;
       }
       .way-card {
-        background: #f9feff;
-        border-radius: 1.2rem;
-        padding: 1.5rem;
-        flex: 1;
-        border-left: 5px solid #18a0e3;
-        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.03);
+        background: #ffffff;
+        border-radius: 1.5rem;
+        padding: 1.6rem;
+        flex: 1 1 240px;
+        border-left: 6px solid #18a0e3;
+        box-shadow: 0 12px 22px -10px rgba(0, 0, 0, 0.05);
       }
       .expert-row {
-        background: #f1f8fe;
+        background: linear-gradient(105deg, #f1f9ff 0%, #ffffff 100%);
         border-radius: 2rem;
-        padding: 2rem;
-        margin: 2rem 0;
+        padding: 2.2rem;
+        margin: 2.5rem 0;
+        border: 1px solid #dceefb;
       }
       .expert-buttons {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
-        margin-top: 1.5rem;
+        margin-top: 1.8rem;
       }
       .expert-cat {
         background: white;
-        border-radius: 80px;
-        padding: 0.7rem 1.2rem;
+        border-radius: 60px;
+        padding: 12px 24px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 1rem;
-        flex: 1 1 200px;
+        gap: 0.8rem;
         border: 1px solid #cde5f5;
+        flex: 1 1 200px;
       }
-      .step-flex {
+      .btn-sm {
+        background: #18a0e3;
+        border: none;
+        padding: 6px 16px;
+        border-radius: 40px;
+        font-weight: 700;
+        font-size: 0.75rem;
+        color: white;
+        cursor: pointer;
+      }
+      .trust-badge-row {
         display: flex;
         flex-wrap: wrap;
-        gap: 1.8rem;
-        margin: 2rem 0;
-      }
-      .step-item {
-        background: #ffffff;
-        border-radius: 1.2rem;
-        padding: 1rem 1.5rem;
-        flex: 1;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        border: 1px solid #e3f0f9;
-      }
-      .step-circle {
-        background: #18a0e3;
-        width: 46px;
-        height: 46px;
-        border-radius: 60px;
-        display: flex;
-        align-items: center;
         justify-content: center;
-        font-weight: 800;
-        font-size: 1.3rem;
-        color: white;
+        gap: 2rem;
+        background: #fafeff;
+        border-radius: 2rem;
+        padding: 1.8rem 2rem;
+        margin: 2rem 0;
+        border: 1px solid #e2f0fa;
+      }
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #115e7a;
+      }
+      .closing-trust {
+        background: linear-gradient(125deg, #eef6fd, #ffffff);
+        border-radius: 2rem;
+        padding: 2rem 2rem;
+        text-align: center;
+        margin: 2rem 0 1rem;
+        border: 1px solid #cde2f2;
+      }
+      .mini-stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2.5rem;
+        margin-top: 1rem;
       }
       .benefits-list {
         display: grid;
@@ -436,12 +421,6 @@
         border-radius: 2rem;
         padding: 2rem;
         margin: 2rem 0;
-      }
-      .benefits-list div {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        font-weight: 500;
       }
       .support-banner {
         background: linear-gradient(115deg, #eef6fd, white);
@@ -465,54 +444,239 @@
         cursor: pointer;
         transition: 0.2s;
       }
-      footer {
+      /* footer {
         text-align: center;
         padding: 2rem 1rem;
         border-top: 1px solid #e2edf6;
         color: #5b7f9c;
+      } */
+      /* process section styling */
+      .process-section {
+        width: 100%;
+        position: relative;
+        padding: 48px 0 56px;
+        background-image: url("https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?w=600&auto=format&fit=crop&q=60");
+        background-size: cover;
+        background-position: center 35%;
+        background-repeat: no-repeat;
+        background-color: #0a1a2a;
+        background-blend-mode: overlay;
+        border-radius: 2rem;
+        margin: 2rem 0;
+        overflow: hidden;
+      }
+      .process-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgb(3 18 32 / 48%) 0%,
+          rgb(0 10 22 / 49%) 100%
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
+      .process-section .container-process {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 32px;
+        position: relative;
+        z-index: 3;
+      }
+      .section-title.center {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+      .section-title.center h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        background: linear-gradient(125deg, #ffffff, #c8e2ff, #9ac8ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+      }
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+      .process-card {
+        background: rgba(18, 40, 58, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 32px;
+        padding: 26px 18px 28px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+      }
+      .step-badge {
+        display: inline-block;
+        background: rgba(0, 45, 70, 0.8);
+        font-weight: 700;
+        font-size: 0.75rem;
+        padding: 5px 16px;
+        border-radius: 60px;
+        color: #c8e2ff;
+        margin-bottom: 16px;
+      }
+      .icon-wrapper {
+        width: 74px;
+        height: 74px;
+        margin: 0 auto 16px;
+        background: linear-gradient(145deg, #1a6a91, #0e4464);
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .icon-wrapper svg {
+        stroke: white;
+        stroke-width: 1.7;
+        width: 38px;
+        height: 38px;
+      }
+      .process-card h4 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin: 14px 0 10px;
+        color: #ffffff;
+      }
+      .process-card p {
+        font-size: 0.85rem;
+        color: #e6f0fa;
+      }
+
+      /* ========== RESPONSIVE (DESKTOP LAYOUT UNCHANGED) ========== */
+      @media (max-width: 1100px) {
+        .hero-left h1 {
+          font-size: 3.2rem;
+        }
+        .section-title {
+          font-size: 2.3rem;
+        }
       }
       @media (max-width: 900px) {
         .hero-left h1 {
-          font-size: 2.5rem;
+          font-size: 2.6rem;
+        }
+        .hero-container {
+          flex-direction: column;
+          gap: 2rem;
+        }
+        .hero-section {
+          padding: 5rem 1.5rem 4rem;
         }
         .section-title {
           font-size: 2rem;
         }
-        .hero-container {
-          flex-direction: column;
-        }
-        .container {
-          padding: 2rem 1.2rem;
-        }
-        .flex-stats-row {
-          flex-direction: column;
-          align-items: center;
-          gap: 1.2rem;
-        }
         .grid-2col {
           flex-direction: column;
+          gap: 1.8rem;
+        }
+        /* ensure Impact & Trust order: on mobile image stays after content (no change to layout visually, content then image below) */
+        .grid-2col.reverse {
+          flex-direction: column;
+        }
+        .process-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 1.2rem;
+        }
+        .hero-left h1 {
+          font-size: 2.2rem;
+        }
+        .section-title {
+          font-size: 1.8rem;
+          padding-top: 30px;
+        }
+        .expert-cat {
+          flex: 1 1 100%;
+        }
+        .category-grid-dark {
+          grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        }
+      }
+      /* For scrollable categories on small screens: ensure grid is scrollable horizontally if needed, but we use responsive grid wrap. 
+         To make strictly scrollable on horizontal if content overflows, we add overflow-auto for .category-grid-dark on narrow screens */
+      @media (max-width: 640px) {
+        .dark-category-section {
+          padding: 1.8rem 1.2rem;
+        }
+        .category-grid-dark {
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          gap: 1.2rem;
+          padding-bottom: 0.8rem;
+          scrollbar-width: thin;
+        }
+        .category-card-dark {
+          min-width: 240px;
+          max-width: 264px;
+          scroll-snap-align: start;
+          flex-shrink: 0;
+          margin-bottom: 18px;
+        }
+        /* process steps scrollable horizontally for very small */
+        .process-grid {
+          display: flex;
+          overflow-x: auto;
+          gap: 1.2rem;
+          scroll-snap-type: x mandatory;
+          padding-bottom: 0.8rem;
+        }
+        .process-card {
+          min-width: 260px;
+          scroll-snap-align: start;
+          flex-shrink: 0;
+          max-width: 260px;
+          margin-bottom: 17px;
+        }
+        .section-title.center h2 {
+          font-size: 1.3rem;
         }
       }
       @media (max-width: 550px) {
         .hero-section {
           padding: 2rem 1rem 3rem;
         }
-        .input-group-premium {
+        .hero-left h1 {
+          font-size: 1.9rem;
+        }
+        .section-title {
+          font-size: 1.6rem;
+        }
+        .flex-stats-row {
           flex-direction: column;
-          background: transparent;
-          padding: 0;
+          align-items: center;
+        }
+        .expert-row {
+          padding: 1.3rem;
+        }
+        .dark-category-section {
+          padding: 1.2rem;
+        }
+        .trust-badge-row {
+          flex-direction: column;
+          align-items: center;
           gap: 1rem;
         }
-        .input-group-premium input {
-          background: white;
-          border-radius: 60px;
-        }
-        .trust-strip {
+        .mini-stats {
+          flex-direction: column;
           gap: 1rem;
-          flex-wrap: wrap;
         }
-        .stat-number {
-          font-size: 1.8rem;
+        .benefits-list {
+          grid-template-columns: 1fr;
+        }
+        .support-banner h3 {
+          font-size: 1.2rem;
         }
       }
     </style>
@@ -606,6 +770,11 @@
             width: 38px;
             height: 38px;
           }
+          .navbar.is-compact .logo-text img {
+            height: 49px;
+            width: 99px;
+            margin-top: -14px;
+          }
 
           .navbar.is-compact .logo-text h1 {
             font-size: 1.4rem;
@@ -654,15 +823,15 @@
             filter: drop-shadow(0 4px 8px rgba(26, 95, 158, 0.12));
             transition: 0.25s;
           }
-          .logo-text img {
-            width: 154px;
-            height: 67px;
-            margin: 0;
-            padding: 0;
-            object-fit: contain;
-            filter: drop-shadow(0 4px 8px rgba(26, 95, 158, 0.12));
-            transition: 0.25s;
-          }
+          /* .logo-text img {
+        width: 154px;
+        height: 67px;
+        margin: 0;
+        padding: 0;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 8px rgba(26, 95, 158, 0.12));
+        transition: 0.25s;
+      } */
 
           .logo-text h1 {
             font-size: 1.85rem;
@@ -680,7 +849,8 @@
             font-weight: 700;
             color: #2c6e9e;
             letter-spacing: 0.6px;
-            margin-top: -3px;
+            margin-top: -4px;
+            text-transform: uppercase;
           }
 
           /* DESKTOP NAVIGATION */
@@ -695,7 +865,7 @@
             font-weight: 600;
             color: #1f3b4c;
             transition: 0.2s;
-            font-size: 1rem;
+            font-size: 18px;
           }
 
           .nav-links a:hover {
@@ -957,7 +1127,7 @@
           .side-dropdown {
             display: flex;
             flex-direction: column;
-            margin-left: 8px;
+            /* margin-left: 8px; */
           }
 
           .side-dropdown-header {
@@ -971,6 +1141,33 @@
             font-size: 1.1rem;
             color: #1f3b4c;
             transition: 0.2s;
+          }
+
+          .side-dropdown-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 12px;
+          }
+
+          .side-dropdown-header span {
+            display: flex;
+            align-items: center;
+            gap: 70px;
+            font-weight: 600;
+          }
+
+          .side-dropdown-header span i {
+            width: 28px;
+            text-align: center;
+            flex-shrink: 0;
+          }
+
+          .side-dropdown-header i:first-child,
+          .side-nav-item i:first-child {
+            width: 28px;
+            text-align: center;
+            flex-shrink: 0;
           }
 
           .side-dropdown-header i:first-child {
@@ -1071,6 +1268,25 @@
               padding: 10px 20px;
             }
           }
+          @media (max-width: 500px) {
+            .logo-area {
+              gap: 8px;
+            }
+
+            .logo-area img {
+              width: 40px;
+              height: 40px;
+            }
+
+            .logo-text h1 {
+              font-size: 24px;
+            }
+
+            .logo-text p {
+              font-size: 9.5px;
+              letter-spacing: 0.5px;
+            }
+          }
         </style>
       </head>
       <body>
@@ -1084,10 +1300,11 @@
                     alt="Khata Dost"
                 /></a>
                 <div class="logo-text">
-                  <div>
-                    <h1>Khata Dost</h1>
-                  </div>
-                  <p>ACCOUNTING & TAX SOLUTIONS</p>
+                  <!-- <div>
+                <img src="images/LOGO-2.png" alt="" />
+              </div> -->
+                  <h1>Khata Dost</h1>
+                  <p>Accounting Made Simple</p>
                 </div>
               </div>
 
@@ -1119,9 +1336,12 @@
                     >
                   </div>
                 </div>
-                <a href="About.html">About Us</a>
-                <a href="Testimonials.html">Reviews</a>
-                <a href="Contact.html" class="contact-btn-glow">Start Now</a>
+                <a href="../About.html">About Us</a>
+                <a href="../Testimonials.html">FAQ</a>
+                <!-- <a href="Contact.html">Contact Us</a> -->
+                <a href="../Contact.html" class="contact-btn-glow"
+                  >Contact Us</a
+                >
               </div>
 
               <!-- Hamburger with icon at start & text (premium) -->
@@ -1179,23 +1399,18 @@
               </div>
             </div>
 
-            <a href="About.html" class="side-nav-item"
+            <a href="../About.html" class="side-nav-item"
               ><i class="fas fa-users"></i> About Us
               <i class="fas fa-chevron-right"></i
             ></a>
-            <a href="Testimonials.html" class="side-nav-item"
-              ><i class="fas fa-star"></i> Reviews
+            <a href="../Testimonials.html" class="side-nav-item"
+              ><i class="fas fa-star"></i> FAQ
               <i class="fas fa-chevron-right"></i
             ></a>
-          </div>
-          <div class="side-menu-footer">
-            <a href="Contact.html" class="start-now-premium"
-              ><i class="fas fa-rocket"></i> Start Now
-            </a>
-            <!-- Arrow at end ( > ) as requested -->
-            <div class="end-arrow">
-              <i class="fas fa-angle-double-right"></i>
-              <i class="fas fa-greater-than"></i>
+            <div class="side-menu-footer">
+              <a href="../Contact.html" class="start-now-premium"
+                ><i class="fas fa-rocket"></i> Contact Us
+              </a>
             </div>
           </div>
         </div>
@@ -1387,28 +1602,16 @@
             <i class="fas fa-star stars"></i><i class="fas fa-star stars"></i
             ><i class="fas fa-star stars"></i><i class="fas fa-star stars"></i
             ><i class="fas fa-star-half-alt stars"></i
-            ><span style="color: white; font-weight: 600">
-              4.9 ★ Google rating from 16,000+ reviews</span
+            ><span style="color: white; font-weight: 600"
+              >4.9 ★ Google rating from 16,000+ reviews</span
             >
           </div>
-          <!-- <div class="input-group-premium">
-            <input
-              type="tel"
-              placeholder="+91  |  Enter mobile number"
-              value="+91 "
-            />
-            <button class="cta-btn">
-              Start Filing <i class="fas fa-arrow-right"></i>
-            </button>
-          </div> -->
           <div class="hero-stats">
             <span class="stat-glass"
               ><i class="fas fa-users"></i> 1M+ users trusted</span
-            >
-            <span class="stat-glass"
+            ><span class="stat-glass"
               ><i class="fas fa-chart-line"></i> 94% save tax</span
-            >
-            <span class="stat-glass"
+            ><span class="stat-glass"
               ><i class="fas fa-calendar-alt"></i> Founded 2017</span
             >
           </div>
@@ -1431,13 +1634,11 @@
         <div>Users trusted on Khata Dost</div>
         <small>13,00,000+ users from 2600 towns</small>
       </div>
-
       <div class="stat-block">
         <div class="stat-number" data-target="94">0</div>
         <div>Impact of saving tax</div>
         <small>That’s how many 1st time users save tax</small>
       </div>
-
       <div class="stat-block">
         <div class="stat-number" data-target="2017">0</div>
         <div>Founded</div>
@@ -1447,1168 +1648,248 @@
 
     <script>
       const counters = document.querySelectorAll(".stat-number");
-
       counters.forEach((counter) => {
         const target = +counter.getAttribute("data-target");
         let count = 0;
-
         const updateCounter = () => {
           const increment = target / 100;
-
           if (count < target) {
             count += increment;
-
-            // Formatting
-            if (target >= 1000000) {
+            if (target >= 1000000)
               counter.innerText =
                 (count / 1000000).toFixed(1).replace(".0", "") + " Million+";
-            } else if (target === 94) {
-              counter.innerText = Math.ceil(count) + "%";
-            } else {
-              counter.innerText = Math.ceil(count);
-            }
-
+            else if (target === 94) counter.innerText = Math.ceil(count) + "%";
+            else counter.innerText = Math.ceil(count);
             requestAnimationFrame(updateCounter);
           } else {
-            // Final exact values
-            if (target >= 1000000) {
-              counter.innerText = "1 Million+";
-            } else if (target === 94) {
-              counter.innerText = "94%";
-            } else {
-              counter.innerText = target;
-            }
+            if (target >= 1000000) counter.innerText = "1 Million+";
+            else if (target === 94) counter.innerText = "94%";
+            else counter.innerText = target;
           }
         };
-
         updateCounter();
       });
     </script>
 
     <div class="container">
-      <!-- <div class="trust-strip" data-aos="fade-up">
-        <span><i class="fas fa-building"></i> Business Standard</span>
-        <span><i class="fab fa-buffer"></i> Business Insider</span>
-        <span><i class="fas fa-chart-line"></i> Business Line</span>
-        <span><i class="fas fa-newspaper"></i> Financial Express</span>
-        <span><i class="fas fa-briefcase"></i> Business Today</span>
-        <span><i class="fas fa-file-invoice"></i> TaxPartner</span>
-      </div> -->
-
-      <!doctype html>
-      <html lang="en">
-        <head>
-          <meta charset="UTF-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      <!-- Grid 1: simplicity first -->
+      <div class="grid-2col" data-aos="fade-right">
+        <div class="text-col">
+          <div class="pill">
+            <i class="fas fa-check-circle"></i> Simplicity First
+          </div>
+          <h2 class="section-title" style="margin-top: 0.8rem">
+            Tax filing made simple
+            <span class="gradient-text">for all income types</span>
+          </h2>
+          <div class="underline-accent"></div>
+          <div class="feature-icon-list">
+            <p>
+              <i class="fas fa-scissors"></i
+              ><span
+                ><strong>Claim all eligible deductions accurately</strong
+                ><br />Maximize refunds using 80C, 80D, HRA & more.</span
+              >
+            </p>
+            <p>
+              <i class="fas fa-bell"></i
+              ><span
+                ><strong>Free notice management & comprehensive support</strong
+                ><br />Experts handle tax notices, peace of mind
+                guaranteed.</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="img-col">
+          <img
+            src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202406/itr-filing-2024-25-1938551-16x9_1.jpg?VersionId=Enopb0gdiV54GgID0I.RGzKlzPcILWaA&size=690:388"
+            alt="tax filing"
           />
-          <title>Khata Dost | Smart Income Tax Filing Platform</title>
-          <!-- Font Awesome 6 (free CDN) -->
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-          />
-          <!-- AOS CSS for scroll animations -->
-          <link
-            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-            rel="stylesheet"
-          />
-          <style>
-            * {
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-            }
+        </div>
+      </div>
 
-            /* body {
-        font-family:
-          system-ui,
-          "Segoe UI",
-          "Inter",
-          -apple-system,
-          BlinkMacSystemFont,
-          "Roboto",
-          sans-serif;
-        background: #ffffff;
-        color: #1a2c3e;
-        line-height: 1.4;
-        scroll-behavior: smooth;
-      } */
+      <!-- Grid 2: Impact & Trust - on responsive, content then image (order as in desktop reverse but mobile uses column, content appears above image naturally) -->
+      <div class="grid-2col reverse" data-aos="fade-left">
+        <div class="text-col">
+          <div class="pill">
+            <i class="fas fa-chart-simple"></i> Impact & Trust
+          </div>
+          <h2 class="section-title">
+            <span class="gradient-text">94% of users save tax</span> with Khata
+            Dost
+          </h2>
+          <div class="underline-accent"></div>
+          <p style="font-size: 1.05rem">
+            Over 13 Lakh+ users from 2600+ towns trust Khata Dost for ITR
+            filing. Ex-IRS joint commissioners and seasoned CAs lead our
+            platform — India’s highest rated assisted filing platform.
+          </p>
+        </div>
+        <div class="img-col">
+          <img src="../images/ITR-2.png" alt="impact" />
+        </div>
+      </div>
 
-            .container {
-              max-width: 1280px;
-              margin: 0 auto;
-              padding: 2rem 2rem;
-            }
+      <!-- Who Can File ITR with Khata Dost? - horizontally scrollable on mobile -->
+      <div class="dark-category-section" data-aos="fade-up">
+        <h2 class="section-title">
+          Who Can File ITR with <span class="gradient-text">Khata Dost?</span>
+        </h2>
+        <div class="underline-light"></div>
+        <div class="category-grid-dark">
+          <div class="category-card-dark">
+            <i class="fas fa-briefcase"></i>
+            <h4>Salaried Individuals</h4>
+            <p>Upload Form 16, auto-fill returns, HRA & deductions</p>
+          </div>
+          <div class="category-card-dark">
+            <i class="fas fa-laptop-code"></i>
+            <h4>Self-Employed</h4>
+            <p>Freelancers, consultants, professionals with 44ADA/44AD</p>
+          </div>
+          <div class="category-card-dark">
+            <i class="fas fa-store"></i>
+            <h4>Business Owners</h4>
+            <p>SMEs, MSMEs, ERP, Tally, partnership firms</p>
+          </div>
+          <div class="category-card-dark">
+            <i class="fas fa-globe"></i>
+            <h4>Foreign Income</h4>
+            <p>NRIs, RNORs, foreign assets, foreign tax credit</p>
+          </div>
+          <div class="category-card-dark">
+            <i class="fas fa-chart-line"></i>
+            <h4>Stocks & Crypto</h4>
+            <p>Capital gains, F&O trading, crypto gains, staking</p>
+          </div>
+          <div class="category-card-dark">
+            <i class="fas fa-home"></i>
+            <h4>HUF Filing</h4>
+            <p>Hindu Undivided Family with ancestral income</p>
+          </div>
+          <div class="category-card-dark">
+            <i class="fas fa-pen"></i>
+            <h4>Revised ITR</h4>
+            <p>Fix errors or missed deductions in previous filings</p>
+          </div>
+          <div class="category-card-dark">
+            <i class="fas fa-hourglass-half"></i>
+            <h4>Belated ITR</h4>
+            <p>File after deadline, pay late fee and avoid penalties</p>
+          </div>
+        </div>
+      </div>
 
-            /* Typography improvements */
-            .section-title {
-              font-size: 2.4rem;
-              font-weight: 700;
-              line-height: 1.25;
-              margin-top: 1.2rem;
-              margin-bottom: 0.5rem;
-              letter-spacing: -0.01em;
-            }
+      <!-- Three ways -->
+      <h2 class="section-title" data-aos="fade-up">
+        Three convenient ways for Income Tax Filing
+      </h2>
+      <div class="underline-accent"></div>
+      <div class="ways-grid" data-aos="fade-up">
+        <div class="way-card">
+          <i class="fas fa-digital-tiling"></i>
+          <h4>Digital Signature (DSC)</h4>
+          <p>Secure e-filing with DSC authenticity</p>
+        </div>
+        <div class="way-card">
+          <i class="fas fa-file-signature"></i>
+          <h4>ITR-V without DSC</h4>
+          <p>Print, sign & send to CPC Bangalore</p>
+        </div>
+        <div class="way-card">
+          <i class="fas fa-qrcode"></i>
+          <h4>e-Verify with Aadhaar/Bank</h4>
+          <p>Instant OTP verification, no physical form</p>
+        </div>
+      </div>
 
-            .gradient-text {
-              background: linear-gradient(135deg, #0f5e89, #18a0e3, #2b9fd9);
-              background-clip: text;
-              -webkit-background-clip: text;
-              color: transparent;
-              font-weight: 700;
-            }
+      <!-- Expert row -->
+      <div class="expert-row" data-aos="fade-up">
+        <h3>Expert-Assisted ITR Filing with Khata Dost</h3>
+        <p>
+          Let our tax experts handle your Income Tax Filing from start to finish
+          — choose your category below.
+        </p>
+        <div class="expert-buttons">
+          <div class="expert-cat">
+            <span><i class="fas fa-user"></i> Salaried</span
+            ><button class="btn-sm cat-btn">Start</button>
+          </div>
+          <div class="expert-cat">
+            <span><i class="fas fa-chart-line"></i> Capital Gains</span
+            ><button class="btn-sm cat-btn">Start</button>
+          </div>
+          <div class="expert-cat">
+            <span><i class="fas fa-globe"></i> Foreign Income</span
+            ><button class="btn-sm cat-btn">Start</button>
+          </div>
+          <div class="expert-cat">
+            <span><i class="fas fa-coins"></i> Crypto Investors</span
+            ><button class="btn-sm cat-btn">Start</button>
+          </div>
+          <div class="expert-cat">
+            <span><i class="fas fa-home"></i> HUF Filing</span
+            ><button class="btn-sm cat-btn">Start</button>
+          </div>
+        </div>
+      </div>
 
-            .underline-accent {
-              width: 70px;
-              height: 4px;
-              background: linear-gradient(90deg, #18a0e3, #7fc9f0);
-              border-radius: 4px;
-              margin: 0.6rem 0 1rem 0;
-            }
+      <!-- trust badges -->
+      <div class="trust-badge-row" data-aos="fade-up">
+        <div class="trust-item">
+          <i class="fas fa-users"></i> <span>13 Lakh+ returns filed</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-star"></i> <span>4.9 ★ Trustpilot rating</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-map-marker-alt"></i> <span>2600+ towns served</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-chalkboard-user"></i>
+          <span>Ex-IRS & CA led platform</span>
+        </div>
+      </div>
 
-            /* Light underline for dark section */
-            .underline-light {
-              width: 70px;
-              height: 4px;
-              background: linear-gradient(90deg, #5bc0ff, #a0dcff);
-              border-radius: 4px;
-              margin: 0.6rem 0 1.5rem 0;
-            }
-
-            /* Pill badge */
-            .pill {
-              background: #e6f3fe;
-              display: inline-flex;
-              align-items: center;
-              gap: 0.5rem;
-              padding: 0.3rem 1.2rem;
-              border-radius: 40px;
-              font-weight: 600;
-              font-size: 0.85rem;
-              color: #0a5f8a;
-              backdrop-filter: blur(2px);
-              letter-spacing: -0.2px;
-            }
-
-            /* Grid 2 column refined */
-            .grid-2col {
-              display: flex;
-              flex-wrap: wrap;
-              gap: 2.8rem;
-              margin: 2rem 0;
-              align-items: center;
-              justify-content: space-between;
-            }
-
-            .grid-2col.reverse {
-              flex-direction: row-reverse;
-            }
-
-            .text-col,
-            .img-col {
-              flex: 1;
-              min-width: 260px;
-            }
-
-            .img-col {
-              border-radius: 2rem;
-              overflow: hidden;
-              box-shadow: 0 24px 36px -16px rgba(0, 32, 64, 0.12);
-              transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
-              background: #f8fafc;
-            }
-
-            .img-col:hover {
-              transform: scale(1.01);
-              box-shadow: 0 28px 40px -18px rgba(24, 160, 227, 0.2);
-            }
-
-            .img-col img {
-              width: 100%;
-              height: auto;
-              display: block;
-              object-fit: cover;
-            }
-
-            .feature-icon-list {
-              display: flex;
-              flex-direction: column;
-              gap: 1.2rem;
-              margin-top: 1.5rem;
-            }
-
-            .feature-icon-list p {
-              display: flex;
-              align-items: flex-start;
-              gap: 14px;
-              font-size: 1rem;
-              font-weight: 500;
-              background: #f9fdfe;
-              padding: 0.8rem 1rem;
-              border-radius: 20px;
-              transition: all 0.25s;
-              border: 1px solid #e7f0f8;
-            }
-
-            .feature-icon-list p i {
-              margin-top: 2px;
-              font-size: 1.2rem;
-              color: #18a0e3;
-            }
-
-            .feature-icon-list p strong {
-              display: block;
-              font-size: 1rem;
-              margin-bottom: 4px;
-              color: #0f3b4f;
-            }
-            .btn-sm {
-              padding: 3px 10px;
-              background: #18a0e3;
-              border-radius: 10px;
-              font-size: 12px;
-              font-weight: 600;
-              color: white;
-              border: none;
-            }
-            /* ========= DARK SECTION: Who Can File ITR (no buttons, elegant) ========= */
-            .dark-category-section {
-              background: linear-gradient(125deg, #0b2b38 0%, #0a1f2a 100%);
-              border-radius: 2rem;
-              padding: 2.5rem 2rem;
-              margin: 2rem 0 2rem;
-              box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.3);
-              transition: all 0.2s;
-            }
-
-            .dark-category-section .section-title {
-              color: #ffffff;
-              margin-top: 0;
-            }
-
-            .dark-category-section .section-title .gradient-text {
-              background: linear-gradient(135deg, #9ad7ff, #6ec3ff);
-              background-clip: text;
-              -webkit-background-clip: text;
-            }
-
-            .dark-category-section .underline-light {
-              margin-bottom: 1.8rem;
-            }
-
-            .category-grid-dark {
-              display: grid;
-              grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-              gap: 1.6rem;
-            }
-
-            .category-card-dark {
-              background: rgba(255, 255, 255, 0.06);
-              backdrop-filter: blur(2px);
-              border-radius: 1.8rem;
-              padding: 1.6rem 1.2rem;
-              border: 1px solid rgba(90, 180, 220, 0.25);
-              transition: all 0.3s ease;
-              text-align: center;
-              cursor: default;
-            }
-
-            .category-card-dark:hover {
-              transform: translateY(-6px);
-              background: rgba(255, 255, 255, 0.12);
-              border-color: rgba(90, 200, 255, 0.6);
-              box-shadow: 0 20px 28px -12px rgba(0, 0, 0, 0.4);
-            }
-
-            .category-card-dark i {
-              font-size: 2.4rem;
-              color: #7acdff;
-              margin-bottom: 1rem;
-              background: rgba(24, 160, 227, 0.2);
-              padding: 10px 10px;
-              border-radius: 60px;
-              width: 5rem;
-              display: inline-block;
-              transition: 0.2s;
-            }
-
-            .category-card-dark:hover i {
-              color: #ffffff;
-              background: #18a0e3;
-            }
-
-            .category-card-dark h4 {
-              font-size: 1.2rem;
-              margin: 0.6rem 0 0.4rem;
-              color: #f0fcff;
-              font-weight: 600;
-            }
-
-            .category-card-dark p {
-              color: #bfd9e8;
-              font-size: 0.85rem;
-              line-height: 1.4;
-              margin-top: 0.3rem;
-            }
-
-            /* ways grid - responsive */
-            .ways-grid {
-              display: flex;
-              flex-wrap: wrap;
-              gap: 2rem;
-              margin: 2rem 0 2.5rem;
-            }
-
-            .way-card {
-              background: #ffffff;
-              border-radius: 1.5rem;
-              padding: 1.6rem;
-              flex: 1 1 240px;
-              border-left: 6px solid #18a0e3;
-              box-shadow: 0 12px 22px -10px rgba(0, 0, 0, 0.05);
-              transition: all 0.2s;
-            }
-
-            .way-card:hover {
-              transform: translateY(-3px);
-              border-left-width: 8px;
-            }
-
-            .way-card i {
-              font-size: 2rem;
-              color: #18a0e3;
-              margin-bottom: 0.8rem;
-              display: inline-block;
-            }
-
-            .way-card h4 {
-              font-size: 1.2rem;
-              margin-bottom: 0.5rem;
-            }
-
-            .way-card p {
-              color: #3e5e7a;
-              line-height: 1.4;
-            }
-
-            /* expert row refined */
-            .expert-row {
-              background: linear-gradient(105deg, #f1f9ff 0%, #ffffff 100%);
-              border-radius: 2rem;
-              padding: 2.2rem;
-              margin: 2.5rem 0;
-              border: 1px solid #dceefb;
-              box-shadow: 0 12px 18px -12px rgba(0, 0, 0, 0.05);
-            }
-
-            .expert-row h3 {
-              font-size: 1.9rem;
-              font-weight: 700;
-              margin-bottom: 0.8rem;
-            }
-
-            .expert-buttons {
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-              gap: 1rem;
-              margin-top: 1.8rem;
-            }
-
-            .expert-cat {
-              background: white;
-              border-radius: 60px;
-              padding: 17px 26px;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              gap: 0.8rem;
-              border: 1px solid #cde5f5;
-              transition: 0.2s;
-            }
-
-            .expert-cat span {
-              font-weight: 600;
-              font-size: 18px;
-              white-space: nowrap;
-              color: #3b3b3b;
-            }
-
-            .expert-cat:hover {
-              background: #f6fbfe;
-              border-color: #18a0e3;
-              transform: translateX(4px);
-            }
-
-            /* Trust Badge Row */
-            .trust-badge-row {
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: center;
-              gap: 2rem;
-              background: #fafeff;
-              border-radius: 2rem;
-              padding: 1.8rem 2rem;
-              margin: 2rem 0;
-              border: 1px solid #e2f0fa;
-              text-align: center;
-            }
-
-            .trust-item {
-              display: flex;
-              align-items: center;
-              gap: 12px;
-              font-size: 1.05rem;
-              font-weight: 600;
-              color: #115e7a;
-            }
-
-            .trust-item i {
-              font-size: 1.8rem;
-              color: #18a0e3;
-            }
-
-            /* closing trust */
-            .closing-trust {
-              background: linear-gradient(125deg, #eef6fd, #ffffff);
-              border-radius: 2rem;
-              padding: 2rem 2rem;
-              text-align: center;
-              margin: 2rem 0 1rem;
-              border: 1px solid #cde2f2;
-            }
-
-            .closing-trust p {
-              font-size: 1.1rem;
-              font-weight: 500;
-              color: #1e4a6e;
-              margin-bottom: 1.2rem;
-            }
-
-            .mini-stats {
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: center;
-              gap: 2.5rem;
-            }
-
-            .stat-block {
-              text-align: center;
-            }
-
-            .stat-number {
-              font-size: 2rem;
-              font-weight: 800;
-              background: linear-gradient(135deg, #0f5e89, #18a0e3);
-              background-clip: text;
-              -webkit-background-clip: text;
-              color: transparent;
-            }
-
-            .stat-label {
-              font-size: 0.85rem;
-              color: #4a6f8f;
-              font-weight: 500;
-            }
-
-            .btn-primary {
-              background: #18a0e3;
-              color: white;
-              border: none;
-              padding: 0.8rem 2rem;
-              border-radius: 60px;
-              font-weight: 700;
-              font-size: 0.95rem;
-              display: inline-flex;
-              align-items: center;
-              gap: 8px;
-              cursor: pointer;
-              transition: 0.2s;
-              box-shadow: 0 6px 12px -6px rgba(24, 160, 227, 0.4);
-            }
-
-            .btn-primary:hover {
-              background: #0f7bb3;
-              transform: translateY(-2px);
-            }
-
-            footer {
-              text-align: center;
-              padding: 2rem 1rem 1rem;
-              border-top: 1px solid #e2edf6;
-              color: #5b7f9c;
-              font-size: 0.85rem;
-              margin-top: 1.5rem;
-            }
-
-            /* responsive refinements */
-            @media (max-width: 900px) {
-              .container {
-                padding: 1.5rem;
-              }
-              .section-title {
-                font-size: 1.9rem;
-              }
-              .grid-2col,
-              .grid-2col.reverse {
-                flex-direction: column;
-                gap: 1.8rem;
-              }
-              .expert-row h3 {
-                font-size: 1.5rem;
-              }
-              .expert-cat span {
-                white-space: normal;
-                font-size: 0.85rem;
-              }
-              .expert-buttons {
-                grid-template-columns: 1fr;
-              }
-              .expert-cat {
-                border-radius: 40px;
-              }
-              .dark-category-section {
-                padding: 1.8rem;
-              }
-              .category-grid-dark {
-                gap: 1rem;
-              }
-              .trust-badge-row {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-              }
-              .mini-stats {
-                flex-direction: column;
-                gap: 1rem;
-              }
-            }
-
-            @media (max-width: 550px) {
-              .section-title {
-                font-size: 1.65rem;
-              }
-              .pill {
-                font-size: 0.7rem;
-                padding: 0.2rem 1rem;
-              }
-              .feature-icon-list p {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 6px;
-              }
-              .expert-row {
-                padding: 1.3rem;
-              }
-              .category-card-dark {
-                padding: 1.2rem;
-              }
-              .category-card-dark i {
-                font-size: 2rem;
-              }
-            }
-          </style>
-        </head>
-        <body>
-          <div class="container">
-            <!-- First grid: simplicity first -->
-            <div class="grid-2col" data-aos="fade-right">
-              <div class="text-col">
-                <div class="pill">
-                  <i class="fas fa-check-circle"></i> Simplicity First
-                </div>
-                <h2 class="section-title" style="margin-top: 0.8rem">
-                  Tax filing made simple
-                  <span class="gradient-text">for all income types</span>
-                </h2>
-                <div class="underline-accent"></div>
-                <div class="feature-icon-list">
-                  <p>
-                    <i class="fas fa-scissors"></i>
-                    <span
-                      ><strong>Claim all eligible deductions accurately</strong
-                      ><br />Maximize refunds using 80C, 80D, HRA & more.</span
-                    >
-                  </p>
-                  <p>
-                    <i class="fas fa-bell"></i>
-                    <span
-                      ><strong
-                        >Free notice management & comprehensive support</strong
-                      ><br />Experts handle tax notices, peace of mind
-                      guaranteed.</span
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="img-col">
-                <img
-                  src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202406/itr-filing-2024-25-1938551-16x9_1.jpg?VersionId=Enopb0gdiV54GgID0I.RGzKlzPcILWaA&size=690:388"
-                  alt="tax filing illustration"
-                  style="background: #eef3fa"
-                />
-              </div>
-            </div>
-
-            <!-- Second grid: Impact & Trust (reverse) -->
-            <div
-              class="grid-2col reverse"
-              data-aos="fade-left"
-              style="flex-direction: row-reverse; padding-top: 10px"
-            >
-              <div class="text-col">
-                <div class="pill">
-                  <i class="fas fa-chart-simple"></i> Impact & Trust
-                </div>
-                <h2 class="section-title">
-                  <span class="gradient-text">94% of users save tax</span> with
-                  Khata Dost
-                </h2>
-                <div class="underline-accent"></div>
-                <p style="font-size: 1.05rem; line-height: 1.5">
-                  Over 13 Lakh+ users from 2600+ towns trust Khata Dost for ITR
-                  filing. Ex-IRS joint commissioners and seasoned CAs lead our
-                  platform — India’s highest rated assisted filing platform.
-                </p>
-              </div>
-              <div class="img-col">
-                <img src="../images/ITR-2.png" alt="impact illustration" />
-              </div>
-            </div>
-
-            <!-- DARK SECTION: Who Can File ITR with Khata Dost? (no buttons, fully dark) -->
-            <div class="dark-category-section" data-aos="fade-up">
-              <h2 class="section-title">
-                Who Can File ITR with
-                <span class="gradient-text">Khata Dost?</span>
-              </h2>
-              <div class="underline-light"></div>
-              <div class="category-grid-dark">
-                <div class="category-card-dark">
-                  <i class="fas fa-briefcase"></i>
-                  <h4>Salaried Individuals</h4>
-                  <p>Upload Form 16, auto-fill returns, HRA & deductions</p>
-                </div>
-                <div class="category-card-dark">
-                  <i class="fas fa-laptop-code"></i>
-                  <h4>Self-Employed</h4>
-                  <p>Freelancers, consultants, professionals with 44ADA/44AD</p>
-                </div>
-                <div class="category-card-dark">
-                  <i class="fas fa-store"></i>
-                  <h4>Business Owners</h4>
-                  <p>SMEs, MSMEs, ERP, Tally, partnership firms</p>
-                </div>
-                <div class="category-card-dark">
-                  <i class="fas fa-globe"></i>
-                  <h4>Foreign Income</h4>
-                  <p>NRIs, RNORs, foreign assets, foreign tax credit</p>
-                </div>
-                <div class="category-card-dark">
-                  <i class="fas fa-chart-line"></i>
-                  <h4>Stocks & Crypto</h4>
-                  <p>Capital gains, F&O trading, crypto gains, staking</p>
-                </div>
-                <div class="category-card-dark">
-                  <i class="fas fa-home"></i>
-                  <h4>HUF Filing</h4>
-                  <p>Hindu Undivided Family with ancestral income</p>
-                </div>
-                <div class="category-card-dark">
-                  <i class="fas fa-pen"></i>
-                  <h4>Revised ITR</h4>
-                  <p>Fix errors or missed deductions in previous filings</p>
-                </div>
-                <div class="category-card-dark">
-                  <i class="fas fa-hourglass-half"></i>
-                  <h4>Belated ITR</h4>
-                  <p>File after deadline, pay late fee and avoid penalties</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Three convenient ways -->
-            <h2 class="section-title" data-aos="fade-up">
-              Three convenient ways for Income Tax Filing
-            </h2>
-            <div class="underline-accent"></div>
-            <div class="ways-grid" data-aos="fade-up">
-              <div class="way-card">
-                <i class="fas fa-digital-tiling"></i>
-                <h4>Digital Signature (DSC)</h4>
-                <p>Secure e-filing with DSC authenticity</p>
-              </div>
-              <div class="way-card">
-                <i class="fas fa-file-signature"></i>
-                <h4>ITR-V without DSC</h4>
-                <p>Print, sign & send to CPC Bangalore</p>
-              </div>
-              <div class="way-card">
-                <i class="fas fa-qrcode"></i>
-                <h4>e-Verify with Aadhaar/Bank</h4>
-                <p>Instant OTP verification, no physical form</p>
-              </div>
-            </div>
-
-            <!-- Expert-Assisted ITR Filing -->
-            <div class="expert-row" data-aos="fade-up">
-              <h3>Expert-Assisted ITR Filing with Khata Dost</h3>
+      <!-- Finished Income Tax e-Filing? Here's What to Do Next! Scrollable on mobile -->
+      <div class="process-section" data-aos="fade-up">
+        <div class="container-process">
+          <div class="section-title center">
+            <h2>✅ Finished Income Tax e-Filing? Here’s What to Do Next!</h2>
+          </div>
+          <div class="process-grid">
+            <div class="process-card">
+              <div class="step-badge">STEP 01</div>
+              <div class="icon-wrapper"><i data-lucide="log-in"></i></div>
+              <h4>Login to Your Account</h4>
               <p>
-                Let our tax experts handle your Income Tax Filing from start to
-                finish — choose your category below.
+                After filing, go to e-verification page & access your dashboard
+                securely
               </p>
-              <div class="expert-buttons">
-                <div class="expert-cat">
-                  <span><i class="fas fa-user"></i> Salaried</span
-                  ><button class="btn-sm cat-btn">Start</button>
-                </div>
-                <div class="expert-cat">
-                  <span><i class="fas fa-chart-line"></i> Capital Gains</span
-                  ><button class="btn-sm cat-btn">Start</button>
-                </div>
-                <div class="expert-cat">
-                  <span><i class="fas fa-globe"></i> Foreign Income</span
-                  ><button class="btn-sm cat-btn">Start</button>
-                </div>
-                <div class="expert-cat">
-                  <span><i class="fas fa-coins"></i> Crypto Investors</span
-                  ><button class="btn-sm cat-btn">Start</button>
-                </div>
-                <div class="expert-cat">
-                  <span><i class="fas fa-home"></i> HUF Filing</span
-                  ><button class="btn-sm cat-btn">Start</button>
-                </div>
-              </div>
             </div>
-
-            <!-- Trust Badge Row - enhanced social proof -->
-            <div class="trust-badge-row" data-aos="fade-up">
-              <div class="trust-item">
-                <i class="fas fa-users"></i> <span>13 Lakh+ returns filed</span>
-              </div>
-              <div class="trust-item">
-                <i class="fas fa-star"></i> <span>4.9 ★ Trustpilot rating</span>
-              </div>
-              <div class="trust-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>2600+ towns served</span>
-              </div>
-              <div class="trust-item">
-                <i class="fas fa-chalkboard-user"></i>
-                <span>Ex-IRS & CA led platform</span>
-              </div>
-            </div>
-
-            <!-- Closing CTA & mini stats (no redundant sections from old) -->
-            <div class="closing-trust" data-aos="fade-up">
+            <div class="process-card">
+              <div class="step-badge">STEP 02</div>
+              <div class="icon-wrapper"><i data-lucide="smartphone"></i></div>
+              <h4>Choose Verification Method</h4>
               <p>
-                <i
-                  class="fas fa-file-invoice"
-                  style="margin-right: 8px; color: #18a0e3"
-                ></i>
-                <strong>India’s highest rated assisted filing platform</strong>
-                — hassle-free ITR, expert support at every step.
+                Aadhaar OTP or Bank EVC — select the fastest option for instant
+                verification
               </p>
-              <div class="mini-stats">
-                <div class="stat-block">
-                  <div class="stat-number">94%</div>
-                  <div class="stat-label">users save more tax</div>
-                </div>
-                <div class="stat-block">
-                  <div class="stat-number">15min</div>
-                  <div class="stat-label">avg filing time</div>
-                </div>
-                <div class="stat-block">
-                  <div class="stat-number">24/7</div>
-                  <div class="stat-label">expert chat support</div>
-                </div>
-              </div>
-              <!-- <button class="btn-primary" style="margin-top: 1.5rem">
-                <i class="fas fa-hand-holding-usd"></i> File your ITR now
-              </button> -->
+            </div>
+            <div class="process-card">
+              <div class="step-badge">STEP 03</div>
+              <div class="icon-wrapper"><i data-lucide="check-circle"></i></div>
+              <h4>Complete e-Verification</h4>
+              <p>
+                Enter OTP to finalize ITR filing and get instant acknowledgement
+              </p>
             </div>
           </div>
+        </div>
+      </div>
 
-          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-          <script>
-            AOS.init({
-              duration: 700,
-              once: true,
-              offset: 30,
-            });
-          </script>
-        </body>
-      </html>
-
-      <!-- steps-----------  -->
-      <!doctype html>
-      <html lang="en">
-        <head>
-          <meta charset="UTF-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, user-scalable=yes"
-          />
-          <title>Income Tax e-Filing | Next Steps After Filing</title>
-          <!-- Google Fonts: Inter for modern readability -->
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
-            rel="stylesheet"
-          />
-          <!-- Lucide CDN - crisp icons -->
-          <script src="https://unpkg.com/lucide@latest"></script>
-          <style>
-            * {
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-            }
-
-            /* body {
-              font-family: "Inter", sans-serif;
-              background: #0a0f1a;
-            } */
-
-            /* Full width, compact height section with premium dark background image */
-            .process-section {
-              width: 100%;
-              position: relative;
-              padding: 48px 0 56px;
-              overflow-x: hidden;
-              /* Premium Unsplash background - dark blue abstract tech gradient (same beautiful image) */
-              background-image: url("https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGJsdWUlMjB3YXZlc3xlbnwwfHwwfHx8MA%3D%3D");
-              background-size: cover;
-              background-position: center 35%;
-              background-repeat: no-repeat;
-              background-color: #0a1a2a;
-              background-blend-mode: overlay;
-            }
-
-            /* Gradient overlay for better text contrast and depth */
-            .process-section::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background: linear-gradient(
-                135deg,
-                rgb(3 18 32 / 48%) 0%,
-                rgb(0 10 22 / 49%) 100%
-              );
-              pointer-events: none;
-              z-index: 1;
-            }
-
-            .container {
-              max-width: 1300px;
-              margin: 0 auto;
-              padding: 0 32px;
-              position: relative;
-              z-index: 3;
-            }
-
-            /* section title - modern, bold, fits tax theme */
-            .section-title.center {
-              text-align: center;
-              margin-bottom: 32px;
-            }
-
-            .section-title.center h2 {
-              font-size: 2rem;
-              font-weight: 800;
-              letter-spacing: -0.02em;
-              background: linear-gradient(125deg, #ffffff, #c8e2ff, #9ac8ff);
-              -webkit-background-clip: text;
-              background-clip: text;
-              color: transparent;
-              display: inline-block;
-              margin-bottom: 6px;
-              text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            }
-
-            .section-title.center:after {
-              content: "";
-              display: block;
-              width: 70px;
-              height: 3px;
-              background: linear-gradient(90deg, #3b82f6, #90caf9);
-              margin: 12px auto 0;
-              border-radius: 4px;
-            }
-
-            /* process grid: 3 steps, compact height, full width usage */
-            .process-grid {
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              gap: 28px;
-              margin-top: 12px;
-            }
-
-            /* glassmorphic cards with subtle border & premium feel */
-            .process-card {
-              background: rgba(18, 40, 58, 0.6);
-              backdrop-filter: blur(10px);
-              border-radius: 32px;
-              padding: 26px 18px 28px;
-              text-align: center;
-              transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-              border: 1px solid rgba(255, 255, 255, 0.16);
-              box-shadow: 0 18px 32px -14px rgba(0, 0, 0, 0.4);
-            }
-
-            .process-card:hover {
-              background: rgba(35, 72, 102, 0.7);
-              border-color: rgba(100, 180, 255, 0.6);
-              transform: translateY(-5px);
-            }
-
-            /* step badge - modern minimal, floating style */
-            .step-badge {
-              display: inline-block;
-              background: rgba(0, 45, 70, 0.8);
-              backdrop-filter: blur(4px);
-              font-weight: 700;
-              font-size: 0.75rem;
-              padding: 5px 16px;
-              border-radius: 60px;
-              letter-spacing: 0.6px;
-              border: 1px solid rgba(255, 255, 255, 0.25);
-              color: #c8e2ff;
-              margin-bottom: 16px;
-            }
-
-            /* lucide icon container - vibrant rounded gradient */
-            .icon-wrapper {
-              width: 74px;
-              height: 74px;
-              margin: 0 auto 16px;
-              background: linear-gradient(145deg, #1a6a91, #0e4464);
-              border-radius: 30px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              transition: all 0.25s ease;
-              box-shadow:
-                0 12px 20px -10px rgba(0, 0, 0, 0.35),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-            }
-
-            .process-card:hover .icon-wrapper {
-              background: linear-gradient(145deg, #2583ae, #145a7c);
-              transform: scale(1.02);
-            }
-
-            /* lucide icons styling */
-            .icon-wrapper svg {
-              stroke: white;
-              stroke-width: 1.7;
-              width: 38px;
-              height: 38px;
-            }
-
-            .process-card h4 {
-              font-size: 1.4rem;
-              font-weight: 700;
-              margin: 14px 0 10px;
-              color: #ffffff;
-              letter-spacing: -0.2px;
-            }
-
-            .process-card p {
-              font-size: 0.85rem;
-              line-height: 1.48;
-              color: #e6f0fa;
-              opacity: 0.92;
-              font-weight: 400;
-              padding: 0 8px;
-            }
-
-            /* responsive behaviors: tablet -> stack to 2 then mobile 1 */
-            @media (max-width: 900px) {
-              .process-grid {
-                gap: 22px;
-              }
-              .process-card h4 {
-                font-size: 1.25rem;
-              }
-              .icon-wrapper {
-                width: 66px;
-                height: 66px;
-              }
-              .icon-wrapper svg {
-                width: 34px;
-                height: 34px;
-              }
-            }
-
-            @media (max-width: 768px) {
-              .process-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-              }
-              .process-section {
-                padding: 44px 0 52px;
-              }
-              .section-title.center h2 {
-                font-size: 1.7rem;
-              }
-              .container {
-                padding: 0 24px;
-              }
-            }
-
-            @media (max-width: 550px) {
-              .process-grid {
-                grid-template-columns: 1fr;
-                gap: 18px;
-                max-width: 380px;
-                margin-left: auto;
-                margin-right: auto;
-              }
-              .process-section {
-                padding: 40px 0 48px;
-              }
-              .section-title.center h2 {
-                font-size: 1.5rem;
-                padding: 0 8px;
-              }
-              .process-card {
-                padding: 22px 16px;
-              }
-            }
-
-            /* accent line at bottom for visual polish */
-            .bg-accent-line {
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              width: 100%;
-              height: 2px;
-              background: linear-gradient(
-                90deg,
-                transparent,
-                #5f9eff,
-                #b0d0ff,
-                transparent
-              );
-              opacity: 0.5;
-              pointer-events: none;
-              z-index: 4;
-            }
-
-            /* small extra glow for cards */
-            .process-card:active {
-              transform: scale(0.98);
-            }
-          </style>
-        </head>
-        <body>
-          <section class="process-section">
-            <div class="container">
-              <div class="section-title center">
-                <h2>
-                  ✅ Finished Income Tax e-Filing? Here’s What to Do Next!
-                </h2>
-              </div>
-              <div class="process-grid">
-                <!-- STEP 1: Login to Your Account (Lucide: LogIn + UserCheck style) -->
-                <div class="process-card">
-                  <div class="step-badge">STEP 01</div>
-                  <div class="icon-wrapper">
-                    <i
-                      data-lucide="log-in"
-                      style="color: white; width: 38px; height: 38px"
-                    ></i>
-                  </div>
-                  <h4>Login to Your Account</h4>
-                  <p>
-                    After filing, go to e-verification page & access your
-                    dashboard securely
-                  </p>
-                </div>
-
-                <!-- STEP 2: Choose Verification Method (Lucide: Smartphone / Key / ShieldCheck) – Use "smartphone" for OTP + "key" -->
-                <div class="process-card">
-                  <div class="step-badge">STEP 02</div>
-                  <div class="icon-wrapper">
-                    <i
-                      data-lucide="smartphone"
-                      style="color: white; width: 38px; height: 38px"
-                    ></i>
-                  </div>
-                  <h4>Choose Verification Method</h4>
-                  <p>
-                    Aadhaar OTP or Bank EVC — select the fastest option for
-                    instant verification
-                  </p>
-                </div>
-
-                <!-- STEP 3: Complete e-Verification (Lucide: Fingerprint / ShieldCheck / CheckCircle) -->
-                <div class="process-card">
-                  <div class="step-badge">STEP 03</div>
-                  <div class="icon-wrapper">
-                    <i
-                      data-lucide="check-circle"
-                      style="color: white; width: 38px; height: 38px"
-                    ></i>
-                  </div>
-                  <h4>Complete e-Verification</h4>
-                  <p>
-                    Enter OTP to finalize ITR filing and get instant
-                    acknowledgement
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="bg-accent-line"></div>
-          </section>
-
-          <!-- Initialize Lucide Icons: Transform data-lucide attributes into actual SVG icons -->
-          <script>
-            (function () {
-              // function to init lucide icons
-              function initLucide() {
-                if (typeof lucide !== "undefined" && lucide.createIcons) {
-                  lucide.createIcons();
-                  return true;
-                }
-                return false;
-              }
-
-              // Try on DOM ready
-              if (document.readyState === "loading") {
-                document.addEventListener("DOMContentLoaded", function () {
-                  if (!initLucide()) {
-                    // wait a bit more if CDN slow
-                    setTimeout(initLucide, 300);
-                  }
-                });
-              } else {
-                if (!initLucide()) {
-                  setTimeout(initLucide, 200);
-                }
-              }
-
-              // fallback interval for safety
-              let attempts = 0;
-              const interval = setInterval(function () {
-                if (typeof lucide !== "undefined" && lucide.createIcons) {
-                  lucide.createIcons();
-                  clearInterval(interval);
-                }
-                attempts++;
-                if (attempts > 15) clearInterval(interval);
-              }, 150);
-            })();
-          </script>
-        </body>
-      </html>
-
+      <!-- Why early filing -->
       <div data-aos="fade-up">
         <h2 class="section-title">Why early ITR filing is a smart move</h2>
         <div class="underline-accent"></div>
@@ -2636,36 +1917,38 @@
         </div>
       </div>
 
+      <!-- benefits -->
       <div class="benefits-list" data-aos="fade-up">
         <div>
           <i
             class="fas fa-id-card"
             style="color: #18a0e3; font-size: 1.4rem"
           ></i>
-          <strong>Legal Proof:</strong> Identity & income proof
+          <p><strong>Legal Proof:</strong> Identity & income proof</p>
         </div>
         <div>
           <i class="fas fa-percent" style="color: #18a0e3"></i>
-          <strong>Claim Deductions:</strong> Reduce tax burden
+          <p><strong>Claim Deductions:</strong> Reduce tax burden</p>
         </div>
         <div>
           <i class="fas fa-hand-holding-usd" style="color: #18a0e3"></i>
-          <strong>Loan Document:</strong> Essential for banks
+          <p><strong>Loan Document:</strong> Essential for banks</p>
         </div>
         <div>
           <i class="fas fa-passport" style="color: #18a0e3"></i>
-          <strong>Requirement for Abroad:</strong> Visa necessity
+          <p><strong>Requirement for Abroad:</strong> Visa necessity</p>
         </div>
         <div>
           <i class="fas fa-exclamation-triangle" style="color: #18a0e3"></i>
-          <strong>Avoid Penalties:</strong> Stay compliant
+          <p><strong>Avoid Penalties:</strong> Stay compliant</p>
         </div>
         <div>
           <i class="fas fa-chart-line" style="color: #18a0e3"></i>
-          <strong>Carry Forward Losses:</strong> Offset future income
+          <p><strong>Carry Forward Losses:</strong> Offset future income</p>
         </div>
       </div>
 
+      <!-- support banner -->
       <div class="support-banner" data-aos="zoom-in">
         <i class="fas fa-headset" style="font-size: 3rem; color: #18a0e3"></i>
         <h3 style="margin: 0.8rem 0">
@@ -2680,29 +1963,56 @@
         </button>
       </div>
 
-      <footer>
+      <div class="closing-trust" data-aos="fade-up">
+        <p>
+          <i
+            class="fas fa-file-invoice"
+            style="margin-right: 8px; color: #18a0e3"
+          ></i
+          ><strong>India’s highest rated assisted filing platform</strong> —
+          hassle-free ITR, expert support at every step.
+        </p>
+        <div class="mini-stats">
+          <div class="stat-block">
+            <div class="stat-number">94%</div>
+            <div class="stat-label">users save more tax</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-number">15min</div>
+            <div class="stat-label">avg filing time</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">expert chat support</div>
+          </div>
+        </div>
+      </div>
+      <!-- <footer>
         <i class="fas fa-shield-alt"></i> © Khata Dost — India's highest-rated
         assisted income tax filing platform • 4.9★ by 16,000+ businesses •
         Expert-backed ITR, maximum refunds & complete support.
-      </footer>
+      </footer> -->
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       AOS.init({ duration: 700, once: true, offset: 20 });
-      const allBtns = document.querySelectorAll(
+      setTimeout(() => {
+        if (typeof lucide !== "undefined") lucide.createIcons();
+      }, 100);
+      const btns = document.querySelectorAll(
         ".cta-btn, .cat-btn, .btn-primary",
       );
-      allBtns.forEach((btn) => {
+      btns.forEach((btn) =>
         btn.addEventListener("click", (e) => {
           e.preventDefault();
           console.log("Khata Dost ITR action triggered");
-        });
-      });
+        }),
+      );
     </script>
   </body>
 </html>
-
 <!-- -------footer------------- -->
 
 <style>

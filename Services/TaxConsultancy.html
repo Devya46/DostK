@@ -577,6 +577,11 @@
             width: 38px;
             height: 38px;
           }
+          .navbar.is-compact .logo-text img {
+            height: 49px;
+            width: 99px;
+            margin-top: -14px;
+          }
 
           .navbar.is-compact .logo-text h1 {
             font-size: 1.4rem;
@@ -625,15 +630,15 @@
             filter: drop-shadow(0 4px 8px rgba(26, 95, 158, 0.12));
             transition: 0.25s;
           }
-          .logo-text img {
-            width: 154px;
-            height: 67px;
-            margin: 0;
-            padding: 0;
-            object-fit: contain;
-            filter: drop-shadow(0 4px 8px rgba(26, 95, 158, 0.12));
-            transition: 0.25s;
-          }
+          /* .logo-text img {
+        width: 154px;
+        height: 67px;
+        margin: 0;
+        padding: 0;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 8px rgba(26, 95, 158, 0.12));
+        transition: 0.25s;
+      } */
 
           .logo-text h1 {
             font-size: 1.85rem;
@@ -651,7 +656,8 @@
             font-weight: 700;
             color: #2c6e9e;
             letter-spacing: 0.6px;
-            margin-top: -3px;
+            margin-top: -4px;
+            text-transform: uppercase;
           }
 
           /* DESKTOP NAVIGATION */
@@ -666,7 +672,7 @@
             font-weight: 600;
             color: #1f3b4c;
             transition: 0.2s;
-            font-size: 1rem;
+            font-size: 18px;
           }
 
           .nav-links a:hover {
@@ -928,7 +934,7 @@
           .side-dropdown {
             display: flex;
             flex-direction: column;
-            margin-left: 8px;
+            /* margin-left: 8px; */
           }
 
           .side-dropdown-header {
@@ -942,6 +948,33 @@
             font-size: 1.1rem;
             color: #1f3b4c;
             transition: 0.2s;
+          }
+
+          .side-dropdown-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 12px;
+          }
+
+          .side-dropdown-header span {
+            display: flex;
+            align-items: center;
+            gap: 70px;
+            font-weight: 600;
+          }
+
+          .side-dropdown-header span i {
+            width: 28px;
+            text-align: center;
+            flex-shrink: 0;
+          }
+
+          .side-dropdown-header i:first-child,
+          .side-nav-item i:first-child {
+            width: 28px;
+            text-align: center;
+            flex-shrink: 0;
           }
 
           .side-dropdown-header i:first-child {
@@ -1042,6 +1075,25 @@
               padding: 10px 20px;
             }
           }
+          @media (max-width: 500px) {
+            .logo-area {
+              gap: 8px;
+            }
+
+            .logo-area img {
+              width: 40px;
+              height: 40px;
+            }
+
+            .logo-text h1 {
+              font-size: 24px;
+            }
+
+            .logo-text p {
+              font-size: 9.5px;
+              letter-spacing: 0.5px;
+            }
+          }
         </style>
       </head>
       <body>
@@ -1055,10 +1107,11 @@
                     alt="Khata Dost"
                 /></a>
                 <div class="logo-text">
-                  <div>
-                    <h1>Khata Dost</h1>
-                  </div>
-                  <p>ACCOUNTING & TAX SOLUTIONS</p>
+                  <!-- <div>
+                <img src="images/LOGO-2.png" alt="" />
+              </div> -->
+                  <h1>Khata Dost</h1>
+                  <p>Accounting Made Simple</p>
                 </div>
               </div>
 
@@ -1090,9 +1143,12 @@
                     >
                   </div>
                 </div>
-                <a href="About.html">About Us</a>
-                <a href="Testimonials.html">Reviews</a>
-                <a href="Contact.html" class="contact-btn-glow">Start Now</a>
+                <a href="../About.html">About Us</a>
+                <a href="../Testimonials.html">FAQ</a>
+                <!-- <a href="Contact.html">Contact Us</a> -->
+                <a href="../Contact.html" class="contact-btn-glow"
+                  >Contact Us</a
+                >
               </div>
 
               <!-- Hamburger with icon at start & text (premium) -->
@@ -1150,23 +1206,18 @@
               </div>
             </div>
 
-            <a href="About.html" class="side-nav-item"
+            <a href="../About.html" class="side-nav-item"
               ><i class="fas fa-users"></i> About Us
               <i class="fas fa-chevron-right"></i
             ></a>
-            <a href="Testimonials.html" class="side-nav-item"
-              ><i class="fas fa-star"></i> Reviews
+            <a href="../Testimonials.html" class="side-nav-item"
+              ><i class="fas fa-star"></i> FAQ
               <i class="fas fa-chevron-right"></i
             ></a>
-          </div>
-          <div class="side-menu-footer">
-            <a href="Contact.html" class="start-now-premium"
-              ><i class="fas fa-rocket"></i> Start Now
-            </a>
-            <!-- Arrow at end ( > ) as requested -->
-            <div class="end-arrow">
-              <i class="fas fa-angle-double-right"></i>
-              <i class="fas fa-greater-than"></i>
+            <div class="side-menu-footer">
+              <a href="../Contact.html" class="start-now-premium"
+                ><i class="fas fa-rocket"></i> Contact Us
+              </a>
             </div>
           </div>
         </div>
@@ -1409,10 +1460,9 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes"
     />
     <title>TaxConsult Pro | Strategic Tax & Compliance Solutions</title>
-
     <!-- Font Awesome 6 (free icons) -->
     <link
       rel="stylesheet"
@@ -1423,7 +1473,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
       rel="stylesheet"
     />
-
+    <!-- Swiper CSS (lightweight, modern touch slider) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <style>
       * {
         margin: 0;
@@ -1435,6 +1489,7 @@
         background: linear-gradient(135deg, #f0f5fe 0%, #e9f0fa 100%);
         padding: 40px 24px;
         color: #0a1e42;
+        font-family: "Inter", sans-serif;
       }
 
       .tax-section {
@@ -1527,7 +1582,7 @@
         letter-spacing: -0.2px;
       }
 
-      /* --- MAIN SERVICE BOX (modern glassmorphism touch) --- */
+      /* --- MAIN SERVICE BOX (modern) --- */
       .service-box {
         background: #ffffff;
         border-radius: 40px;
@@ -1558,6 +1613,7 @@
         backdrop-filter: blur(2px);
       }
 
+      /* Desktop grid layout (original style, untouched for > 992px) */
       .services-gridd {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -1573,7 +1629,6 @@
         background: white;
       }
 
-      /* removing border-right for last column */
       .service-card:nth-child(4),
       .service-card:nth-child(8) {
         border-right: none;
@@ -1583,16 +1638,15 @@
         border-bottom: none;
       }
 
-      /* hover effect with subtle lift & border glow */
       .service-card:hover {
         background: #fefefe;
         box-shadow:
           0 12px 20px -12px rgba(0, 0, 0, 0.08),
-          inset 0 0 0 1px rgba(43, 104, 204, 0.1);
+          inset 0 0 0 1px rgba(43, 104, 204, 0.15);
         transform: translateY(-4px);
         z-index: 2;
         position: relative;
-        border-radius: 8px;
+        border-radius: 12px;
       }
 
       .service-flex {
@@ -1601,7 +1655,6 @@
         gap: 20px;
       }
 
-      /* modern gradient icons with subtle shadows */
       .service-icon {
         min-width: 80px;
         width: 80px;
@@ -1614,10 +1667,8 @@
         color: white;
         transition: all 0.2s ease;
         box-shadow: 0 8px 14px -6px rgba(0, 0, 0, 0.2);
-        filter: contrast(0.8);
       }
 
-      /* unique color palette (original but improved consistency) */
       .blue {
         background: linear-gradient(135deg, #1e56c4, #0b3d8c);
       }
@@ -1664,12 +1715,10 @@
         font-weight: 400;
       }
 
-      /* small micro interaction + badge style for cta */
       .service-card:active {
         transform: translateY(-2px);
       }
 
-      /* Decorative element */
       .service-box::before {
         content: "";
         position: absolute;
@@ -1682,22 +1731,127 @@
         z-index: 3;
       }
 
-      /* Responsive Excellence */
-      @media (max-width: 1200px) {
-        .service-content h3 {
-          font-size: 1.3rem;
+      /* Desktop media queries (preserve layout for >992px) */
+      @media (min-width: 993px) {
+        .swiper-service-container {
+          display: contents; /* hide swiper wrapper on desktop, show grid */
         }
-        .service-flex {
-          gap: 14px;
-        }
-        .service-icon {
-          min-width: 70px;
-          width: 70px;
-          height: 70px;
-          font-size: 32px;
+        .mobile-swiper-wrapper {
+          display: none;
         }
       }
 
+      /* Tablet & Mobile: replace grid with swipeable swiper carousel */
+      @media (max-width: 992px) {
+        .services-gridd {
+          display: none; /* hide original grid on tablet/mobile */
+        }
+        .mobile-swiper-wrapper {
+          display: block;
+          padding: 20px 24px 32px 24px;
+        }
+        .swiper-service {
+          width: 100%;
+          padding-bottom: 20px;
+          overflow: visible;
+        }
+        .swiper-slide {
+          height: auto;
+          display: flex;
+        }
+        .service-card-swipe {
+          background: white;
+          border-radius: 32px;
+          padding: 28px 24px;
+          box-shadow: 0 16px 28px -12px rgba(0, 0, 0, 0.12);
+          transition: all 0.2s ease;
+          cursor: pointer;
+          width: 100%;
+          border: 1px solid rgba(11, 47, 102, 0.06);
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+        .service-card-swipe:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 24px 36px -14px rgba(0, 0, 0, 0.18);
+        }
+        .swipe-flex {
+          display: flex;
+          align-items: flex-start;
+          gap: 20px;
+          flex-wrap: wrap;
+        }
+        .swipe-icon {
+          min-width: 72px;
+          width: 72px;
+          height: 72px;
+          border-radius: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 34px;
+          color: white;
+          box-shadow: 0 8px 14px -6px rgba(0, 0, 0, 0.2);
+        }
+        .swipe-content h3 {
+          font-size: 1.4rem;
+          font-weight: 700;
+          margin-bottom: 12px;
+          color: #0a2540;
+        }
+        .swipe-content p {
+          font-size: 0.95rem;
+          line-height: 1.5;
+          color: #4a5b7a;
+        }
+        .swiper-pagination {
+          position: relative;
+          margin-top: 24px;
+          bottom: auto;
+        }
+        .swiper-pagination-bullet {
+          background: #b9c6e0;
+          opacity: 0.6;
+        }
+        .swiper-pagination-bullet-active {
+          background: #0b2f66;
+          opacity: 1;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: #0b2f66;
+          background: white;
+          width: 40px;
+          height: 40px;
+          border-radius: 40px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(2px);
+        }
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+          font-size: 18px;
+          font-weight: bold;
+        }
+        @media (max-width: 640px) {
+          .swipe-flex {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+          .swipe-content {
+            text-align: center;
+          }
+          .service-card-swipe {
+            padding: 24px 20px;
+          }
+          .mobile-swiper-wrapper {
+            padding: 12px 16px 28px 16px;
+          }
+        }
+      }
+
+      /* keep top responsive untouched */
       @media (max-width: 992px) {
         .top-grid {
           grid-template-columns: repeat(3, 1fr);
@@ -1706,32 +1860,14 @@
         .top-item {
           border-right: none;
         }
-        .services-gridd {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .service-card:nth-child(2),
-        .service-card:nth-child(4),
-        .service-card:nth-child(6),
-        .service-card:nth-child(8) {
-          border-right: none;
-        }
-        .service-card:nth-child(5),
-        .service-card:nth-child(6),
-        .service-card:nth-child(7) {
-          border-bottom: 1px solid #edf2fc;
-        }
-        .service-card:nth-child(8) {
-          border-bottom: none;
-        }
         .service-title {
           font-size: 1.4rem;
           padding: 12px 28px;
           white-space: nowrap;
         }
       }
-
       @media (max-width: 768px) {
-        body {
+        .servicebody {
           padding: 24px 16px;
         }
         .top-grid {
@@ -1747,51 +1883,24 @@
           font-size: 0.95rem;
         }
         .service-title {
-          font-size: 1.25rem;
+          font-size: 1.2rem;
           padding: 10px 20px;
           white-space: normal;
           width: 85%;
           text-align: center;
-          letter-spacing: -0.2px;
-        }
-        .services-gridd {
-          grid-template-columns: 1fr;
-        }
-        .service-card {
-          border-right: none !important;
-          border-bottom: 1px solid #edf2fc !important;
-          padding: 28px 20px;
-        }
-        .service-card:last-child {
-          border-bottom: none !important;
-        }
-        .service-flex {
-          flex-direction: row;
-          text-align: left;
-          align-items: center;
-        }
-        .service-content h3 {
-          font-size: 1.3rem;
         }
         .top-heading {
-          font-size: 1.1rem;
+          font-size: 1rem;
           padding: 12px 20px;
-          border-radius: 0 0 20px 0;
+        }
+        .service-box {
+          margin: 2rem 1rem;
+        }
+        .top-box {
+          margin: 1.5rem 1rem;
         }
       }
-
       @media (max-width: 480px) {
-        .service-flex {
-          flex-direction: column;
-          text-align: center;
-          align-items: center;
-        }
-        .service-content {
-          text-align: center;
-        }
-        .service-icon {
-          margin-bottom: 8px;
-        }
         .top-icon {
           width: 60px;
           height: 60px;
@@ -1801,23 +1910,15 @@
           display: none;
         }
         .service-title {
-          font-size: 1.1rem;
+          font-size: 1rem;
           width: 95%;
-          padding: 10px 12px;
         }
       }
 
-      /* accessibility & smooth scroll */
+      /* animations & util */
       html {
         scroll-behavior: smooth;
       }
-
-      /* optional badge: little extra polish on icons */
-      .service-icon i {
-        filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
-      }
-
-      /* custom subtle animation on load */
       @keyframes fadeSlideUp {
         0% {
           opacity: 0;
@@ -1828,58 +1929,29 @@
           transform: translateY(0);
         }
       }
-
       .service-card,
-      .top-item {
+      .top-item,
+      .service-card-swipe {
         animation: fadeSlideUp 0.35s ease-out forwards;
         opacity: 0;
       }
-
-      .service-card:nth-child(1) {
-        animation-delay: 0.02s;
-      }
-      .service-card:nth-child(2) {
-        animation-delay: 0.05s;
-      }
-      .service-card:nth-child(3) {
-        animation-delay: 0.08s;
-      }
-      .service-card:nth-child(4) {
-        animation-delay: 0.11s;
-      }
-      .service-card:nth-child(5) {
-        animation-delay: 0.14s;
-      }
-      .service-card:nth-child(6) {
-        animation-delay: 0.17s;
-      }
-      .service-card:nth-child(7) {
-        animation-delay: 0.2s;
-      }
-      .service-card:nth-child(8) {
-        animation-delay: 0.23s;
-      }
-      .top-item:nth-child(1) {
-        animation-delay: 0.02s;
-      }
-      .top-item:nth-child(2) {
-        animation-delay: 0.05s;
-      }
-      .top-item:nth-child(3) {
-        animation-delay: 0.08s;
-      }
-      .top-item:nth-child(4) {
-        animation-delay: 0.11s;
-      }
-      .top-item:nth-child(5) {
-        animation-delay: 0.14s;
+      .info-badge {
+        position: absolute;
+        bottom: 12px;
+        right: 20px;
+        font-size: 11px;
+        color: #b9c6e0;
+        background: transparent;
+        pointer-events: none;
+        font-weight: 400;
+        z-index: 4;
       }
     </style>
   </head>
   <body>
     <div class="servicebody">
       <section class="tax-section">
-        <!-- Professional Tax Solutions for Clients: top segment improved readability -->
+        <!-- Professional Tax Solutions top segment (unchanged) -->
         <div class="top-box">
           <div class="top-heading">
             <i class="fa-solid fa-badge-check"></i>
@@ -1917,11 +1989,12 @@
           </div>
         </div>
 
-        <!-- SERVICES CORE: enhanced color, readability, hover fx -->
+        <!-- SERVICES CORE: desktop grid + mobile swiper hybrid (non-intrusive) -->
         <div class="service-box">
           <div class="service-title">✦ OUR TAX CONSULTANCY SERVICES ✦</div>
+
+          <!-- Desktop grid: original layout, visible on large screens -->
           <div class="services-gridd">
-            <!-- 1 -->
             <div class="service-card" data-service="income-tax">
               <div class="service-flex">
                 <div class="service-icon blue">
@@ -1937,7 +2010,6 @@
                 </div>
               </div>
             </div>
-            <!-- 2 -->
             <div class="service-card" data-service="gst">
               <div class="service-flex">
                 <div class="service-icon green">
@@ -1953,7 +2025,6 @@
                 </div>
               </div>
             </div>
-            <!-- 3 -->
             <div class="service-card" data-service="business">
               <div class="service-flex">
                 <div class="service-icon orange">
@@ -1969,7 +2040,6 @@
                 </div>
               </div>
             </div>
-            <!-- 4 -->
             <div class="service-card" data-service="saving">
               <div class="service-flex">
                 <div class="service-icon pink">
@@ -1985,7 +2055,6 @@
                 </div>
               </div>
             </div>
-            <!-- 5 -->
             <div class="service-card" data-service="tds">
               <div class="service-flex">
                 <div class="service-icon purple">
@@ -2000,7 +2069,6 @@
                 </div>
               </div>
             </div>
-            <!-- 6 -->
             <div class="service-card" data-service="notice">
               <div class="service-flex">
                 <div class="service-icon red">
@@ -2016,7 +2084,6 @@
                 </div>
               </div>
             </div>
-            <!-- 7 -->
             <div class="service-card" data-service="advance">
               <div class="service-flex">
                 <div class="service-icon darkblue">
@@ -2032,7 +2099,6 @@
                 </div>
               </div>
             </div>
-            <!-- 8 -->
             <div class="service-card" data-service="financial">
               <div class="service-flex">
                 <div class="service-icon darkgreen">
@@ -2049,144 +2115,267 @@
               </div>
             </div>
           </div>
+
+          <!-- Mobile Swiper Container (hidden on desktop) -->
+          <div class="mobile-swiper-wrapper">
+            <div class="swiper-service swiper">
+              <div class="swiper-wrapper">
+                <!-- slides built dynamically from same data, but also static backup for consistency -->
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
 
-    <!-- Interactive micro-interactions: ripple + subtle toast like console greeting & improved hover state (overriding free) -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       (function () {
-        // 1. Smooth interactive feedback on service cards with dynamic pointer
-        const cards = document.querySelectorAll(".service-card");
+        // 1. Build mobile swiper slides from same service data to maintain consistency
+        const servicesData = [
+          {
+            iconClass: "blue",
+            iconName: "fa-solid fa-file-invoice-dollar",
+            title: "Income Tax Consultancy",
+            desc: "Expert support for tax planning, filing guidance, deductions, exemptions, and full compliance — from ITR-1 to ITR-7.",
+          },
+          {
+            iconClass: "green",
+            iconName: "fa-solid fa-receipt",
+            title: "GST Consultancy",
+            desc: "Professional assistance for GST registration, returns (GSTR-1,3B), reconciliation, annual returns, notices, and audit support.",
+          },
+          {
+            iconClass: "orange",
+            iconName: "fa-solid fa-chart-line",
+            title: "Business Tax Advisory",
+            desc: "Customized tax strategies for startups, growing businesses, and corporate entities — minimizing liability while staying compliant.",
+          },
+          {
+            iconClass: "pink",
+            iconName: "fa-solid fa-piggy-bank",
+            title: "Tax Saving Planning",
+            desc: "Optimize your taxes legally with smart investment and deduction planning under 80C, 80D, and beyond — maximize refunds.",
+          },
+          {
+            iconClass: "purple",
+            iconName: "fa-solid fa-file-signature",
+            title: "TDS & TCS Consultancy",
+            desc: "End-to-end support for TDS deduction, timely return filing (24Q, 26Q), corrections, form 16/16A, and full compliance.",
+          },
+          {
+            iconClass: "red",
+            iconName: "fa-solid fa-envelope-open-text",
+            title: "Tax Notice & Scrutiny Support",
+            desc: "Expert handling of income tax and GST notices, strategic documentation, legal representation & effective response drafting.",
+          },
+          {
+            iconClass: "darkblue",
+            iconName: "fa-solid fa-calendar-check",
+            title: "Advance Tax Planning",
+            desc: "Avoid penalties and interest with accurate advance tax calculation, quarterly payment scheduling & proactive tax management.",
+          },
+          {
+            iconClass: "darkgreen",
+            iconName: "fa-solid fa-handshake",
+            title: "Financial & Compliance Advisory",
+            desc: "Improve financial planning and maintain end-to-end tax compliance including bookkeeping support, risk mitigation & audits.",
+          },
+        ];
 
-        // Helper to create quick non-intrusive feedback (brief console info and optional subtle highlight)
-        function handleCardClick(e) {
-          const card = e.currentTarget;
-          const serviceTitleElem = card.querySelector(".service-content h3");
-          if (!serviceTitleElem) return;
-          const serviceName = serviceTitleElem.innerText;
+        const swiperWrapper = document.querySelector(
+          ".swiper-service .swiper-wrapper",
+        );
+        if (swiperWrapper) {
+          swiperWrapper.innerHTML = "";
+          servicesData.forEach((service, idx) => {
+            const slide = document.createElement("div");
+            slide.className = "swiper-slide";
+            slide.innerHTML = `
+          <div class="service-card-swipe" data-service="${service.title.toLowerCase().replace(/\s/g, "-")}">
+            <div class="swipe-flex">
+              <div class="swipe-icon ${service.iconClass}">
+                <i class="${service.iconName}"></i>
+              </div>
+              <div class="swipe-content">
+                <h3>${service.title}</h3>
+                <p>${service.desc}</p>
+              </div>
+            </div>
+          </div>
+        `;
+            swiperWrapper.appendChild(slide);
+          });
+        }
 
-          // Simple console interaction to showcase dynamic enhancement without intrusive modals
+        // initialize swiper only on tablet/mobile (max-width: 992px) but we init always but conditionally by breakpoint? swiper works anyway; but we set breakpoints: allow only if width < 993? Actually swiper will work but desktop media hides container. fine.
+        let swiperInstance = null;
+        function initSwiper() {
+          const container = document.querySelector(".swiper-service");
+          if (!container) return;
+          if (window.innerWidth <= 992) {
+            if (!swiperInstance) {
+              swiperInstance = new Swiper(".swiper-service", {
+                slidesPerView: 1,
+                spaceBetween: 24,
+                loop: false,
+                pagination: { el: ".swiper-pagination", clickable: true },
+                navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                  640: { slidesPerView: 1.2, spaceBetween: 20 },
+                  768: { slidesPerView: 2, spaceBetween: 24 },
+                  992: { slidesPerView: 2.5, spaceBetween: 24 },
+                },
+                touchRatio: 1.2,
+                resistanceRatio: 0.85,
+              });
+            } else {
+              swiperInstance.update();
+            }
+          } else {
+            if (swiperInstance) {
+              swiperInstance.destroy(true, true);
+              swiperInstance = null;
+            }
+          }
+        }
+        window.addEventListener("resize", () => {
+          initSwiper();
+        });
+        initSwiper();
+
+        // 2. Add click handlers for both desktop cards and mobile swipe cards (unified console feedback)
+        const handleServiceClick = (cardElement, serviceName) => {
           console.log(
             `🔍 [TaxConsult Pro] Service selected: ${serviceName} — expert assistance available.`,
           );
-
-          // Add a temporary ripple-like effect (minimal border pulse)
-          card.style.transition = "all 0.1s ease";
-          const originalBorder = card.style.boxShadow;
-          card.style.boxShadow =
-            "0 0 0 2px rgba(11, 47, 102, 0.3), 0 8px 18px rgba(0,0,0,0.1)";
+          cardElement.style.transition = "all 0.12s ease";
+          const originalShadow = cardElement.style.boxShadow;
+          cardElement.style.boxShadow =
+            "0 0 0 3px rgba(11, 47, 102, 0.25), 0 10px 20px -8px rgba(0,0,0,0.15)";
           setTimeout(() => {
-            card.style.boxShadow = originalBorder || "";
-          }, 200);
-        }
+            cardElement.style.boxShadow = originalShadow || "";
+          }, 180);
+        };
 
-        cards.forEach((card) => {
-          // remove any existing listener to avoid duplication, then attach
-          card.removeEventListener("click", handleCardClick);
-          card.addEventListener("click", handleCardClick);
-
-          // Enhance hover from CSS already, but add a11y role
+        // Desktop cards
+        const desktopCards = document.querySelectorAll(
+          ".services-gridd .service-card",
+        );
+        desktopCards.forEach((card) => {
+          const titleElem = card.querySelector(".service-content h3");
+          const serviceName = titleElem ? titleElem.innerText : "Service";
+          card.addEventListener("click", (e) =>
+            handleServiceClick(card, serviceName),
+          );
           card.setAttribute("role", "button");
           card.setAttribute("tabindex", "0");
           card.style.cursor = "pointer";
-
-          // keyboard support
           card.addEventListener("keydown", (e) => {
             if (e.key === "Enter" || e.key === " ") {
               e.preventDefault();
-              handleCardClick(e);
+              handleServiceClick(card, serviceName);
             }
           });
         });
 
-        // 2. Top items micro effect: subtle click feedback for demo (non-obtrusive)
+        // Mobile swipe cards (dynamic delegation)
+        function attachMobileCardEvents() {
+          const mobileCards = document.querySelectorAll(".service-card-swipe");
+          mobileCards.forEach((card) => {
+            const titleElem = card.querySelector(".swipe-content h3");
+            const serviceName = titleElem ? titleElem.innerText : "Service";
+            // remove existing to avoid duplicates
+            card.removeEventListener("click", (e) =>
+              handleServiceClick(card, serviceName),
+            );
+            card.addEventListener("click", (e) =>
+              handleServiceClick(card, serviceName),
+            );
+            card.setAttribute("role", "button");
+            card.setAttribute("tabindex", "0");
+            card.style.cursor = "pointer";
+            card.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                handleServiceClick(card, serviceName);
+              }
+            });
+          });
+        }
+        // observer for swiper slides load
+        const observer = new MutationObserver(() => {
+          attachMobileCardEvents();
+        });
+        const swiperContainer = document.querySelector(
+          ".mobile-swiper-wrapper",
+        );
+        if (swiperContainer)
+          observer.observe(swiperContainer, { childList: true, subtree: true });
+        setTimeout(() => {
+          attachMobileCardEvents();
+        }, 100);
+
+        // 3. Top items micro feedback (unchanged)
         const topItems = document.querySelectorAll(".top-item");
         topItems.forEach((item) => {
           item.addEventListener("click", (e) => {
-            const targetHeading =
-              item.querySelector("h4")?.innerText || "segment";
+            const heading = item.querySelector("h4")?.innerText || "segment";
             console.log(
-              `✨ [TaxConsult Pro] Explore solutions for: ${targetHeading}`,
+              `✨ [TaxConsult Pro] Explore custom solutions for: ${heading}`,
             );
-            // optional mini highlight
-            item.style.transform = "scale(0.99)";
+            item.style.transform = "scale(0.98)";
             setTimeout(() => {
               item.style.transform = "";
             }, 120);
           });
           item.style.cursor = "pointer";
-          item.setAttribute("title", "Click to discover relevant tax services");
+          item.setAttribute("title", "Click to explore relevant tax services");
         });
 
-        // 3. Dynamic year / info (optional)
-        const addSmartBadge = () => {
-          // no overriding, just add floating subtle brand message but no content break
-          const serviceBox = document.querySelector(".service-box");
-          if (serviceBox && !document.querySelector(".info-badge")) {
-            const subtleNote = document.createElement("div");
-            subtleNote.className = "info-badge";
-            subtleNote.style.position = "absolute";
-            subtleNote.style.bottom = "12px";
-            subtleNote.style.right = "20px";
-            subtleNote.style.fontSize = "11px";
-            subtleNote.style.color = "#b9c6e0";
-            subtleNote.style.background = "transparent";
-            subtleNote.style.pointerEvents = "none";
-            subtleNote.style.fontWeight = "400";
-            subtleNote.innerHTML = "✓ expert driven · 24/7 support";
-            serviceBox.style.position = "relative";
-            serviceBox.appendChild(subtleNote);
-          }
-        };
-        addSmartBadge();
-
-        // 4. Ensures responsive border adjustments on window resize to keep consistent grid experience (no layout breaking)
-        function fixGridBorders() {
-          const width = window.innerWidth;
-          const cardsArray = document.querySelectorAll(".service-card");
-          if (width <= 992 && width > 768) {
-            // for tablet 2-col scenario: ensure that card 5,6,7 have bottom border but 8 not
-            cardsArray.forEach((card, idx) => {
-              if (idx >= 4 && idx <= 6) {
-                card.style.borderBottom = "1px solid #edf2fc";
-              } else if (idx === 7) {
-                card.style.borderBottom = "none";
-              }
-            });
-          } else if (width <= 768) {
-            cardsArray.forEach((card) => {
-              card.style.borderBottom = "1px solid #edf2fc";
-            });
-            if (cardsArray.length)
-              cardsArray[cardsArray.length - 1].style.borderBottom = "none";
-          } else {
-            // default reset
-            cardsArray.forEach((card, idx) => {
-              card.style.borderBottom = "";
-              if (idx >= 4) card.style.borderBottom = "none";
-            });
-            // reapply nth-child(4) & nth-child(8) border-right fix
-          }
+        // 4. badge addition
+        const serviceBox = document.querySelector(".service-box");
+        if (serviceBox && !document.querySelector(".info-badge")) {
+          const subtleNote = document.createElement("div");
+          subtleNote.className = "info-badge";
+          subtleNote.innerHTML = "✓ expert driven · 24/7 support";
+          serviceBox.style.position = "relative";
+          serviceBox.appendChild(subtleNote);
         }
 
-        window.addEventListener("resize", () => {
-          fixGridBorders();
-        });
-        fixGridBorders();
+        // 5. fix responsive service title wrap
+        function handleTitleWrap() {
+          const titleEl = document.querySelector(".service-title");
+          if (!titleEl) return;
+          if (window.innerWidth < 500) titleEl.style.whiteSpace = "normal";
+          else if (window.innerWidth >= 992)
+            titleEl.style.whiteSpace = "nowrap";
+          else titleEl.style.whiteSpace = "normal";
+        }
+        window.addEventListener("resize", handleTitleWrap);
+        handleTitleWrap();
 
-        // 5. add a simple floating style for service title visibility on small devices if needed
-        const styleAdjust = () => {
-          if (window.innerWidth < 500) {
-            const title = document.querySelector(".service-title");
-            if (title) title.style.whiteSpace = "normal";
-          } else {
-            const title = document.querySelector(".service-title");
-            if (title) title.style.whiteSpace = "nowrap";
+        // final grid border fix for desktop (no side effects)
+        function fixDesktopGrid() {
+          if (window.innerWidth > 992) {
+            const cards = document.querySelectorAll(
+              ".services-gridd .service-card",
+            );
+            cards.forEach((c) => {
+              c.style.borderBottom = "";
+              c.style.borderRight = "";
+            });
           }
-        };
-        window.addEventListener("resize", styleAdjust);
-        styleAdjust();
+        }
+        window.addEventListener("resize", fixDesktopGrid);
+        fixDesktopGrid();
       })();
     </script>
   </body>
@@ -2199,22 +2388,19 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes"
     />
-    <title>Khata Dost | Tax Consultancy Excellence</title>
-
-    <!-- Font Awesome 6 (sharp & solid for better icons) -->
+    <title>Khata Dost | Modern Tax Consultancy</title>
+    <!-- Font Awesome 6 (Sharp + Solid) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
-    <!-- Google Fonts for modern typography -->
+    <!-- Google Fonts: Inter -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
       rel="stylesheet"
     />
-
     <style>
       * {
         margin: 0;
@@ -2223,76 +2409,76 @@
       }
 
       body {
-        background: linear-gradient(145deg, #f4f8ff 0%, #eef2fa 100%);
-        /* padding: 30px 20px; */
+        background: linear-gradient(135deg, #f5f9ff 0%, #ecf2fb 100%);
         font-family: "Inter", sans-serif;
-        color: #121e3c;
+        color: #0a1a2f;
       }
 
       .main-wrapper {
         max-width: 1350px;
         margin: 0 auto;
+        padding: 28px 30px;
       }
 
-      /* modern card style */
+      /* Glass card design */
       .glass-card {
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(0px);
-        border-radius: 32px;
-        border: 1px solid rgba(8, 43, 99, 0.12);
+        background: rgba(255, 255, 255, 0.99);
+        border-radius: 40px;
+        border: 1px solid rgba(18, 52, 106, 0.1);
         box-shadow:
-          0 20px 35px -12px rgba(0, 0, 0, 0.08),
-          0 1px 2px rgba(0, 0, 0, 0.02);
-        transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease;
+          0 20px 35px -14px rgba(0, 0, 0, 0.05),
+          0 1px 3px rgba(0, 0, 0, 0.02);
+        overflow: hidden;
+        transition: box-shadow 0.2s;
+        height: 100%;
       }
 
-      /* top sections grid */
+      /* TOP SECTIONS: desktop 2 columns, responsive → 1 below other (stack) */
       .top-sections {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 28px;
-        margin-bottom: 32px;
+        margin-bottom: 42px;
       }
 
-      /* unified header style */
+      /* unified header gradient */
       .section-header {
-        background: linear-gradient(105deg, #0a2b5e 0%, #0f3a7a 100%);
-        padding: 20px 18px;
-        border-radius: 10px 10px 0 0;
+        background: linear-gradient(105deg, #0c2e5c 0%, #124180 100%);
+        padding: 20px 24px;
         text-align: center;
-        position: relative;
-        overflow: hidden;
       }
 
       .section-header h2 {
-        font-size: 25px;
-        font-weight: 600;
+        font-size: 26px;
+        font-weight: 700;
         letter-spacing: -0.3px;
         color: white;
-        margin: 0;
         display: inline-flex;
         align-items: center;
         gap: 12px;
-        justify-content: center;
       }
 
       .section-header h2 i {
-        font-size: 1.9rem;
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        font-size: 1.8rem;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
       }
 
-      /* feature list styling */
+      /* feature list (left column) */
       .feature-list {
         padding: 28px 26px;
+      }
+
+      /* desktop vertical layout */
+      .features-desktop {
+        display: flex;
+        flex-direction: column;
       }
 
       .feature-item {
         display: flex;
         gap: 22px;
-        padding: 20px 0;
-        border-bottom: 1px solid #e9edf4;
+        padding: 22px 0;
+        border-bottom: 1px solid #eef2f9;
         transition: all 0.25s ease;
       }
 
@@ -2301,13 +2487,13 @@
       }
 
       .feature-item:hover {
-        transform: translateX(6px);
+        transform: translateX(5px);
       }
 
       .feature-icon {
         min-width: 64px;
         height: 64px;
-        background: #f0f5ff;
+        background: #f0f5fe;
         border-radius: 28px;
         display: flex;
         align-items: center;
@@ -2317,8 +2503,8 @@
       }
 
       .feature-item:hover .feature-icon {
-        background: #ffffff;
-        box-shadow: 0 8px 18px rgba(8, 43, 99, 0.12);
+        background: white;
+        box-shadow: 0 12px 20px -10px rgba(0, 56, 128, 0.15);
         transform: scale(1.02);
       }
 
@@ -2350,80 +2536,137 @@
 
       .feature-content p {
         font-size: 0.95rem;
-        line-height: 1.5;
-        color: #4a5568;
+        line-height: 1.45;
+        color: #334155;
       }
 
-      /* --- ENHANCED PROCESS SECTION (modern timeline, steps, animations) --- */
-      .process-wrapper {
-        padding: 28px 28px 32px;
-        position: relative;
+      /* SWIPEABLE (SLIDABLE) styles for mobile - horizontal carousel */
+      .swipeable-container {
+        width: 100%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        cursor: grab;
+        scrollbar-width: thin;
       }
 
-      .process-steps-container {
-        position: relative;
+      .swipeable-container:active {
+        cursor: grabbing;
+      }
+
+      .features-slider {
         display: flex;
-        flex-direction: column;
-        gap: 16px;
+        flex-direction: row;
+        gap: 18px;
+        padding: 6px 6px 16px 6px;
       }
 
-      /* better step card design */
-      .step-card {
-        display: flex;
-        align-items: flex-start;
-        gap: 24px;
+      .slider-card {
+        flex: 0 0 85%;
+        scroll-snap-align: start;
         background: #ffffff;
         border-radius: 28px;
-        padding: 20px 24px;
-        transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-        border: 1px solid #eef2fa;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+        padding: 22px 20px;
+        border: 1px solid #e9eff8;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
+        transition: transform 0.2s;
+      }
+
+      .slider-card .feature-icon {
         margin-bottom: 16px;
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+      }
+
+      .slider-card h3 {
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin: 12px 0 8px;
+      }
+
+      .slider-card p {
+        font-size: 0.92rem;
+        color: #475569;
+        line-height: 1.4;
+      }
+
+      .features-slider-wrapper {
+        display: none;
+      }
+
+      .swipe-hint {
+        text-align: center;
+        font-size: 0.75rem;
+        color: #5b6e8c;
+        margin-top: 12px;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      /* PROCESS SECTION (right column) */
+      .process-wrapper {
+        padding: 28px 28px 32px;
+      }
+
+      .step-card {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        background: #ffffff;
+        border-radius: 32px;
+        padding: 20px 24px;
+        margin-bottom: 20px;
+        border: 1px solid #eef2fa;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.02);
+      }
+
+      .step-card:last-child {
+        margin-bottom: 0;
       }
 
       .step-card:hover {
         transform: translateY(-4px);
-        box-shadow: 0 18px 30px -12px rgba(8, 43, 99, 0.15);
-        border-color: #cddef5;
+        box-shadow: 0 24px 32px -14px rgba(12, 46, 92, 0.12);
+        border-color: #c7def5;
       }
 
-      /* icon and number combo */
       .step-visual {
         display: flex;
         align-items: center;
-        gap: 12px;
-        min-width: 110px;
+        gap: 14px;
+        min-width: 130px;
       }
 
       .step-badge-icon {
         width: 68px;
         height: 68px;
-        background: linear-gradient(135deg, #f0f7ff, #ffffff);
-        border-radius: 34px;
+        background: linear-gradient(145deg, #f8fcff, #ffffff);
+        border-radius: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 34px;
-        box-shadow: 0 12px 18px -8px rgba(0, 0, 0, 0.08);
-        transition: 0.2s;
-      }
-
-      .step-card:hover .step-badge-icon {
-        transform: scale(1.02) rotate(2deg);
+        box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.05);
       }
 
       .step-number-circle {
-        width: 44px;
-        height: 44px;
+        width: 46px;
+        height: 46px;
         background: #0f3b7a;
         border-radius: 60px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: 800;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         color: white;
-        box-shadow: 0 6px 12px rgba(15, 59, 122, 0.2);
+        box-shadow: 0 8px 16px rgba(15, 59, 122, 0.2);
       }
 
       .step-card:nth-child(1) .step-number-circle {
@@ -2444,23 +2687,21 @@
       }
 
       .step-content h3 {
-        font-size: 1.55rem;
+        font-size: 1.5rem;
         font-weight: 700;
         letter-spacing: -0.3px;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
       }
 
       .step-content p {
         font-size: 0.95rem;
-        color: #4b5565;
-        line-height: 1.5;
+        color: #475569;
       }
 
-      /* subtle link/arrow inside step */
       .step-arrow {
         align-self: center;
-        font-size: 26px;
-        color: #a0b9da;
+        font-size: 28px;
+        color: #adc1e0;
         transition: 0.2s;
       }
 
@@ -2469,34 +2710,32 @@
         color: #1e40af;
       }
 
-      /* benefits section - modern */
+      /* BENEFITS SECTION - desktop 6 columns, responsive 2 columns */
       .benefits-box {
-        background: #ffffff;
-        border-radius: 32px;
-        border: 1px solid #e2edff;
+        background: white;
+        border-radius: 40px;
+        border: 1px solid #e2edfc;
         overflow: hidden;
-        transition: all 0.2s;
-        margin-bottom: 3rem;
       }
 
       .benefit-title {
-        background: #f8fbfe;
-        padding: 24px 20px;
+        background: #fbfdff;
+        padding: 26px 20px;
         text-align: center;
-        font-size: 1.7rem;
+        font-size: 1.8rem;
         font-weight: 800;
-        letter-spacing: -0.2px;
-        color: #0a2b5e;
-        border-bottom: 2px solid #e0ebfa;
+        letter-spacing: -0.3px;
+        color: #0c2e5c;
+        border-bottom: 2px solid #e6effa;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 14px;
+        gap: 18px;
       }
 
       .benefit-title i {
-        font-size: 2rem;
-        background: linear-gradient(135deg, #1e40af, #3b82f6);
+        font-size: 2.1rem;
+        background: linear-gradient(135deg, #1a4cbc, #3b82f6);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -2506,13 +2745,12 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         gap: 0;
-        background: white;
       }
 
       .benefit-item {
         text-align: center;
-        padding: 32px 12px;
-        border-right: 1px solid #edf2f9;
+        padding: 36px 12px;
+        border-right: 1px solid #eef3fd;
         transition: all 0.25s ease;
         background: white;
       }
@@ -2523,476 +2761,544 @@
 
       .benefit-item:hover {
         background: #fafdff;
-        transform: translateY(-6px);
+        transform: translateY(-5px);
       }
 
       .benefit-icon {
-        font-size: 48px;
-        margin-bottom: 16px;
+        font-size: 52px;
+        margin-bottom: 18px;
         display: inline-block;
-        transition: 0.2s;
-        filter: contrast(0.5);
-      }
-
-      .benefit-item:hover .benefit-icon {
-        transform: scale(1.05);
       }
 
       .benefit-item h4 {
         font-size: 1rem;
         font-weight: 700;
         line-height: 1.4;
-        color: #1f2a48;
+        color: #1f2d5c;
       }
 
-      /* ANIMATIONS (scroll reveal) */
+      /* ========= RESPONSIVE BREAKPOINTS ========= */
+      /* 1) Top section becomes 1 below other (stacked) at max-width 950px */
+      @media (max-width: 950px) {
+        .top-sections {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+      }
+
+      /* 2) For tablet & mobile: why khata dost becomes slidable (horizontal swipe) */
+      @media (max-width: 900px) {
+        .features-desktop {
+          display: none;
+        }
+        .features-slider-wrapper {
+          display: block;
+        }
+        .feature-list {
+          padding: 22px 20px;
+        }
+      }
+
+      /* 3) Benefits grid: 2 columns on responsive (tablet & mobile) */
+      @media (max-width: 1024px) {
+        .benefits-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+        .benefit-item {
+          border-right: 1px solid #eef3fd;
+          border-bottom: 1px solid #eef3fd;
+        }
+        .benefit-item:nth-child(even) {
+          border-right: none;
+        }
+        .benefit-item:nth-child(5),
+        .benefit-item:nth-child(6) {
+          border-bottom: none;
+        }
+      }
+
+      /* Extra small devices: card width larger */
+      @media (max-width: 680px) {
+        .slider-card {
+          flex: 0 0 88%;
+        }
+        .step-card {
+          flex-wrap: wrap;
+          gap: 16px;
+        }
+        .step-visual {
+          width: 100%;
+          justify-content: space-between;
+        }
+        .step-arrow {
+          display: none;
+        }
+        .step-content h3 {
+          font-size: 1.35rem;
+        }
+        .section-header h2 {
+          font-size: 1.4rem;
+          gap: 8px;
+        }
+        .section-header h2 i {
+          font-size: 1.4rem;
+        }
+        .benefit-title {
+          font-size: 1.4rem;
+          padding: 20px 14px;
+        }
+        .main-wrapper {
+          padding: 20px 18px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .slider-card {
+          flex: 0 0 92%;
+          padding: 18px;
+        }
+      }
+
+      /* desktop revert safe (ensures no conflict) */
+      @media (min-width: 901px) {
+        .features-slider-wrapper {
+          display: none;
+        }
+        .features-desktop {
+          display: flex;
+        }
+      }
+
+      /* Ensures benefits grid desktop remains 6 columns above 1025px */
+      @media (min-width: 1025px) {
+        .benefits-grid {
+          grid-template-columns: repeat(6, 1fr);
+        }
+        .benefit-item {
+          border-bottom: none;
+        }
+        .benefit-item:nth-child(even) {
+          border-right: 1px solid #eef3fd;
+        }
+        .benefit-item:last-child {
+          border-right: none;
+        }
+      }
+
+      /* Fade animations */
       @keyframes fadeUp {
         0% {
           opacity: 0;
-          transform: translateY(18px);
+          transform: translateY(12px);
         }
         100% {
           opacity: 1;
           transform: translateY(0);
         }
       }
-
-      .animate-fade {
-        animation: fadeUp 0.6s ease forwards;
-      }
-
       .feature-item,
       .step-card,
-      .benefit-item {
-        opacity: 0;
+      .benefit-item,
+      .slider-card {
         animation: fadeUp 0.5s ease forwards;
+        opacity: 0;
       }
-
       .feature-item:nth-child(1) {
-        animation-delay: 0.05s;
+        animation-delay: 0.02s;
       }
       .feature-item:nth-child(2) {
-        animation-delay: 0.1s;
+        animation-delay: 0.07s;
       }
       .feature-item:nth-child(3) {
-        animation-delay: 0.15s;
+        animation-delay: 0.12s;
       }
       .feature-item:nth-child(4) {
-        animation-delay: 0.2s;
+        animation-delay: 0.17s;
       }
       .feature-item:nth-child(5) {
-        animation-delay: 0.25s;
+        animation-delay: 0.22s;
       }
       .feature-item:nth-child(6) {
-        animation-delay: 0.3s;
+        animation-delay: 0.27s;
       }
-
       .step-card:nth-child(1) {
-        animation-delay: 0.1s;
+        animation-delay: 0.05s;
       }
       .step-card:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-      .step-card:nth-child(3) {
-        animation-delay: 0.3s;
-      }
-      .step-card:nth-child(4) {
-        animation-delay: 0.4s;
-      }
-
-      .benefit-item:nth-child(1) {
         animation-delay: 0.1s;
       }
-      .benefit-item:nth-child(2) {
+      .step-card:nth-child(3) {
+        animation-delay: 0.15s;
+      }
+      .step-card:nth-child(4) {
         animation-delay: 0.2s;
       }
-      .benefit-item:nth-child(3) {
-        animation-delay: 0.3s;
+      .benefit-item {
+        animation-delay: 0.05s;
       }
-      .benefit-item:nth-child(4) {
-        animation-delay: 0.4s;
+      .slider-card:nth-child(1) {
+        animation-delay: 0.02s;
       }
-      .benefit-item:nth-child(5) {
-        animation-delay: 0.5s;
+      .slider-card:nth-child(2) {
+        animation-delay: 0.08s;
       }
-      .benefit-item:nth-child(6) {
-        animation-delay: 0.6s;
+      .slider-card:nth-child(3) {
+        animation-delay: 0.14s;
       }
-
-      /* Responsive design */
-      @media (max-width: 1100px) {
-        .top-sections {
-          grid-template-columns: 1fr;
-          gap: 24px;
-        }
-
-        .benefits-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
-
-        .benefit-item:nth-child(3) {
-          border-right: none;
-        }
-
-        .benefit-item:nth-child(4) {
-          border-right: 1px solid #edf2f9;
-        }
+      .slider-card:nth-child(4) {
+        animation-delay: 0.2s;
       }
-
-      @media (max-width: 800px) {
-        .step-card {
-          flex-wrap: wrap;
-          gap: 18px;
-        }
-
-        .step-visual {
-          min-width: auto;
-          width: 100%;
-          justify-content: space-between;
-        }
-
-        .step-arrow {
-          display: none;
-        }
-
-        .step-content h3 {
-          font-size: 1.4rem;
-        }
-
-        .feature-list {
-          padding: 20px 20px;
-        }
-
-        .feature-item {
-          flex-direction: column;
-          text-align: center;
-          align-items: center;
-          gap: 14px;
-        }
-
-        .feature-icon {
-          min-width: 70px;
-        }
-
-        .section-header h2 {
-          font-size: 1.5rem;
-        }
-
-        .benefit-title {
-          font-size: 1.4rem;
-        }
+      .slider-card:nth-child(5) {
+        animation-delay: 0.26s;
       }
-
-      @media (max-width: 680px) {
-        body {
-          padding: 20px 12px;
-        }
-
-        .benefits-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .benefit-item {
-          border-right: 1px solid #edf2f9;
-        }
-
-        .benefit-item:nth-child(even) {
-          border-right: none;
-        }
-
-        .benefit-item:nth-child(3) {
-          border-right: 1px solid #edf2f9;
-        }
-
-        .benefit-item:nth-child(4) {
-          border-right: none;
-        }
-      }
-
-      @media (max-width: 540px) {
-        .step-badge-icon {
-          width: 56px;
-          height: 56px;
-          font-size: 28px;
-        }
-
-        .step-number-circle {
-          width: 38px;
-          height: 38px;
-          font-size: 1.2rem;
-        }
-
-        .feature-content h3 {
-          font-size: 1.3rem;
-        }
-
-        .section-header h2 {
-          font-size: 1.3rem;
-          gap: 6px;
-        }
-
-        .benefits-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .benefit-item {
-          border-right: none;
-          border-bottom: 1px solid #edf2f9;
-        }
-
-        .benefit-item:last-child {
-          border-bottom: none;
-        }
+      .slider-card:nth-child(6) {
+        animation-delay: 0.32s;
       }
     </style>
   </head>
   <body>
     <div class="main-wrapper">
-      <!-- TOP TWO SECTIONS -->
+      <!-- TOP SECTIONS: will stack vertically on responsive (1 below other) -->
       <div class="top-sections">
-        <!-- LEFT: WHY CHOOSE KHATA DOST (fresh icons & style) -->
+        <!-- LEFT: WHY KHATA DOST (Slidable on mobile, normal on desktop) -->
         <div class="glass-card">
           <div class="section-header">
             <h2>
-              <i class="fa-regular fa-star"></i>
-              WHY CHOOSE KHATA DOST?
+              <i class="fa-regular fa-star"></i> WHY KHATA DOST?
               <i class="fa-regular fa-hand-peace"></i>
             </h2>
           </div>
           <div class="feature-list">
-            <!-- 6 features with premium icons -->
-            <div class="feature-item">
-              <div class="feature-icon blue-icon">
-                <i class="fa-solid fa-chalkboard-user"></i>
+            <!-- Desktop default vertical layout -->
+            <div class="features-desktop">
+              <div class="feature-item">
+                <div class="feature-icon blue-icon">
+                  <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Top-tier Tax Experts</h3>
+                  <p>
+                    Certified professionals mastering latest regulations, IT
+                    filings & corporate compliance.
+                  </p>
+                </div>
               </div>
-              <div class="feature-content">
-                <h3>Experienced Tax Experts</h3>
-                <p>
-                  Our professionals stay updated with the latest tax laws and
-                  compliance requirements.
-                </p>
+              <div class="feature-item">
+                <div class="feature-icon green-icon">
+                  <i class="fa-solid fa-handshake-angle"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Bespoke Consultation</h3>
+                  <p>
+                    Custom tax frameworks for startups, freelancers &
+                    enterprises — no one-size-fits-all.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon orange-icon">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Lightning Support</h3>
+                  <p>
+                    Dedicated account managers, same-day query resolution &
+                    proactive filing alerts.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon purple-icon">
+                  <i class="fa-solid fa-file-shield"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>End-to-End Compliance</h3>
+                  <p>
+                    From tax registration to notice handling — we shield you
+                    from legal risks.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon gold-icon">
+                  <i class="fa-solid fa-coins"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Fair & Transparent Pricing</h3>
+                  <p>
+                    Zero hidden costs, affordable retainers, and maximum value
+                    for every rupee.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon navy-icon">
+                  <i class="fa-solid fa-fingerprint"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Bank-grade Security</h3>
+                  <p>
+                    Your financial data remains 100% encrypted and strictly
+                    confidential.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div class="feature-item">
-              <div class="feature-icon green-icon">
-                <i class="fa-solid fa-handshake-angle"></i>
+            <!-- MOBILE SLIDABLE (swipe) version -->
+            <div class="features-slider-wrapper">
+              <div class="swipeable-container" id="swipeFeatures">
+                <div class="features-slider">
+                  <div class="slider-card">
+                    <div class="feature-icon blue-icon">
+                      <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3>Top-tier Tax Experts</h3>
+                    <p>
+                      Certified professionals mastering latest regulations, IT
+                      filings & corporate compliance.
+                    </p>
+                  </div>
+                  <div class="slider-card">
+                    <div class="feature-icon green-icon">
+                      <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3>Bespoke Consultation</h3>
+                    <p>
+                      Custom tax frameworks for startups, freelancers &
+                      enterprises — no one-size-fits-all.
+                    </p>
+                  </div>
+                  <div class="slider-card">
+                    <div class="feature-icon orange-icon">
+                      <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3>Lightning Support</h3>
+                    <p>
+                      Dedicated account managers, same-day query resolution &
+                      proactive filing alerts.
+                    </p>
+                  </div>
+                  <div class="slider-card">
+                    <div class="feature-icon purple-icon">
+                      <i class="fa-solid fa-file-shield"></i>
+                    </div>
+                    <h3>End-to-End Compliance</h3>
+                    <p>
+                      From tax registration to notice handling — we shield you
+                      from legal risks.
+                    </p>
+                  </div>
+                  <div class="slider-card">
+                    <div class="feature-icon gold-icon">
+                      <i class="fa-solid fa-coins"></i>
+                    </div>
+                    <h3>Fair & Transparent Pricing</h3>
+                    <p>
+                      Zero hidden costs, affordable retainers, and maximum value
+                      for every rupee.
+                    </p>
+                  </div>
+                  <div class="slider-card">
+                    <div class="feature-icon navy-icon">
+                      <i class="fa-solid fa-fingerprint"></i>
+                    </div>
+                    <h3>Bank-grade Security</h3>
+                    <p>
+                      Your financial data remains 100% encrypted and strictly
+                      confidential.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="feature-content">
-                <h3>Personalized Consultation</h3>
-                <p>
-                  Every business and individual has different tax needs — we
-                  provide customized solutions.
-                </p>
-              </div>
-            </div>
-
-            <div class="feature-item">
-              <div class="feature-icon orange-icon">
-                <i class="fa-solid fa-bolt"></i>
-              </div>
-              <div class="feature-content">
-                <h3>Fast & Reliable Support</h3>
-                <p>
-                  Quick response, proper guidance, and smooth processing for all
-                  tax-related matters.
-                </p>
-              </div>
-            </div>
-
-            <div class="feature-item">
-              <div class="feature-icon purple-icon">
-                <i class="fa-solid fa-file-shield"></i>
-              </div>
-              <div class="feature-content">
-                <h3>Complete Compliance Assistance</h3>
-                <p>
-                  From consultation to filing and notice handling, we manage
-                  everything professionally.
-                </p>
-              </div>
-            </div>
-
-            <div class="feature-item">
-              <div class="feature-icon gold-icon">
-                <i class="fa-solid fa-coins"></i>
-              </div>
-              <div class="feature-content">
-                <h3>Transparent & Affordable Pricing</h3>
-                <p>
-                  No hidden charges. Simple, affordable, and value-driven tax
-                  consultancy services.
-                </p>
-              </div>
-            </div>
-
-            <div class="feature-item">
-              <div class="feature-icon navy-icon">
-                <i class="fa-solid fa-fingerprint"></i>
-              </div>
-              <div class="feature-content">
-                <h3>Secure & Confidential</h3>
-                <p>
-                  Your financial and business information remains fully safe and
-                  confidential.
-                </p>
+              <div class="swipe-hint">
+                <i class="fa-regular fa-hand-pointer"></i>
+                <span>Swipe to explore →</span>
+                <i class="fa-solid fa-arrow-right"></i>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- RIGHT: OUR WORKING PROCESS (enhanced, modern, step cards) -->
+        <!-- RIGHT: OUR WORKING PROCESS (always stacked below on mobile due to parent grid) -->
         <div class="glass-card">
           <div class="section-header">
-            <h2>
-              <i class="fa-regular fa-compass"></i>
-              OUR WORKING PROCESS
-            </h2>
+            <h2><i class="fa-regular fa-compass"></i> OUR WORKING PROCESS</h2>
           </div>
           <div class="process-wrapper">
-            <div class="process-steps-container">
-              <!-- Step 1 -->
-              <div class="step-card">
-                <div class="step-visual">
-                  <div class="step-badge-icon" style="color: #1e40af">
-                    <i class="fa-solid fa-magnifying-glass-chart"></i>
-                  </div>
-                  <div class="step-number-circle">1</div>
+            <div class="step-card">
+              <div class="step-visual">
+                <div class="step-badge-icon" style="color: #1e40af">
+                  <i class="fa-solid fa-magnifying-glass-chart"></i>
                 </div>
-                <div class="step-content">
-                  <h3>Requirement Analysis</h3>
-                  <p>
-                    We deeply understand your income, business structure, and
-                    tax-related requirements to craft a precise roadmap.
-                  </p>
-                </div>
+                <div class="step-number-circle">1</div>
               </div>
-              <!-- Step 2 -->
-              <div class="step-card">
-                <div class="step-visual">
-                  <div class="step-badge-icon" style="color: #059669">
-                    <i class="fa-solid fa-comments-dollar"></i>
-                  </div>
-                  <div class="step-number-circle">2</div>
-                </div>
-                <div class="step-content">
-                  <h3>Expert Consultation</h3>
-                  <p>
-                    Our tax professionals deliver strategic guidance and
-                    powerful tax-saving insights tailored to your financial
-                    goals.
-                  </p>
-                </div>
+              <div class="step-content">
+                <h3>Requirement Discovery</h3>
+                <p>
+                  Deep dive into income sources, deductions & business goals —
+                  blueprint for tax optimisation.
+                </p>
               </div>
-              <!-- Step 3 -->
-              <div class="step-card">
-                <div class="step-visual">
-                  <div class="step-badge-icon" style="color: #ea580c">
-                    <i class="fa-solid fa-folder-open"></i>
-                  </div>
-                  <div class="step-number-circle">3</div>
-                </div>
-                <div class="step-content">
-                  <h3>Documentation & Review</h3>
-                  <p>
-                    We meticulously verify each document, ensuring accuracy,
-                    compliance, and error-free filing for maximum confidence.
-                  </p>
-                </div>
+              <div class="step-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
               </div>
-              <!-- Step 4 -->
-              <div class="step-card">
-                <div class="step-visual">
-                  <div class="step-badge-icon" style="color: #7c3aed">
-                    <i class="fa-solid fa-vr-cardboard"></i>
-                  </div>
-                  <div class="step-number-circle">4</div>
+            </div>
+            <div class="step-card">
+              <div class="step-visual">
+                <div class="step-badge-icon" style="color: #059669">
+                  <i class="fa-solid fa-comments-dollar"></i>
                 </div>
-                <div class="step-content">
-                  <h3>Compliance & Ongoing Support</h3>
-                  <p>
-                    Timely assistance for filing, notices, regulatory updates,
-                    and future tax planning — we're always a step ahead.
-                  </p>
+                <div class="step-number-circle">2</div>
+              </div>
+              <div class="step-content">
+                <h3>Strategic Tax Consultation</h3>
+                <p>
+                  Actionable insights, legal tax-saving routes & future-ready
+                  financial strategies.
+                </p>
+              </div>
+              <div class="step-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-visual">
+                <div class="step-badge-icon" style="color: #ea580c">
+                  <i class="fa-solid fa-folder-open"></i>
                 </div>
+                <div class="step-number-circle">3</div>
+              </div>
+              <div class="step-content">
+                <h3>Documentation & Validation</h3>
+                <p>
+                  Meticulous verification of books, proofs & past returns —
+                  flawless filing foundation.
+                </p>
+              </div>
+              <div class="step-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-visual">
+                <div class="step-badge-icon" style="color: #7c3aed">
+                  <i class="fa-solid fa-vr-cardboard"></i>
+                </div>
+                <div class="step-number-circle">4</div>
+              </div>
+              <div class="step-content">
+                <h3>Lifecycle Compliance & Support</h3>
+                <p>
+                  Quarterly updates, instant notice assistance, audit defence —
+                  we stay with you.
+                </p>
+              </div>
+              <div class="step-arrow">
+                <i class="fa-solid fa-arrow-right-long"></i>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- BENEFITS SECTION (improved icons & stylish) -->
+      <!-- BENEFITS SECTION: 2 columns on responsive (tablet/mobile) - desktop 6 columns -->
       <div class="benefits-box">
         <div class="benefit-title">
-          BENEFITS OF PROFESSIONAL TAX CONSULTANCY
-          <i class="fa-regular fa-circle-check"></i>
+          TAX CONSULTANCY ADVANTAGES <i class="fa-regular fa-circle-check"></i>
         </div>
         <div class="benefits-grid">
           <div class="benefit-item">
             <div class="benefit-icon" style="color: #16a34a">
               <i class="fa-solid fa-scale-balanced"></i>
             </div>
-            <h4>Reduce Tax<br />Liability Legally</h4>
+            <h4>Legally Minimize<br />Tax Outgo</h4>
           </div>
           <div class="benefit-item">
             <div class="benefit-icon" style="color: #dc2626">
               <i class="fa-solid fa-ban"></i>
             </div>
-            <h4>Avoid Notices<br />& Penalties</h4>
+            <h4>Avoid Scrutiny<br />& Penalties</h4>
           </div>
           <div class="benefit-item">
             <div class="benefit-icon" style="color: #2563eb">
               <i class="fa-solid fa-diagram-project"></i>
             </div>
-            <h4>Better Financial<br />Planning</h4>
+            <h4>Strategic Financial<br />Blueprint</h4>
           </div>
           <div class="benefit-item">
             <div class="benefit-icon" style="color: #f97316">
               <i class="fa-solid fa-check-double"></i>
             </div>
-            <h4>Accurate Tax<br />Compliance</h4>
+            <h4>Error-free ITR<br />& GST Compliance</h4>
           </div>
           <div class="benefit-item">
             <div class="benefit-icon" style="color: #8b5cf6">
               <i class="fa-solid fa-brain"></i>
             </div>
-            <h4>Expert Guidance<br />for Complex Cases</h4>
+            <h4>Complex Cases<br />Handled Proficiently</h4>
           </div>
           <div class="benefit-item">
             <div class="benefit-icon" style="color: #0d9488">
               <i class="fa-regular fa-clock"></i>
             </div>
-            <h4>Save Time<br />& Effort</h4>
+            <h4>Time-saving &<br />Hassle-free Experience</h4>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- subtle script for additional micro interaction (optional but adds polish) -->
+    <!-- Smooth swipe and micro-interactions -->
     <script>
       (function () {
-        // add smooth parallax hover for benefit items and feature items (just for style)
-        const allCards = document.querySelectorAll(
-          ".feature-item, .step-card, .benefit-item",
-        );
-        for (let card of allCards) {
-          card.addEventListener("mouseenter", function (e) {
-            // already styled with CSS, but smoothness
-            this.style.willChange = "transform";
+        const swipeContainer = document.getElementById("swipeFeatures");
+        if (swipeContainer) {
+          let isDown = false;
+          let startX;
+          let scrollLeft;
+          swipeContainer.addEventListener("mousedown", (e) => {
+            isDown = true;
+            swipeContainer.style.cursor = "grabbing";
+            startX = e.pageX - swipeContainer.offsetLeft;
+            scrollLeft = swipeContainer.scrollLeft;
           });
-          card.addEventListener("mouseleave", function (e) {
-            this.style.willChange = "auto";
+          swipeContainer.addEventListener("mouseleave", () => {
+            isDown = false;
+            swipeContainer.style.cursor = "grab";
           });
+          swipeContainer.addEventListener("mouseup", () => {
+            isDown = false;
+            swipeContainer.style.cursor = "grab";
+          });
+          swipeContainer.addEventListener("mousemove", (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - swipeContainer.offsetLeft;
+            const walk = (x - startX) * 1.2;
+            swipeContainer.scrollLeft = scrollLeft - walk;
+          });
+          swipeContainer.style.cursor = "grab";
+
+          // touch smoothing
+          swipeContainer.addEventListener("touchstart", () => {});
         }
-        // Intersection observer to replay animations if needed? Not necessary, but ensures visibility.
-        // already visible on load, we keep the fade-in
-        console.log(
-          "Khata Dost experience — modern, trustworthy tax companion",
+        // add subtle will-change for performance
+        const allInteractive = document.querySelectorAll(
+          ".feature-item, .step-card, .benefit-item, .slider-card",
         );
+        allInteractive.forEach((el) => {
+          el.addEventListener("mouseenter", () => {
+            el.style.willChange = "transform";
+          });
+          el.addEventListener("mouseleave", () => {
+            el.style.willChange = "auto";
+          });
+        });
       })();
     </script>
   </body>
 </html>
+
 <!-- ---------steps------- -->
 <!doctype html>
 <html lang="en">
@@ -3668,8 +3974,8 @@
 
           <!-- button block: redirects to contact.html + icon (calendar + arrow) -->
           <div class="cta-actions">
-            <a href="contact.html" class="btn-primary">
-              <span>Get Expert Tax Advice | Book a Consultation</span>
+            <a href="../Contact.html" class="btn-primary">
+              <span>Get Expert Tax Advice </span>
               <span class="btn-icon-svg">
                 <svg
                   width="18"

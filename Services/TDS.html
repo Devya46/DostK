@@ -573,6 +573,11 @@
             width: 38px;
             height: 38px;
           }
+          .navbar.is-compact .logo-text img {
+            height: 49px;
+            width: 99px;
+            margin-top: -14px;
+          }
 
           .navbar.is-compact .logo-text h1 {
             font-size: 1.4rem;
@@ -621,15 +626,15 @@
             filter: drop-shadow(0 4px 8px rgba(26, 95, 158, 0.12));
             transition: 0.25s;
           }
-          .logo-text img {
-            width: 154px;
-            height: 67px;
-            margin: 0;
-            padding: 0;
-            object-fit: contain;
-            filter: drop-shadow(0 4px 8px rgba(26, 95, 158, 0.12));
-            transition: 0.25s;
-          }
+          /* .logo-text img {
+        width: 154px;
+        height: 67px;
+        margin: 0;
+        padding: 0;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 8px rgba(26, 95, 158, 0.12));
+        transition: 0.25s;
+      } */
 
           .logo-text h1 {
             font-size: 1.85rem;
@@ -647,7 +652,8 @@
             font-weight: 700;
             color: #2c6e9e;
             letter-spacing: 0.6px;
-            margin-top: -3px;
+            margin-top: -4px;
+            text-transform: uppercase;
           }
 
           /* DESKTOP NAVIGATION */
@@ -662,7 +668,7 @@
             font-weight: 600;
             color: #1f3b4c;
             transition: 0.2s;
-            font-size: 1rem;
+            font-size: 18px;
           }
 
           .nav-links a:hover {
@@ -924,7 +930,7 @@
           .side-dropdown {
             display: flex;
             flex-direction: column;
-            margin-left: 8px;
+            /* margin-left: 8px; */
           }
 
           .side-dropdown-header {
@@ -938,6 +944,33 @@
             font-size: 1.1rem;
             color: #1f3b4c;
             transition: 0.2s;
+          }
+
+          .side-dropdown-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 12px;
+          }
+
+          .side-dropdown-header span {
+            display: flex;
+            align-items: center;
+            gap: 70px;
+            font-weight: 600;
+          }
+
+          .side-dropdown-header span i {
+            width: 28px;
+            text-align: center;
+            flex-shrink: 0;
+          }
+
+          .side-dropdown-header i:first-child,
+          .side-nav-item i:first-child {
+            width: 28px;
+            text-align: center;
+            flex-shrink: 0;
           }
 
           .side-dropdown-header i:first-child {
@@ -1038,6 +1071,25 @@
               padding: 10px 20px;
             }
           }
+          @media (max-width: 500px) {
+            .logo-area {
+              gap: 8px;
+            }
+
+            .logo-area img {
+              width: 40px;
+              height: 40px;
+            }
+
+            .logo-text h1 {
+              font-size: 24px;
+            }
+
+            .logo-text p {
+              font-size: 9.5px;
+              letter-spacing: 0.5px;
+            }
+          }
         </style>
       </head>
       <body>
@@ -1051,10 +1103,11 @@
                     alt="Khata Dost"
                 /></a>
                 <div class="logo-text">
-                  <div>
-                    <h1>Khata Dost</h1>
-                  </div>
-                  <p>ACCOUNTING & TAX SOLUTIONS</p>
+                  <!-- <div>
+                <img src="images/LOGO-2.png" alt="" />
+              </div> -->
+                  <h1>Khata Dost</h1>
+                  <p>Accounting Made Simple</p>
                 </div>
               </div>
 
@@ -1086,9 +1139,12 @@
                     >
                   </div>
                 </div>
-                <a href="About.html">About Us</a>
-                <a href="Testimonials.html">Reviews</a>
-                <a href="Contact.html" class="contact-btn-glow">Start Now</a>
+                <a href="../About.html">About Us</a>
+                <a href="../Testimonials.html">FAQ</a>
+                <!-- <a href="Contact.html">Contact Us</a> -->
+                <a href="../Contact.html" class="contact-btn-glow"
+                  >Contact Us</a
+                >
               </div>
 
               <!-- Hamburger with icon at start & text (premium) -->
@@ -1146,23 +1202,18 @@
               </div>
             </div>
 
-            <a href="About.html" class="side-nav-item"
+            <a href="../About.html" class="side-nav-item"
               ><i class="fas fa-users"></i> About Us
               <i class="fas fa-chevron-right"></i
             ></a>
-            <a href="Testimonials.html" class="side-nav-item"
-              ><i class="fas fa-star"></i> Reviews
+            <a href="../Testimonials.html" class="side-nav-item"
+              ><i class="fas fa-star"></i> FAQ
               <i class="fas fa-chevron-right"></i
             ></a>
-          </div>
-          <div class="side-menu-footer">
-            <a href="Contact.html" class="start-now-premium"
-              ><i class="fas fa-rocket"></i> Start Now
-            </a>
-            <!-- Arrow at end ( > ) as requested -->
-            <div class="end-arrow">
-              <i class="fas fa-angle-double-right"></i>
-              <i class="fas fa-greater-than"></i>
+            <div class="side-menu-footer">
+              <a href="../Contact.html" class="start-now-premium"
+                ><i class="fas fa-rocket"></i> Contact Us
+              </a>
             </div>
           </div>
         </div>

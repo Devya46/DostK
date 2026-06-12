@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    <title>Khata Dost | ACCOUNTING & TAXATION</title>
+    <title>Contact Us | Khata Dost</title>
     <link
       rel="shortcut icon"
       href="images/Logo1-removebg-preview.png"
@@ -166,6 +166,7 @@
         color: #2c6e9e;
         letter-spacing: 0.6px;
         margin-top: -4px;
+        text-transform: uppercase;
       }
 
       /* DESKTOP NAVIGATION */
@@ -180,7 +181,7 @@
         font-weight: 600;
         color: #1f3b4c;
         transition: 0.2s;
-        font-size: 1rem;
+        font-size: 18px;
       }
 
       .nav-links a:hover {
@@ -442,7 +443,7 @@
       .side-dropdown {
         display: flex;
         flex-direction: column;
-        margin-left: 8px;
+        /* margin-left: 8px; */
       }
 
       .side-dropdown-header {
@@ -456,6 +457,33 @@
         font-size: 1.1rem;
         color: #1f3b4c;
         transition: 0.2s;
+      }
+
+      .side-dropdown-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 12px;
+      }
+
+      .side-dropdown-header span {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        font-weight: 600;
+      }
+
+      .side-dropdown-header span i {
+        width: 28px;
+        text-align: center;
+        flex-shrink: 0;
+      }
+
+      .side-dropdown-header i:first-child,
+      .side-nav-item i:first-child {
+        width: 28px;
+        text-align: center;
+        flex-shrink: 0;
       }
 
       .side-dropdown-header i:first-child {
@@ -556,6 +584,25 @@
           padding: 10px 20px;
         }
       }
+      @media (max-width: 500px) {
+        .logo-area {
+          gap: 8px;
+        }
+
+        .logo-area img {
+          width: 40px;
+          height: 40px;
+        }
+
+        .logo-text h1 {
+          font-size: 24px;
+        }
+
+        .logo-text p {
+          font-size: 9.5px;
+          letter-spacing: 0.5px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -571,7 +618,7 @@
                 <img src="images/LOGO-2.png" alt="" />
               </div> -->
               <h1>Khata Dost</h1>
-              <p>ACCOUNTING & TAX SOLUTIONS</p>
+              <p>Accounting Made Simple</p>
             </div>
           </div>
 
@@ -604,8 +651,9 @@
               </div>
             </div>
             <a href="About.html">About Us</a>
-            <a href="Testimonials.html">Reviews</a>
-            <a href="Contact.html" class="contact-btn-glow">Start Now</a>
+            <a href="Testimonials.html">FAQ</a>
+            <!-- <a href="Contact.html">Contact Us</a> -->
+            <a href="Contact.html" class="contact-btn-glow">Contact Us</a>
           </div>
 
           <!-- Hamburger with icon at start & text (premium) -->
@@ -622,7 +670,7 @@
     <div class="side-menu" id="sideMenu">
       <div class="side-header">
         <div class="logo-small">
-          <img src="https://placehold.co/200x200?text=KD" alt="logo" />
+          <img src="images/Logo1-removebg-preview.png" alt="logo" />
           <h4>Khata Dost</h4>
         </div>
         <button class="close-menu" id="closeSideMenu">
@@ -667,18 +715,12 @@
           <i class="fas fa-chevron-right"></i
         ></a>
         <a href="Testimonials.html" class="side-nav-item"
-          ><i class="fas fa-star"></i> Reviews
-          <i class="fas fa-chevron-right"></i
+          ><i class="fas fa-star"></i> FAQ <i class="fas fa-chevron-right"></i
         ></a>
-      </div>
-      <div class="side-menu-footer">
-        <a href="Contact.html" class="start-now-premium"
-          ><i class="fas fa-rocket"></i> Start Now
-        </a>
-        <!-- Arrow at end ( > ) as requested -->
-        <div class="end-arrow">
-          <i class="fas fa-angle-double-right"></i>
-          <i class="fas fa-greater-than"></i>
+        <div class="side-menu-footer">
+          <a href="Contact.html" class="start-now-premium"
+            ><i class="fas fa-rocket"></i> Contact Us
+          </a>
         </div>
       </div>
     </div>
@@ -1406,7 +1448,7 @@
       // ⚠️ IMPORTANT: Replace the dummy URL below with your actual Google Apps Script Web App URL
       // The script should accept POST data and write to Google Sheets.
       const GOOGLE_SCRIPT_URL =
-        "https://script.google.com/macros/s/AKfycbzCuk5JcL3hkXj3B9d9vInRflU9nHlZqUAgZ9EJOQ8jZb0cU8YtcIqMk4eojAhJqyTD/exec";
+        "https://script.google.com/macros/s/AKfycbwf8HYhaTIjwRwr1cDEg19pxLjX7XLmZInbbQy5034QrZeLVBcJ8ABDvzYZ6ry8brTV/exec";
       // ^ Replace with your published Apps Script deployment URL for production.
 
       const contactForm = document.getElementById("contactForm");
